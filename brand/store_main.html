@@ -12,11 +12,12 @@
 <header>
     <div id="head">
         <nav>
-            <div id="mob_menu" class="mob_menu_switch">
+            <div id="mob_menu" >
                 <article>
                     <div></div>
                     <div></div>
                     <div></div>
+                    <span class="mob_menu_switch_off"></span>
                 </article>
             </div>
             <ul class="flex">
@@ -660,12 +661,13 @@
             let cnt = $("#main>div").length;
 
             for(let i = 0; i <= cnt; i++){
-                $("#prod"+i).removeClass("switch");
+                $("#prod"+i).removeClass("switch"); //클래스 초기화
             }
-            $("#prod"+idx).addClass("switch");
-            $("#main").css("background-image","url('./images/bg_0"+ idx +".png')");
+            $("#prod"+idx).addClass("switch");  //클래스 삽입
+            $("#main").css("background-image","url('./images/bg_0"+ idx +".png')"); //이미지 삽입
         }); 
     });
+
 </script>
 </body>
 </html>
