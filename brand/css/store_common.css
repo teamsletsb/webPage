@@ -80,6 +80,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 }
 #head .flex{
     justify-content:right;
+    user-select: none;
 }
 #head ul>li{
     height:50px;
