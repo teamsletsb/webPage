@@ -2,8 +2,7 @@
 
 
     $(window).resize(function(){
-        let isWindow = $("body").width();
-        if(isWindow >= 1024){
+        if((window.matchMedia('(max-width: 1023px)').matches) == 0){
             if($("#head ul>li").css("display") == "none"){
                 $("#head ul>li").css("display","block");
                 $("#mob_menu span").removeClass("mob_menu_switch_on");  //초기화
