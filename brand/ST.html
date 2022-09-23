@@ -6,13 +6,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>new</title>
     <link href="./css/ST.css" rel="stylesheet" type="text/css" />
+
+   
 </head>
 <body>
 <!--헤더영역-->
 <header>
     <div id="head">
         <nav>
-            <div id="mob_menu" >
+            <div id="mob_menu">
                 <article>
                     <div></div>
                     <div></div>
@@ -21,11 +23,11 @@
                 </article>
             </div>
             <ul class="flex">
-                <li><a href="#">홈으로 돌아가기</a></li>
+                <li><a href="index.html">홈으로 돌아가기</a></li>
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
-                <li><a href="#">마이페이지</a></li>
-                <li><a href="#">장바구니</a></li>
+                <li ><a href="#">마이페이지</a></li>
+                <li ><a href="#">장바구니</a></li>
                 <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
             </ul>
         </nav>
@@ -283,7 +285,7 @@
         </article>
     </div>
 
-    <div id="prod4" class="wrap prod">    <!-- 04 미인활명수 -->
+     <div id="prod4" class="wrap prod">    <!-- 04 미인활명수 -->
         <article>   <!--컨텐츠 헤드-->
             <h2>미인활명수</h2>
             <h3>(일반의약품)</h3>
@@ -610,20 +612,18 @@
         </article>
     </div>
 
-    <div id="products">
-        <ul class="flex">
-            <li><a href="#"><img src="./images/img2.png" alt="img2"/></a></li>
-            <li><a href="#"><img src="./images/img3.png" alt="img3"/></a></li>
-            <li><a href="#"><img src="./images/img4.png" alt="img4"/></a></li>
-            <li><a href="#"><img src="./images/img5.png" alt="img5"/></a></li>
-            <li><a href="#"><img src="./images/img6.png" alt="img6"/></a></li>
-            <li><a href="#"><img src="./images/img7_pack.png" alt="img7"/></a></li>
-            <li><a href="#"><img src="./images/img8_pack.png" alt="img8"/></a></li>
-            
-        </ul>
-    </div>
+        <div id="products">
+            <ul class="flex">
+                <li><a href="#"><img src="./images/img2.png" alt="img2"/></a></li>
+                <li><a href="#"><img src="./images/img3.png" alt="img3"/></a></li>
+                <li><a href="#"><img src="./images/img4.png" alt="img4"/></a></li>
+                <li><a href="#"><img src="./images/img5.png" alt="img5"/></a></li>
+                <li><a href="#"><img src="./images/img6.png" alt="img6"/></a></li>
+                <li><a href="#"><img src="./images/img7_pack.png" alt="img7"/></a></li>
+                <li><a href="#"><img src="./images/img8_pack.png" alt="img8"/></a></li>
+            </ul>
+        </div>
 </section>
-
 <!--푸터영역-->
 <footer class="flex">
     <div>
@@ -652,10 +652,13 @@
             <li><a href="#"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
         </ul>
     </div>
+
 </footer>
 
 <script>
-    $(document).ready(function(){
+    let change = function(){
+        
+        $("#main").css("background-image","url('./images/bg_01.png");
         $('#products>ul>li').click(function(){      
             let idx = $(this).index()+1;
             let cnt = $("#main>div").length;
@@ -665,9 +668,25 @@
             }
             $("#prod"+idx).addClass("switch");  //클래스 삽입
             $("#main").css("background-image","url('./images/bg_0"+ idx +".png')"); //이미지 삽입
-        }); 
-    });
+            let color = [
+                ,
+            "#56BB8A", 
+            "rgba(128,194,242,0.6)", 
+            "#F4BA65", 
+            "#ADCE99", 
+            "#97C94F", 
+            "#EDEC9B", 
+            "#C5ECF5"];
+            $("#main").css("background-color",color[idx]);
+        });
+    };
+    $(document).ready(change());
+
+
 
 </script>
+<!--jd slider-->
+
+<script type="text/javascript" src="./js/store_common.js"></script>
 </body>
 </html>
