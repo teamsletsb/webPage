@@ -20,7 +20,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 
 
 .wrap{
-    width:1440px;
+    width:1280px;
     margin:0 auto;
 }
 
@@ -45,7 +45,6 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     width:180px;
     height:50px;
     text-align:center;
-    line-height:43px;
     border:1px solid #10643A;
     background-color:rgba(0,0,0,0);
     cursor:pointer;
@@ -54,7 +53,17 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     font-size:1.2rem;
     letter-spacing: 2px;
     transition:all 0.28s;
+    border-radius: 10px;
+    position:relative;
 }
+.btn>span{
+    display:block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
 .btn:hover{
     background-color:#10643A;
     box-shadow: 0 50px 0 0  rgba(0,0,0,0.25) inset, 
@@ -73,7 +82,6 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 #head{
     position:relative;
     height:100px;
-    
 }
 #head>nav{
     height:50px;
@@ -98,6 +106,11 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     font-size:1.1rem;
     font-weight:400;
 }
+#head ul>li:hover>a{
+    font-weight:600;
+    border-bottom:1px solid #10643A;
+}
+
 #head li img{
     width:24px;
     position:absolute;
@@ -123,7 +136,6 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     height:100px;
     background:url('../images/logo.png') no-repeat center center/90px;
     text-indent:-9999px;
-
 }
 
 

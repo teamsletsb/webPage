@@ -50,3 +50,23 @@ initSwiper();   //최초 실행
 $(window).on('resize', function(){  //이후 창 크기에 반응하여 실행
 initSwiper();
 });
+
+
+//버튼이벤트 - 장바구니
+$(function(){
+    $(".paybtn>button:nth-of-type(1)").click(function(){
+        $(this).append("<div class='btn_popup'>장바구니에 담았습니다.</div>");
+        setTimeout(function(){
+            $(".paybtn>button:nth-of-type(1)>div:nth-of-type(1)").remove();
+        },2000);
+    });
+});
+
+
+//버튼이벤트 - 구매하기
+$(function(){
+    $(".paybtn>button:nth-of-type(2)").click(function(){
+        location.href = '';
+    });
+});
+
