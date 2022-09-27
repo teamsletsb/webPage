@@ -48,7 +48,7 @@
     <div class="wrap">
         <form>
             <div class="flex">
-                <input type="checkbox" name ="items"> 
+                <input id = "checkall" type="checkbox"> 
                 <h4>전체선택</h4>
                 <button name="delete_select_items" class="btn">선택 삭제</button>
             </div>
@@ -131,16 +131,18 @@
     </div>
 </section>
 <!--하부 픽스되는 결제링크 섹션-->
-<section id="to_pay_link">
-    <div class="wrap">
-        <article class="flex">
-            <h4>결제 예정금액</h4>
-            <h4>25000원</h4>
-        </article>
-        <article class="flex">
-            <h5>4개 상품 22000원 + 배송비 3000원</h5>
-            <h5>주문하기</h5>
-        </article>
+<section id = "fixedzone">
+    <div id="to_pay_link">
+        <div class="wrap">
+            <article class="flex">
+                <h4>결제 예정금액</h4>
+                <h4>25000원</h4>
+            </article>
+            <article class="flex">
+                <h5>4개 상품 22000원 + 배송비 3000원</h5>
+                <h5>주문하기</h5>
+            </article>
+        </div>
     </div>
 </section>
 
@@ -191,15 +193,8 @@
         name : '까스활',
         price : 1500
     };
-    let items = [0, 1200, 1400, 1800, 1500];
+    let items = [0, item1.price, item2.price, item3.price, item4.price];
     
-
-    //총 건수
-    let list_cnt = function(){
-        let list_cnt = $(".buckets").length;
-        $("#counting_buckets>h3").html("총 "+list_cnt+"건");
-    };
-    list_cnt();
 
     //초기화
     $(document).ready(function(){
@@ -214,9 +209,24 @@
 
         $(".buckets:nth-of-type(4) .item_name").html(item4.name);
         $(".buckets:nth-of-type(4) .item_price").html(item4.price+"원");
+
+            
+        list_delete();  //리스트삭제
+        bucketslist();  //건수 구하기
+        list_refresh(); // 건수 새로고침
+        paybanner();    //구매하기배너
     });
 
-    // 계산
+    //총 건수
+    let bucketslist = function(){   //건수 구하기
+        return $(".buckets").length;
+    };
+    let list_refresh = function(){  //새로고침
+        $("#counting_buckets>h3").html("총 "+bucketslist()+"건");
+    };
+
+
+    // 가격계산
     $(function(){
         //감소버튼
         $(".btn_dec").click(function(){
@@ -228,24 +238,85 @@
 
                 let afterprice = price(aftercnt, idx);  //계산함수 호출
                 $(this).parent("div").siblings(".item_price").html(afterprice+"원");
+
+                paybanner();
             };
         });
         //증가버튼
         $(".btn_inc").click(function(){
-                let nowcnt = parseInt($(this).siblings(".count_items").text());
-                let aftercnt = nowcnt + 1;
-                $(this).siblings(".count_items").html(aftercnt);
-                let idx = $(this).parents("ul").index() + 1;
+            let nowcnt = parseInt($(this).siblings(".count_items").text());
+            let aftercnt = nowcnt + 1;
+            $(this).siblings(".count_items").html(aftercnt);
+            let idx = $(this).parents("ul").index() + 1;
 
-                let afterprice = price(aftercnt, idx);  //계산함수 호출
-                $(this).parent("div").siblings(".item_price").html(afterprice+"원");
-            });
+            let afterprice = price(aftercnt, idx);  //계산함수 호출
+            $(this).parent("div").siblings(".item_price").html(afterprice+"원");
 
-        //가격계산식
-        function price(aftercnt, idx){
+            paybanner();
+        });
+    });
+    //가격계산식
+    function price(aftercnt, idx){
             return items[idx] * aftercnt;
         }; 
+
+    //총금액계산
+    let sumprice = function(){
+        let sum = 0;
+        for(let i = 0; i < bucketslist(); i++){
+            let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .item_price").text());
+            sum = sum + sprs;
+        }
+        return sum;
+    };
+
+    //결제 링크 배너 최신화
+    let paybanner = function(){
+        $("#to_pay_link h5:first-child").html(bucketslist()+"개 상품 "+"총 "+sumprice()+"원 + 배송비 3000원 입니다.");
+        $("#to_pay_link h4:last-child").html("총 "+(sumprice()+3000)+"원")
+    };
+
+    //결제 링크 배너 이동관련
+    $(window).scroll(function(){
+        let banner_heightY = $("#to_pay_link").offset().top;//배너의 현재높이
+        let fixedzone = $("#fixedzone").offset().top;   //멈춰야 할 곳
+        
+        
+        //좌표값이동?
+        if(banner_heightY > fixedzone){     //배너가 위치에 도달하면
+            $("#to_pay_link").css("position","static");
+
+        }else if(banner_heightY <= fixedzone){
+            $("#to_pay_link").css("position","fixed")
+        }
     });
+
+    //체크
+    $(function(){
+        $("#checkall").click(function(){
+            if(($("#cbx_chkAll").is(":checked"))){
+                $("input[name=items]").prop("checked", true);
+            }else{
+                $("input[name=items]").prop("checked", false);
+            };
+        });
+    });
+
+    //
+
+
+    //삭제
+    
+    let list_delete = function(){
+        $("button.delete").click(function(){
+            $(this).parents(".buckets").remove();
+            bucketslist();
+            list_refresh();
+            paybanner();
+        });
+    };
+    
+
 
     
 
