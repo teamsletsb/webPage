@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>new</title>
+    <title>ST-2</title>
+    <link href="./css/ST_2.css" rel="stylesheet" type="text/css" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
     <link href="./css/store_common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,8 +36,13 @@
             <h1 id="logo"><a href="ST.html">logo</a></h1>
         </div>
     </header>
-<!--    컨텐츠 영역    -->
+<!--  중간    -->
+<section id="pay">
 
+<h3>결제가 진행되는 중입니다.</h3>
+<div id="update"></div>
+</section>
+<!--  푸터    -->
 <footer class="flex">
     <div>
         <h2 id="logo_footer"><a href="#">logo</a></h2>
@@ -64,5 +74,23 @@
 </footer>
 
     <script type="text/javascript" src="./js/store_common.js"></script>
+    <script>
+        // 스크립트 부분
+        $(function(){
+            var i = 0;
+            $("#update").progressbar();
+            (function(){
+                $("#update").progressbar("value",i);
+                i++;
+                if(i<=100){
+                    setTimeout(arguments.callee,10);
+                    //argument.callee : 현재 실행 중인 함수를 다시 불러오는 것
+                }else if(i>=100){
+                    window.location.replace("./ST_2_1.html");
+                }
+            })(); // 바로실행 함수!! (function(){})(); 익명함수
+        });
+        </script>
+
 </body>
 </html>

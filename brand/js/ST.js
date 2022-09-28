@@ -66,7 +66,8 @@ $(function(){
 //버튼이벤트 - 구매하기
 $(function(){
     $(".paybtn>button:nth-of-type(2)").click(function(){
-        location.href = '';
+        location.href = 'ST_1.html';
     });
 });
+
 
