@@ -179,7 +179,7 @@
         display:block;
         position:relative;
         width:90%;
-        height:inherit;
+        height:1470px;
         margin:0 auto;
     }
     .contents>.info_img{
@@ -190,7 +190,7 @@
     .contents>.info_text{
         position:absolute;
         height:700px;
-        top:55%;
+        top:60%;
         transform:translateY(-50%);
     }
 

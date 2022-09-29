@@ -85,148 +85,41 @@
         <p>이미 회원이신가요?<a href="./L.html">로그인</a></p>
     </form>
 </section>
-
-<footer class="flex">
-    <div>
-        <h2 id="logo_footer"><a href="#">logo</a></h2>
-    </div>
-    <div>
-        <ul>
+<!--푸터영역 수정 20220929-->
+<footer>
+    <div class="ftinfocon">
+        <ul class="ftinfo">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
             <li><a href="#">개인정보취급방침</a></li>
-            <li>
-                <address>
-                <p>대표이사 : 유준하, 한종현</p>
-                <p>사업자등록번호 : 110-81-00102</p>
-                <p>Mail : dongwha@dong-wha.co.kr</p>
-                <p>Tel : 02-2021-9300</p>
-                <p>04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
-                <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
-            </address>
-            </li>
+            <li><a href="#">이메일수집거부</a></li>
         </ul>
+<div class="ft_bg">
+        <div>
+            <ul class="ftadd">
+                <h2 id="logo_footer"><a href="#">logo</a></h2>
+                <li>
+                    <address>
+                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
+                        <p>Tel : 02-2021-9300 04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
+                        <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <div id="social_icon">
+            <ul class="icon_list">
+                <li><a href="https://www.facebook.com/"><img src="./images/social_icon_1.png" alt="icon_social_1"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./images/social_icon_2.png" alt="icon_social_2"></a></li>
+                <li><a href="https://twitter.com/"><img src="./images/social_icon_3.png" alt="icon_social_3"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
+            </ul>
+        </div>
     </div>
-    <div id="social_icon">
-        <ul class="flex">
-            <li><a href="https://www.facebook.com/"><img src="./images/social_icon_1.png" alt="icon_social_1"></a></li>
-            <li><a href="https://www.youtube.com/"><img src="./images/social_icon_2.png" alt="icon_social_2"></a></li>
-            <li><a href="https://twitter.com/"><img src="./images/social_icon_3.png" alt="icon_social_3"></a></li>
-            <li><a href="https://www.instagram.com/"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
-        </ul>
-    </div>
-
 </footer>
 </body>
-<script>
-// 비밀번호 8자리 이상 입력 경고문구
-$('#pw_text').hide();
-$('#pw_length').on('input', function(){
-    if($('#pw_length').val() != '' && $('#pw_length').val().length < 8){
-        $('#pw_text').show();
-    }else{
-        $('#pw_text').hide();
-    }
-})
-// 체크박스 전체 선택
-$(".checkbox_group").on("click", "#check_all", function () {
-    $(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(":checked"));
-});
-// 체크박스 개별 선택
-$(".checkbox_group").on("click", ".normal", function() {
-    var is_checked = true;
-
-    $(".checkbox_group .normal").each(function(){
-        is_checked = is_checked && $(this).is(":checked");
-    });
-
-    $("#check_all").prop("checked", is_checked);
-});
-</script>
-<script>//회원가입 유효성검사
-$(document).ready(function(){
-    $("#final_submit").click(function(){
-        var email_id = document.getElementById('email_id');
-        var pw_length = document.getElementById('pw_length');
-        var re_pw_length = document.getElementById('re_pw_length');
-        var u_name = document.getElementById('u_name');
-        
 
 
-        if(email_id.value == ""){
-            alert("이메일 주소를 입력하세요.");
-            email_id.focus();
-            return false;
-        };
-
-
-        if(pw_length.value == ""){
-            alert("비밀번호를 입력하세요.");
-            pw_length.focus();
-            return false;
-        };
-
-        var pwdCheck = /^(?=.*[0-9]).{8,25}$/;
-
-        if(!pwdCheck.test(pw_length.value)){
-            alert("비밀번호는 8이상 25자리 이하로 사용해야합니다.");
-            pw_length.focus();
-            return false;
-        };
-
-        if(re_pw_length.value !== pw_length.value){
-            alert("비밀번호가 일치하지 않습니다.");
-            re_pw_length.focus();
-            return false;
-        };
-
-        if(u_name == ""){
-            alert("닉네임을 입력하세요.");
-            u_name.focus();
-            return false;
-        };
-
-        var u_nameCheck = /^[a-zA-Z0-9가-힣]{1,15}$/;
-
-        if(!u_nameCheck.test(u_name.value)){
-            alert("닉네임은 1~15자리로 사용해야합니다.");
-            u_name.focus();
-            return false;
-        };
-
-        //필수 약관동의체크해야 넘어가기..
-        if(!check_1.checked){
-           alert("약관 동의를 체크하세요.");
-           serviceterm.focus();
-           return false;
-        };
-        if(!check_2.checked){
-           alert("약관 동의를 체크하세요.");
-           serviceterm.focus();
-           return false;
-        };
-        if(!check_3.checked){
-           alert("약관 동의를 체크하세요.");
-           serviceterm.focus();
-           return false;
-        };
-        
-
-        location.href="./S_2.html";
-
-    });
-});
-
-//이메일 체크 팝업..
-$("#email_btn").click(function(){
-        if($('#email_id').val() != ''){
-        alert("확인되었습니다.");
-    };
-});
-//닉네임 체크 팝업..
-$("#u_name_btn").click(function(){
-    if($('#u_name').val() != ''){
-        alert("확인되었습니다.");
-    };
-});
-</script>
 <script type="text/javascript" src="./js/store_common.js"></script>
+<script type="text/javascript" src="./js/S.js"></script>
 </html>

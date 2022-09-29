@@ -2,7 +2,7 @@
 @import url('store_common.css');
 
 
-@media all and (min-width:1025px){
+@media all and (min-width:1024px){
     /*타이틀*/
     .mytitle{
         margin-top:50px;
@@ -158,10 +158,13 @@
     .ordercontent{
         width:100%;
         display:inline-block;
+        border-top: 1px solid #d0d0d0;
     }
+    .ordercontent:first-of-type{border-top: 0;}
     .orderimg{
         width:20%;
         display:block;
+        margin: 15px 0 0 15px;
     }
     .orderimg img{
         display:flex;

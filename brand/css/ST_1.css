@@ -163,6 +163,8 @@ h1{
 /*푸터랑 간격 넓히기*/
 #od_agree{margin-bottom: 100px;}
 
+
+
 /*모바일ver.*/
 @media all and (max-width:1024px) {
     .wrap{width: 100%;}
