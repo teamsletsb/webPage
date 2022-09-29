@@ -16,11 +16,11 @@ let change = function(){
             ,
         "#56BB8A", 
         "rgba(128,194,242,0.6)", 
-        "#F4BA65", 
         "#ADCE99", 
+        "#F4BA65",
         "#97C94F", 
-        "#EDEC9B", 
-        "#C5ECF5"];
+        "#C5ECF5", 
+        "#EDEC9B"];
         $("#main").css("background-color",color[idx]);
     });
 };
