@@ -138,6 +138,25 @@
     opacity:1     !important;
 }
 
+.btn_popup{
+    position:fixed;
+    width:220px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    top:61%;
+    left:12%;
+    border:1px solid #000;
+    border-radius: 20px;
+    background:aquamarine;
+    z-index:9999;
+    opacity:1;
+    transition:all 0.2s;
+    background:#fff;
+    color:#000;
+    font-size:0.95rem;
+}
+
 
 
 @media screen and (max-width: 1023px){
@@ -188,17 +207,16 @@
     }
     .btn_popup{
         position:absolute;
-        width:230px;
-        height:40px;
-        line-height:40px;
+        width:220px;
+        height:30px;
+        line-height:30px;
         text-align:center;
         top:110%;
-        left:30%;
+        left:15%;
         border:1px solid #000;
         border-radius: 20px;
         background:aquamarine;
         z-index:9999;
-        position:fixed;
         opacity:1;
         transition:all 0.2s;
         background:#fff;

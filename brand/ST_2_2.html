@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>new</title>
+    <title>ST-2-2</title>
+    <link href="./css/ST_2.css" rel="stylesheet" type="text/css" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
     <link href="./css/store_common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,8 +36,21 @@
             <h1 id="logo"><a href="ST.html">logo</a></h1>
         </div>
     </header>
-<!--    컨텐츠 영역    -->
-
+<!--  중간내용    -->
+<section id="sec01">
+    <div class="box">
+        <h3>이용에 불편을 드려 대단히 죄송합니다.</h3>
+        <div class="flex">
+            <ul class="normal">
+                <li>잠시 후에 다시 시도해주시기 바랍니다.</li>
+                <li>동일한 문제가 지속적으로 발생할 경우, 고객센터(02-1234-5678)로 문의해주시기 바랍니다.</li>
+                <li>감사합니다.</li>
+            </ul>
+        </div>
+        <div class="btn" onclick="return_page()">돌아가기</div>
+    </div>
+</section>
+<!--  푸터    -->
 <footer class="flex">
     <div>
         <h2 id="logo_footer"><a href="#">logo</a></h2>
@@ -62,7 +80,13 @@
     </div>
 
 </footer>
-
+    <script>
+        function return_page(){
+            window.history.back();
+            return false;
+            };
+    </script>
     <script type="text/javascript" src="./js/store_common.js"></script>
+
 </body>
 </html>
