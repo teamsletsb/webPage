@@ -1,0 +1,200 @@
+@charset "utf-8";
+@import url('./store_common.css');
+
+/*공통*/
+input[type=checkbox]{
+    width:300px;
+    height:30px;
+}
+
+button.delete{
+    width:44px;
+    height:44px;
+    position:relative;
+}
+button.delete>span{
+    position:absolute;
+    top:52%;
+    left:53%;
+    transform:translate(-50%,-50%);
+}
+
+/* 
+body>section:nth-of-type(1){
+    margin-bottom:120px;
+} */
+#or_head>h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 80px auto 0;
+}
+#or_head>hr{width: 480px; margin: 30px auto 30px;}
+
+#counting_orderitem>h3{
+    font-weight:700;
+    font-size:1.2rem;
+}
+#counting_orderitem>hr{
+    margin:30px auto 60px;
+}
+
+.wrap>form button{
+    width:130px;
+    height:40px;
+    font-size:1rem;
+    font-weight:600;
+}
+.wrap>form{
+    flex: row;
+    align-content: stretch;
+
+}
+.wrap>form>div{
+    justify-content:space-between;
+    flex-flow: wrap;
+    margin:0 30px;
+    align-items: center;
+}
+.wrap>form>div>h4{
+    display: block;
+    font-weight:500;
+    font-size:1.3rem;
+    width:60%;
+}
+
+#contents{
+    user-select: none;
+}
+#contents>.orderitem>li>a>img{
+    vertical-align:top;
+    height:160px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    transition:all .2s;
+}
+#contents>.orderitem>li>a{
+    display:block;
+    border:1px solid #202020;
+    text-align:center;
+    width:240px;
+    height:260px;
+    position:relative;
+}
+#contents>.orderitem>li>a:hover>img{
+    height:185px;
+    transition:all .2s;
+}
+#contents>.orderitem>li{
+    margin:50px 0;
+    text-align:center;
+}
+#contents>.orderitem{
+    align-items:center;
+}
+
+#contents>.orderitem>li:nth-of-type(1){
+    width:10%;
+}
+#contents>.orderitem>li:nth-of-type(2){
+    width:40%;
+    text-align:left;
+    position:relative;
+}
+#contents>.orderitem>li:nth-of-type(2)>img,
+#contents>.orderitem>li:nth-of-type(2)>span{
+    margin:10px 0;
+    line-height:55px;
+}
+/* #contents>.orderitem>li:nth-of-type(2)::after{
+    content:'　　　최대 200개 구매가능';
+    height:40px;
+    line-height:40px;
+    font-size:0.95rem;
+    position:absolute;
+    display:block;
+    background:url('../images/CA_icon.png') no-repeat left center;
+} */
+#contents>.orderitem>li:nth-of-type(3){
+    width:25%;
+}
+#contents>.orderitem>li:nth-of-type(3)>h5{
+    width: 70%;
+    font-size:1.6rem;
+    font-weight:500;
+}
+#contents>.orderitem>li:nth-of-type(3)>h6{
+    width: 70%;
+    font-size:1.3rem;
+    margin:30px 0;
+    color:red;
+}
+#contents>.orderitem>li:nth-of-type(3)>div{
+    font-size:1.5rem;
+    width:70%;
+    height:40px;
+    align-items: center;
+    border:1px solid #000;
+    border-radius: 20px;
+}
+#contents>.orderitem>li:nth-of-type(3)>div>.btn_dec,
+#contents>.orderitem>li:nth-of-type(3)>div>.btn_inc{
+    display:block;
+    width:28px;
+    height:28px;
+    line-height:27px;
+    border-radius:50%;
+    border:1px solid #10643A;
+    cursor:pointer;
+    box-sizing:border-box;
+}
+#contents>.orderitem>li:nth-of-type(3)>div>.btn_dec:hover,
+#contents>.orderitem>li:nth-of-type(3)>div>.btn_inc:hover{
+    border:0;
+    background:#10643A;
+    color:#fff;
+    transition:all .25s;
+    box-shadow:0 50px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -50px 0 0 rgba(0,0,0,0.25) inset;
+    box-sizing:border-box;
+}
+#contents>.orderitem>li:nth-of-type(3)>div>.count_items{
+    width:40px;
+    height:40px;
+    line-height:40px;
+    font-size:1.3rem;
+}
+#fixedzone>span>button{
+    user-select: none;
+    font-size: ;
+}
+
+#CA_link{
+    width:100%;
+    height:120px;
+    background:#10643A;
+    position:fixed;
+    left:0;
+    bottom:0;
+    cursor:pointer;
+}
+
+#CA_link>button{
+    width: inherit;
+    height:inherit;
+}
+#CA_link>span{
+    justify-content:center;
+    text-align: center;
+    height:100%;
+    color: red;
+    font-size:2.5rem;
+    font-weight:600;
+    letter-spacing:3px;
+    overflow: visible;
+    user-select: none;
+}
+
+
