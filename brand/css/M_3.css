@@ -1,7 +1,35 @@
 @charset "utf-8";
 @import url('store_common.css');
 
-@media all and (min-width:1025px){
+.green_line{
+    border: 2px solid #10643A;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+.askbtn{
+    background:#10643A;
+    color:#fff;
+    height:50px;
+    line-height:50px;
+    width:200px;
+    text-align:center;
+    box-sizing:border-box;
+}
+
+.askbtnnone{
+    border:1px solid #10643A;
+    color:#10643a;
+    height:50px;
+    line-height:50px;
+    width:200px;
+    text-align:center;
+    box-sizing:border-box;
+}
+
+/*pc*/
+@media all and (min-width:1024px){
     /*타이틀*/
     .mytitle{
         margin-top:50px;
@@ -54,6 +82,8 @@
         width:100%;
         font-weight:400;
     }
+
+    
     /*잠깐
   
     .qnalist_con{
@@ -160,27 +190,24 @@
     .formitem{
         margin-bottom: 20px;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: left;
+        align-items: flex-start;
         font-size:1.1rem;
     }
     .formitem:nth-of-type(3) input{
         height:300px;
-
     }
     select{
         border:1px solid #333;
         width:150px;
-        height:50px;
-
     }
     label{
         width: 100px;
         padding-right: 10px;
-        display: flex;
-        text-align: center;
-        align-items: center;
         margin-bottom: 5px;
         font-size:1.2rem;
+        line-height:19px;
     }
     input{flex-grow: 1;}
     input:nth-of-type(2),
@@ -200,26 +227,11 @@
     .buttoncon a{
         margin-right:30px;
     }
-    .askbtn{
-        background:#10643A;
-        color:#fff;
-        height:70px;
-        line-height:70px;
-        width:200px;
-        text-align:center;
-    }
     
-    .askbtnnone{
-        border:1px solid #10643A;
-        color:#10643a;
-        height:70px;
-        line-height:70px;
-        width:200px;
-        text-align:center;
-    }
 }
 
-@media all and (max-width:1024px){
+/*모바일*/
+@media all and (max-width:1023px){
     /*타이틀*/
     .wrap{
         width:95%;
@@ -389,17 +401,14 @@
     select{
         border:1px solid #333;
         width:150px;
-        height:50px;
 
     }
     label{
         width: 100px;
         padding-right: 10px;
-        display: flex;
-        text-align: center;
-        align-items: center;
         margin-bottom: 5px;
         font-size:1.2rem;
+        line-height:20px;
     }
     input{flex-grow: 1;}
     input:nth-of-type(2),
@@ -419,21 +428,5 @@
     }
     .buttoncon a{
         padding:10px;
-    }
-    .askbtn{
-        background:#10643A;
-        color:#fff;
-        height:70px;
-        line-height:70px;
-        width:200px;
-        text-align:center;
-    }
-    .askbtnnone{
-        border:1px solid #10643A;
-        color:#10643a;
-        height:70px;
-        line-height:70px;
-        width:200px;
-        text-align:center;
     }
 }
