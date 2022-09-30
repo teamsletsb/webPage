@@ -3,6 +3,9 @@
 
 
 /*타이틀*/
+body{
+    overflow-x:hidden;
+}
 .mytitle{
     margin-top:50px;
     text-align:center;
@@ -18,26 +21,27 @@ h1{
     width:100%;
 }
 .memwrap{width: 100%;}
-@media all and (min-width:1025px){
-/*마이페이지 리스트*/
-.mylist ul{
-    display: flex;
-    justify-content: space-between;
-    padding:80px 25% 70px 25%;
-    text-align:center;
-}
 
-.mylist ul li{
-    font-size:1.3rem;
-    float:left;
-    font-weight:400;
-}
+@media all and (min-width:1024px){
+    /*마이페이지 리스트*/
+    .mylist ul{
+        display: flex;
+        justify-content: space-between;
+        padding:80px 25% 70px 25%;
+        text-align:center;
+    }
 
-.mylist ul li a:hover{
-    font-weight: 600;
-    color:#10643A;
-    display:block;
-}
+    .mylist ul li{
+        font-size:1.3rem;
+        float:left;
+        font-weight:400;
+    }
+
+    .mylist ul li a:hover{
+        font-weight: 600;
+        color:#10643A;
+        display:block;
+    }
 }
 
 
@@ -57,26 +61,46 @@ h2{
 #memmodify span{
     font-size: 1.3rem;
     font-weight: 400;
-    margin: 10px 0 10px 13%;
+    width:100%;
+
 }
+#membermodify p,
+#delivery p{
+    padding:0 10%;
+}
+#membermodify p,
+#delivery p{
+    margin:40px 0;
+}
+
+
 #memmodify span,
 #delivery span{
     display: inline-block;
-    width: 200px;
+    width: 160px;
     height: 50px;
     border:2px solid #333;
     border-radius: 15px;
     text-align: center;
-    line-height: 50px;
+    line-height: 46px;
     cursor: pointer;
-    margin-left: 50px;
+    margin-left: 4%;
     box-sizing: border-box;
+    font-size:1.2rem;
 }
 #memmodify>div>ul{
     margin-bottom: 100px;
 }
 #memmodify>div>ul>li{
     margin: 30px auto;
+}
+#membermodify,
+#delivery{
+    width:90%;
+    margin:0 auto;
+}
+#memmodify hr{
+    margin-bottom:80px;
 }
 
 #lineee{margin-left: 77px;}
@@ -85,6 +109,7 @@ input{
     border-bottom:2px solid #333;
     height: 30px;
     width: 50%;
+    min-width:300px;
     box-sizing: border-box;
 }
 
@@ -140,11 +165,26 @@ button{
     }
 
 
+    .memtitle{
+        margin-bottom:15px;
+    }
 
+
+    #memmodify .memtitle{
+        margin-bottom:15px;
+    }
+    #membermodify,
+    #delivery{
+    width:70%;
+    margin:0 auto;
+    }
     #memmodify ul p{font-size: 1rem;}
     #memmodify ul span{font-size: 0.8rem;}
     #memmodify span{width: 20%;}
     #lineee{margin-left: 60px;}
-    button{width:40%}
+    button{width:40%;}
+    #memmodify span.btn{
+        font-size:1.1rem;
+    }
     
 }
