@@ -41,8 +41,9 @@
 
     /*h2 기본스타일*/
     h2{
-        font-size:1.3rem;
-        font-weight:500;
+        font-size:2rem;
+        font-weight:400;
+        margin-bottom:15px;
     }
 
     /*주문배송조회*/
@@ -286,8 +287,9 @@
 
     /*h2 기본스타일*/
     h2{
-        font-size:1.3rem;
-        font-weight:500;
+        font-size:2rem;
+        font-weight:400;
+        margin-bottom:15px;
     }
 
     /*주문배송조회*/

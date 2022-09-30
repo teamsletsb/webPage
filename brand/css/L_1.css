@@ -4,16 +4,17 @@
 a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
 
 
-#sub_title{
+.sub_title{
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
-    margin: 80px auto 40px;
+    margin: 80px auto 0;
 }
+hr{width: 480px; margin: 30px auto 30px;}
 .contents{
     width:480px;
     height:500px;
-    margin:50px auto;
+    margin:0 auto;
 }
 ul.tab_menu{
     width:100%;
@@ -72,6 +73,7 @@ ul.tab_menu>li:last-child.active{
 .tab_contents>div.active{z-index:9999;}
 
 /*폼필드 CSS*/
+.wrap{width: 100%; margin: 0 auto 60px;}
 .form_flex{
     display: flex;
     flex-flow: row wrap;
@@ -145,6 +147,13 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
 
 
 @media screen and (max-width: 1023px){
+    .sub_title{
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: left;
+        margin-left: 2.5%;
+    }
+    hr{width: 95%; margin: 15px auto 80px;}
     .contents{width:400px;}
     .form_flex{width: 400px;}
     tr.form_flex:nth-child(1) td>input{width: 295px;}
