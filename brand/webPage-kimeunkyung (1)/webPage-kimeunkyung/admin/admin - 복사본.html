@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>new</title>
+    <link href="css/admin_layout_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Hello, ID</h1>
+        <span>LOGOUT</span>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"><img src="./images/admin_icon01.png" alt="icon" class="icon"/>대시보드</a>
+            </li>
+        </ul>
+        <ul class="menu">
+                <li>
+                    <a href="#"><img src="./images/admin_icon02.png" alt="icon" class="icon"/>제품관리</a>
+                    <ul class="submenu">
+                        <li><a href="#">전체제품보기</a></li>
+                        <li><a href="#">등록</a></li>
+                        <li><a href="#">수정</a></li>
+                        <li><a href="#">삭제</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#"><img src="./images/admin_icon03.png" alt="icon" class="icon"/>재고관리</a>
+                    <ul class="submenu">
+                        <li><a href="#">매출현황</a></li>
+                        <li><a href="#">출고</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#"><img src="./images/admin_icon04.png" alt="icon" class="icon"/>환불/교환/반품/취소</a>
+                    <ul class="submenu">
+                        <li><a href="#">환불</a></li>
+                        <li><a href="#">교환</a></li>
+                        <li><a href="#">반품</a></li>
+                        <li><a href="#">취소</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#"><img src="./images/admin_icon05.png" alt="icon" class="icon"/>고객관리</a>
+                    <ul class="submenu">
+                        <li><a href="#">회원관리</a></li>
+                        <li><a href="#">혜택관리</a></li>
+                        <li><a href="#">대량메일 발송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#"><img src="./images/admin_icon06.png" alt="icon" class="icon"/>환경설정</a>
+                    <ul class="submenu">
+                        <li><a href="#">메뉴메뉴</a></li>
+                        <li><a href="#">메뉴메뉴</a></li>
+                        <li><a href="#">메뉴메뉴</a></li>
+                        <li><a href="#">메뉴메뉴</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+<script>
+
+    $(document).ready(function(){
+        $(".menu>li").click(function(){
+            $(this).children(".submenu").slideToggle(100);
+            $(".submenu>li>a, .menu>li>a").css("color","#00BEC6");
+            $(this).css("background","#fff");  
+        });	
+        $(".submenu").click(function(){
+            $(this).fadeToggle("slow");
+            $(".menu>li>a").css("color","#fff");
+            $(this).css("background","#272a39"); 
+        }); 
+    });   
+
+</script>
+</html>

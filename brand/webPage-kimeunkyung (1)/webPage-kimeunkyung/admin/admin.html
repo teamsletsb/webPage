@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>new</title>
+    <link href="css/admin_layout_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Hello, ADMIN</h1>
+        <span>LOGOUT</span>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="#" id="icon01"><img src="./images/a1.png" alt="icon" class="icon"/>대시보드</a>
+            </li>
+        </ul>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <img src="./images/a2.png" alt="icon" class="icon" id="icon02"/>제품관리
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li><a href="#">전체제품보기</a></li>
+                        <li><a href="#">등록</a></li>
+                        <li><a href="#">수정</a></li>
+                        <li><a href="#">삭제</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="./images/a3.png" alt="icon" class="icon" id="icon03"/>재고관리
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li><a href="#">매출현황</a></li>
+                        <li><a href="#">출고</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <img src="./images/a4.png" alt="icon" class="icon" id="icon04"/>환불/교환/반품/취소
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li><a href="#">환불</a></li>
+                        <li><a href="#">교환</a></li>
+                        <li><a href="#">반품</a></li>
+                        <li><a href="#">취소</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <img src="./images/a5.png" alt="icon" class="icon" id="icon05"/>고객관리
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li><a href="#">회원관리</a></li>
+                        <li><a href="#">혜택관리</a></li>
+                        <li><a href="#">대량메일 발송</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+            <ul class="menu">
+                <li>
+                    <a href="#"><img src="./images/a6.png" alt="icon" class="icon" id="icon06"/>환경설정</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <section id="contents01">
+      <h2><img src="images/a1_over.png" alt="icon"/> 대시보드</h2><br/>
+      <img src="images/그래프섹션.png" alt="graph"/>
+    </section>
+    <section id="contents02">
+      <h3>문의/구매평</h3>
+        <div class="flex">
+          <div>
+            <a href="#"><img src="images/Rectangle01.png" alt="이미지"/></a>
+          </div>
+          <ul class="board">
+            <li><a href="#">[구매평] 리뷰입니다리뷰입니다리뷰입니다리뷰입니다리뷰입니다</a></li>
+            <li><a href="#">닉네임 | 2022-01-01</a></li>
+          </ul>
+        </div>
+        <div class="flex">
+          <div>
+            <a href="#"><img src="images/Rectangle02.png" alt="이미지"/></a>
+          </div>
+          <ul class="board">
+            <li><a href="#">[구매평] 리뷰입니다리뷰입니다리뷰입니다리뷰입니다리뷰입니다</a></li>
+            <li><a href="#">닉네임 | 2022-01-01</a></li>
+          </ul>
+        </div>
+        <div class="flex">
+          <div>
+            <a href="#"><img src="images/Rectangle03.png" alt="이미지"/></a>
+          </div>
+          <ul class="board">
+            <li><a href="#">[구매평] 리뷰입니다리뷰입니다리뷰입니다리뷰입니다리뷰입니다</a></li>
+            <li><a href="#">닉네임 | 2022-01-01</a></li>
+          </ul>
+        </div>
+        <div class="flex">
+          <ul class="board">
+            <li><a href="#">[문의] 문의합니다문의합니다문의합니다문의합니다문의합니다</a></li>
+            <li><a href="#">닉네임 | 2022-01-01</a></li>
+          </ul>
+        </div>
+        <div class="flex">
+          <div>
+            <a href="#"><img src="images/Rectangle04.png" alt="이미지"/></a>
+          </div>
+          <ul class="board">
+            <li><a href="#">[문의] 문의합니다문의합니다문의합니다문의합니다문의합니다</a></li>
+            <li><a href="#">닉네임 | 2022-01-01</a></li>
+          </ul>
+        </div>
+    </section>
+    <section id="contents03">
+      <article id="pink"><a href="#">0건</a></article>
+      <article id="mint"><a href="#">발주확인 0건</a></article>
+      <article id="orange"><a href="#">출고완료 1건</a></article>
+    </section>
+</body>
+<script>
+/*
+
+$(".collapsed").click(function(){
+	var i = $(this).index();
+	$(this).children().attr("src","images/admin-icon"+(i+1)+"_over.png");
+},function(){
+	var i = $(this).index();
+	$(this).children().attr("src","images/admin-icon"+(i+1)+".png");
+});
+
+/*
+$(document).ready(function(){
+var flags = true;
+var ts, idx, src;
+$("#nav_img>li>a").click(function(evt){
+  evt.preventDefault();
+	if(flags == true){
+		ts = $(this).children().attr('src'); // ./images/apple-logo.png
+		idx = ts.lastIndexOf("."); // 뒤에서부터 .을 찾아서 걔의 인덱스 값을 리턴해줌. 
+		src= ts.substring(0,idx) + "_over.png"; // .인덱스값 부터 지우고 _over.png 넣어줌
+		$(this).children().attr('src',src); // src == ./images/apple-logo_over.png
+		flags=false;
+	}else{
+		ts = $(this).children().attr('src');
+		idx = ts.lastIndexOf("_");
+		src= ts.substring(0,idx) + ".png";
+		$(this).children().attr('src',src);
+		flags=true;
+	}});
+});
+*/
+/*
+$(document).ready(function(){
+var flags = false;
+var ts, idx, src;
+$(".accordion-button").click(function(){
+  evt.preventDefault();
+  if(aria-expanded == true){
+    ts = $(this).children().attr('src'); // ./images/apple-logo.png
+		idx = ts.lastIndexOf("."); // 뒤에서부터 .을 찾아서 걔의 인덱스 값을 리턴해줌. 
+		src= ts.substring(0,idx) + "_over.png"; // .인덱스값 부터 지우고 _over.png 넣어줌
+		$(this).children().attr('src',src); // src == ./images/apple-logo_over.png
+		flags=true;
+  }else{
+		ts = $(this).children().attr('src');
+		idx = ts.lastIndexOf("_");
+		src= ts.substring(0,idx) + ".png";
+		$(this).children().attr('src',src);
+		flags=false;
+	}
+});
+});
+
+
+    $(document).ready(function(){
+      var flags = $("#headingOne button").attr("aria-expanded");
+      var ts, idx, src;
+      $(".accordion-button").click(function(){
+        if(flags == true){
+              ts = $(this).children().attr('src'); // ./images/apple-logo.png
+              idx = ts.lastIndexOf("."); // 뒤에서부터 .을 찾아서 걔의 인덱스 값을 리턴해줌. 
+              src= ts.substring(0,idx) + "_over.png"; // .인덱스값 부터 지우고 _over.png 넣어줌
+              $(this).children().attr('src',src); // src == ./images/apple-logo_over.png
+              flags=true;
+      }else{
+        ts = $(this).children().attr('src');
+        idx = ts.lastIndexOf("_");
+        src= ts.substring(0,idx) + ".png";
+        $(this).children().attr('src',src);
+        flags=false;
+      }
+      });
+    });
+   
+      $(".menu").click(function(){
+        $(this).children().css({
+          'background-color':'#fff',
+          'width':'250px',
+          'height':'45px'
+        });
+        $("#icon01").css('color','#00BEC6');
+      });
+  */ 
+
+
+
+    $(document).ready(function () {
+      var ts, idx, src;
+      $("button").click(function () {
+        if ($(this).hasClass('collapsed')) {
+          ts = $(this).children().attr('src');
+          idx = ts.lastIndexOf("_");
+          src = ts.substring(0, idx) + ".png";
+          $(this).children().attr('src', src);
+
+        } else {
+          ts = $(this).children().attr('src'); // ./images/apple-logo.png
+          idx = ts.lastIndexOf("."); // 뒤에서부터 .을 찾아서 걔의 인덱스 값을 리턴해줌. 
+          src = ts.substring(0, idx) + "_ov.png"; // .인덱스값 부터 지우고 _over.png 넣어줌
+          $(this).children().attr('src', src); // src == ./images/apple-logo_over.png
+        }
+      });
+    });
+
+
+</script>
+</html>

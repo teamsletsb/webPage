@@ -1,0 +1,255 @@
+@charset "utf-8";
+@import url('./store_common.css');
+
+/*공통*/
+input[type=checkbox]{
+    width:30px;
+    height:30px;
+}
+
+button.delete{
+    width:44px;
+    height:44px;
+    position:relative;
+}
+button.delete>span{
+    position:absolute;
+    top:52%;
+    left:53%;
+    transform:translate(-50%,-50%);
+}
+
+
+body>section:nth-of-type(1){
+    margin-bottom:20px;
+}
+#bk_head>h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 80px auto 0;
+}
+#bk_head>hr{width: 480px; margin: 30px auto 30px;}
+
+#counting_buckets>h3{
+    font-weight:700;
+    font-size:1.2rem;
+}
+#counting_buckets>hr{
+    margin:30px auto 60px;
+}
+
+.wrap>form button{
+    width:130px;
+    height:40px;
+    font-size:1rem;
+    font-weight:600;
+}
+.wrap>form,
+.wrap>form>div{
+    justify-content: space-between;
+    flex-flow:row wrap;
+    margin:0 20px;
+    align-items: center;
+}
+.wrap>form>div>h4{
+    font-weight:500;
+    font-size:1.2rem;
+    width:80%;
+}
+
+#contents{
+    user-select: none;
+}
+#contents>.buckets>li>a>img{
+    vertical-align:top;
+    height:160px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    transition:all .2s;
+}
+#contents>.buckets>li>a{
+    display:block;
+    border:1px solid #202020;
+    text-align:center;
+    width:240px;
+    height:260px;
+    position:relative;
+}
+#contents>.buckets>li>a:hover>img{
+    height:185px;
+    transition:all .2s;
+}
+#contents>.buckets>li{
+    margin:50px 0;
+    text-align:center;
+}
+#contents>.buckets{
+    align-items: center;
+}
+
+#contents>.buckets>li:nth-of-type(1){
+    width:10%;
+}
+#contents>.buckets>li:nth-of-type(2){
+    width:40%;
+    text-align:left;
+    position:relative;
+}
+#contents>.buckets>li:nth-of-type(2)>img,
+#contents>.buckets>li:nth-of-type(2)>span{
+    margin:10px 0;
+    line-height:55px;
+}
+#contents>.buckets>li:nth-of-type(2)::after{
+    content:'　　　최대 200개 구매가능';
+    height:40px;
+    line-height:40px;
+    font-size:0.95rem;
+    position:absolute;
+    display:block;
+    background:url('../images/CA_icon.png') no-repeat left center;
+}
+#contents>.buckets>li:nth-of-type(3){
+    width:25%;
+}
+#contents>.buckets>li:nth-of-type(3)>h5{
+    font-size:1.6rem;
+    font-weight:500;
+}
+#contents>.buckets>li:nth-of-type(3)>h6{
+    font-size:1.3rem;
+    margin:30px 0;
+    color:red;
+}
+#contents>.buckets>li:nth-of-type(3)>div{
+    font-size:1.5rem;
+    width:100%;
+    height:40px;
+    align-items: center;
+    border:1px solid #000;
+    border-radius: 20px;
+}
+#contents>.buckets>li:nth-of-type(3)>div>.btn_dec,
+#contents>.buckets>li:nth-of-type(3)>div>.btn_inc{
+    display:block;
+    width:28px;
+    height:28px;
+    line-height:27px;
+    border-radius:50%;
+    border:1px solid #10643A;
+    cursor:pointer;
+    box-sizing:border-box;
+}
+#contents>.buckets>li:nth-of-type(3)>div>.btn_dec:hover,
+#contents>.buckets>li:nth-of-type(3)>div>.btn_inc:hover{
+    border:0;
+    background:#10643A;
+    color:#fff;
+    transition:all .25s;
+    box-shadow:0 50px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -50px 0 0 rgba(0,0,0,0.25) inset;
+    box-sizing:border-box;
+}
+#contents>.buckets>li:nth-of-type(3)>div>.count_items{
+    width:40px;
+    height:40px;
+    line-height:40px;
+    font-size:1.3rem;
+}
+#fixedzone{
+    width:100%;
+    height:120px;
+}
+#to_pay_link{
+    margin-top:100px;
+    width:inherit;
+    height:120px;
+    background:#10643A;
+    position:sticky;
+    left:0;
+    bottom:0;
+    cursor:pointer;
+    display:block;
+}
+#to_pay_link>div{
+    height:inherit;
+}
+#to_pay_link .flex{
+    justify-content: space-between;
+    margin:0 60px;
+    height:50%;
+    color:#fff;
+    font-size:1.6rem;
+    font-weight:400;
+    letter-spacing:1px;
+}
+#to_pay_link .flex>h4{
+    line-height:60px;
+}
+#to_pay_link .flex>h4:last-child{
+    color:red;
+    font-size:2rem;
+    font-weight:600;
+    letter-spacing:3px;
+}
+#to_pay_link .flex>h5{
+    line-height:30px;
+}
+#to_pay_link .flex>h5:last-child{
+    font-size:2rem;
+    font-weight:600;
+    letter-spacing:7px;
+}
+
+
+
+@media screen and (max-width: 1023px){
+    section>div>form>.flex{
+        justify-content: left;
+    }
+    #h_h4{
+        width:80px;
+        margin:0 33% 0 5%;
+    }
+    .buckets{
+        margin:60px 0;
+    } 
+
+    #contents>.buckets>li:nth-of-type(2){
+        width:34%;
+    }
+    #contents>.buckets>li>a{
+        width:100%;
+        height:200px;
+    }
+    #contents>.buckets>li>a>img{
+        height:120px;
+    }
+    #contents>.buckets>li>a:hover>img{
+        height:140px;
+    }
+
+    #to_pay_link .flex{
+    margin: 0 3%;
+    }
+    #to_pay_link .pay1{
+        font-size:1.5rem;
+    }
+    #to_pay_link .pay3{
+        font-size:1.1rem;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        width:68%;
+        
+    }
+    #to_pay_link .flex>h4:last-child{
+        font-size:1.5rem;
+    }
+    #to_pay_link .flex>h5:last-child {
+        font-size:1.75rem;
+    }
+}

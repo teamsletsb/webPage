@@ -31,7 +31,7 @@ h1{
 
 /*수량 증감 영역*/
 .odlist{
-    width: 1280px;
+    width: 100%;
     justify-content: space-around;
 }
 .qty{
@@ -51,11 +51,26 @@ h1{
     justify-content: space-between;
 }
 .between{justify-content: space-between;}
-#ct_qty{width: 30px; text-align: center;}
+#ct_qty{width: 30px; text-align: center; border:0;margin:0 0px;}
 #qty_box dt{margin-right: 0;}
 #product_name{padding-right: 10px;}
 .fs02{font-size: 1.4rem; padding-right:10px;}
 #omanwon{padding-right: 15px;}
+.minus, .plus{
+    font-size: 1.5rem;
+    border: 1px solid #333;
+    border-radius:100%;
+    text-align: center;
+    width: 30px; height: 30px;
+    line-height: 30px;
+}
+.minus:hover, .plus:hover{
+    background-color: #10643A;
+    cursor: pointer;
+}
+.minus:hover a, .plus:hover a{
+    color:#fff;
+}
 
 /*폰트사이즈*/
 #od_info p, #od_pay p, #od_coupon p, #od_pay>span,
@@ -68,7 +83,8 @@ h1{
     margin-top: 20px;
 }
 .margin_left, .phone_num{height: 30px;}
-#phone_number{height: 36px; width: 150px;}
+.phone_num{width:100px;}
+#phone_number{height: 36px; width: 100px;}
 #phone_number option{font-size: 1.2rem;}
 
 /*배송지정보*/
@@ -163,8 +179,6 @@ h1{
 /*푸터랑 간격 넓히기*/
 #od_agree{margin-bottom: 100px;}
 
-
-
 /*모바일ver.*/
 @media all and (max-width:1024px) {
     .wrap{width: 100%;}
@@ -174,8 +188,10 @@ h1{
     #od_coupon>hr, #od_pay>hr,
     #od_last>hr{
         width: 95%; 
-        text-align: left;
-        margin-left: 0;
+        text-align: center;
+    }
+    h2{
+        margin-left:2.5%;
     }
 
     /*수량 증감 영역*/

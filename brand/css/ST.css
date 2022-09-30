@@ -5,6 +5,7 @@
 
 #main{
     width:100%;
+    margin:0 auto;
     height:980px;
     position:relative;
     background:url() no-repeat center/cover;
@@ -30,6 +31,12 @@
 
 .contents.flex{
     justify-content:space-between;
+}
+#prod6>article.contents>.info_img img,
+#prod7>article.contents>.info_img img
+#prod7>article.contents>.info_img,
+#prod7>article.contents>.info_img{
+    width:340px;
 }
 .contents.flex>div{
     width:50%;
@@ -92,9 +99,7 @@
     transform:translateX(-50%);
     width:1152px;
 }
-#products>ul{
-    justify-content:space-between;
-}
+
 #products>ul>li{
     width:12%;
     background-color:rgba(255,255,255,0.4);

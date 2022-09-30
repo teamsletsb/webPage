@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import url('store_common.css');
+
+
+/*타이틀*/
+.mytitle{
+    margin-top:50px;
+    text-align:center;
+}
+h1{
+    font-weight: 500;
+    font-size:1.8rem;
+    color:#222;
+}
+
+.mytitle hr{
+    margin-top: 30px;
+    width:400px;
+}
+
+/*마이페이지 리스트*/
+.mylist ul{
+    display: flex;
+    justify-content: space-between;
+    padding:80px 25% 70px 25%;
+    text-align:center;
+}
+
+.mylist ul li{
+    font-size:1.3rem;
+    float:left;
+    font-weight:400;
+}
+
+.mylist ul li a:hover{
+    font-weight: 600;
+    color:#10643A;
+    display:block;
+}
