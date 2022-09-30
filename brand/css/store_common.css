@@ -191,6 +191,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 .ftinfo li{
     padding:15px;
     width:15%;
+    text-align:center;
 }
 .ftinfo li a{
     width:100%;
