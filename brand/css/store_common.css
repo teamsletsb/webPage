@@ -409,6 +409,7 @@ footer>div:nth-of-type(2){
         width:100%;
         font-size:0.9rem;
         text-align:center;
+        padding:14px 0;
     }
     .ftinfo li a{
         width:100%;
