@@ -57,12 +57,14 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     border:1px solid #10643A;
     background-color:rgba(0,0,0,0);
     cursor:pointer;
-    color:#333;
+    color:#202020;
     font-weight:400;
     font-size:1.2rem;
     letter-spacing: 2px;
-    transition:all 0.28s;
     border-radius: 10px;
+    line-height:48px;
+    box-sizing:border-box;
+    transition:all 0.3s;
 }
 
 

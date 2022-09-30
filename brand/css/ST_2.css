@@ -16,25 +16,30 @@ a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
     margin: 100px auto 50px;
 }
 /*st-2-1*/
-#sec01{height: 400px;}
+#sec01{height: 450px;}
 #sec01 .flex{
-    width: 400px;
+    width: 80%;
     margin: 50px auto 0;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #sec01 .flex li{
-    margin: 10px 0;
+    margin: 20px 0;
+    font-size:1.25rem;
+
 }
 .box{
-    width: 500px;
+    width: 80%;
     margin: 0 auto;
 }
 .btn{
     display: block;
     margin: 50px auto 0;
     border-radius: 10px;
-    line-height: 50px;
+    line-height: 48px;
     box-sizing:border-box;
+}
+.btn>a{
+    color:#202020;
 }
 .btn:hover>a{
     display:block;
@@ -49,3 +54,11 @@ a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
 
 /*텍스트 오른쪽으로 붙게 정렬*/
 .right{text-align: right;}
+
+
+/*st_2_2*/
+.normal{
+    text-align:center;
+    font-size:1.25rem;
+    line-height:1.2;
+}

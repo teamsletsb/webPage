@@ -35,7 +35,7 @@ if ((window.matchMedia('(max-width: 1023px)').matches) && mySwiper == undefined)
     $("#products>ul").removeClass("flex");
     mySwiper = new Swiper(".swiper-container", {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 15,
     simulateTouch: true,
     
     });
