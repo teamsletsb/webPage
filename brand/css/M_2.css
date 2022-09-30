@@ -15,8 +15,9 @@ h1{
 
 .mytitle hr{
     margin-top: 30px;
-    width:400px;
+    width:100%;
 }
+.memwrap{width: 100%;}
 @media all and (min-width:1025px){
 /*마이페이지 리스트*/
 .mylist ul{
@@ -56,7 +57,7 @@ h2{
 #memmodify span{
     font-size: 1.3rem;
     font-weight: 400;
-    margin: 10px 0 10px 14%;
+    margin: 10px 0 10px 13%;
 }
 #memmodify span,
 #delivery span{
@@ -66,15 +67,15 @@ h2{
     border:2px solid #333;
     border-radius: 15px;
     text-align: center;
-    line-height: 45px;
+    line-height: 50px;
     cursor: pointer;
     margin-left: 50px;
     box-sizing: border-box;
 }
-#memmodify>ul{
+#memmodify>div>ul{
     margin-bottom: 100px;
 }
-#memmodify>ul>li{
+#memmodify>div>ul>li{
     margin: 30px auto;
 }
 
