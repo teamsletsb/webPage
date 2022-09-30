@@ -147,13 +147,6 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
 
 
 @media screen and (max-width: 1023px){
-    .sub_title{
-        font-size: 2rem;
-        font-weight: 400;
-        text-align: left;
-        margin-left: 2.5%;
-    }
-    hr{width: 95%; margin: 15px auto 80px;}
     .contents{width:400px;}
     .form_flex{width: 400px;}
     tr.form_flex:nth-child(1) td>input{width: 295px;}
