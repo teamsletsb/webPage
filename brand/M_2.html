@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>마이페이지</title>
+    <title>new</title>
     <link href="./css/M_2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -48,43 +48,42 @@
 </section>
 <!--회원정보 수정-->
 <section id="memmodify" class="wrap">
-    <div class="memwrap">
-        <div>
-            <p class="memtitle">회원정보수정</p>
-            <hr/>
-        </div>
-        <ul id="membermodify">
-            <li>
-                <p>휴대폰번호 <input type="text" name="phone"/><span class="btn">본인인증하기</span></p>
-            </li>
-            <li>
-                <p>　　아이디 <input type="text" name="uid"/></p>
-            </li>
-            <li>
-                <p>　비밀번호 <input type="password" name="uid" /><span class="btn">비밀번호변경</span></p>
-                
-            </li>
-        </ul>
+    <div>
+        <p class="memtitle">회원정보수정</p>
+    </div>
+    <ul id="membermodify">
+        <li>
+            <label>휴대폰번호</label>
+            <p><input type="text" name="phone"/><span class="btn">본인인증하기</span></p>
+        </li>
+        <li>
+            <label>아이디</label>
+            <p><input type="text" name="uid"/></p>
+        </li>
+        <li>
+            <label>비밀번호</label>
+            <p><input type="password" name="uid" /><span class="btn">비밀번호변경</span></p>
+        </li>
         <div>
             <p class="memtitle">배송정보수정</p>
-            <hr/>
         </div>
-        <ul id="delivery">
-            <li>
-                <p>　 수령인 <input type="text" name="phone" size="100"/></p>
-            </li>
-            <li>
-                <p>배송 주소 <input type="text" name="uid" size="100"/>
-                    <input type="text" name="uid" size="100" id="lineee"/><span class="btn">수정하기</span></p>
-                
-            </li>
-        </ul>
-        <div class="flex">
-        <button class="button">수정하기</button>
-        <button class="button">회원탈퇴</button>
-        </div>
+        <li>
+            <label>수령인</label>
+            <p><input type="text" name="phone" size="100"/></p>
+        </li>
+        <li>
+            <label>배송지</label>
+            <p><input type="text" name="uid" size="100"/>
+                <input type="text" name="uid" size="100"><span class="btn">수정하기</span></p>
+        </li>
+    </ul>
+    <div class="buttonwrap">
+    <button class="button">수정하기</button>
+    <button class="button">회원탈퇴</button>
     </div>
 </section>
+
+<!--푸터영역 수정 20220929-->
 <footer>
     <div class="ftinfocon">
         <ul class="ftinfo">
@@ -99,7 +98,7 @@
                 <h2 id="logo_footer"><a href="#">logo</a></h2>
                 <li>
                     <address>
-                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 Mail : dongwha@dong-wha.co.kr</p>
+                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
                         <p>Tel : 02-2021-9300 04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
                         <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
                     </address>
@@ -116,6 +115,7 @@
         </div>
     </div>
 </footer>
+
 <script type="text/javascript" src="./js/store_common.js"></script>
 </body>
 </html>

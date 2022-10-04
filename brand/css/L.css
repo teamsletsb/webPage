@@ -15,11 +15,10 @@ form div input{
     display: inline-block;
     width: 300px;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     height: 50px;
     line-height: 50px;
-    border: 2px solid #696969;
-    border-radius: 5px;
+    border: 1px solid #696969;
     padding-left: 10px;
     margin:0 auto 10px;
     box-sizing: border-box;
@@ -31,8 +30,8 @@ input::placeholder{color: #adadad;}
     color: #fff;
     border: 0; padding-left: 0;
     text-align: center;
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 500;
     cursor: pointer;
     transition:all .3s;
 }

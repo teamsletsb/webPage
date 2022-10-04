@@ -1,8 +1,9 @@
 // 헤더영역 공통
 
-
+$(document).ready(function(){
     $(window).resize(function(){
-        if((window.matchMedia('(max-width: 1023px)').matches) == 0){
+        let isWindow = $(window).width();
+        if(isWindow >= 1024){
             if($("#head ul>li").css("display") == "none"){
                 $("#head ul>li").css("display","block");
                 $("#mob_menu span").removeClass("mob_menu_switch_on");  //초기화
@@ -18,9 +19,12 @@
             $("#mob_menu div").addClass("mob_menu_switch_on");      //햄버거 보여줌
         };
     });
+});
 
 
 $("#mob_menu").click(function(){    
+    let isWindow = $(window).width();
+
     if($("#mob_menu span").hasClass("mob_menu_switch_off")){    //클릭시 햄버거있으면
 
         $("#mob_menu span").removeClass("mob_menu_switch_off"); //초기화

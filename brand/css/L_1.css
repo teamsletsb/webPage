@@ -4,17 +4,16 @@
 a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
 
 
-.sub_title{
+#sub_title{
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
-    margin: 80px auto 0;
+    margin: 80px auto 40px;
 }
-hr{width: 480px; margin: 30px auto 30px;}
 .contents{
     width:480px;
     height:500px;
-    margin:0 auto;
+    margin:50px auto;
 }
 ul.tab_menu{
     width:100%;
@@ -30,8 +29,8 @@ ul.tab_menu>li{
     line-height:40px;
     box-sizing: border-box;
     cursor: pointer;
-    color:#000;
-    font-size: 1.2rem;
+    color:#222;
+    font-size: 1.0rem;
     font-weight: 400;
 }
 ul.tab_menu::after{
@@ -44,7 +43,7 @@ ul.tab_menu::after{
 
 ul.tab_menu>li.active{
     background: #10643A;
-    color:#fff;
+    color:#fbfbfb;
 }
 ul.tab_menu>li:first-child.active{
     border-left:1px solid #10643A;
@@ -60,30 +59,34 @@ ul.tab_menu>li:last-child.active{
 .tab_contents>div{
     position:absolute;
     background:#fff;
-    border-top:5px solid #10643A;
+    border-top:2px solid #10643A;
     box-sizing: border-box;
     font-weight: 400;
-    color:#000;
+    color:#222;
     height:500px; width: 100%;
     line-height: 2;
     left: 0;
 }
-.tab_contents>div>h2{font-size: 1.4rem; margin-top: 30px;}
+.tab_contents>div>h2{
+    font-size: 1.0rem; 
+    margin-top: 30px;
+    margin-bottom:5px;
+}
+
 .tab_contents>div>h3{font-size: 1.2rem; margin-bottom: 25px;}
 .tab_contents>div.active{z-index:9999;}
 
 /*폼필드 CSS*/
-.wrap{width: 100%; margin: 0 auto 60px;}
 .form_flex{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 33px;
     width: 480px;
 }
 tr.form_flex th{
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     height: 40px;
     line-height: 40px;
 }
@@ -92,9 +95,8 @@ tr.form_flex td>input,
 tr.form_flex:nth-child(2) td>select{
     height: 40px;
     line-height: 40px;
-    font-size: 1.4rem;
-    border: 2px solid #696969;
-    border-radius: 5px;
+    font-size: 1.0rem;
+    border: 1px solid #696969;
     padding-left: 10px;
     box-sizing: border-box;
 }
@@ -104,9 +106,9 @@ tr.form_flex:nth-child(2) td>select,
 tr.form_flex:nth-child(2) td>input{width:93px; margin-right: 5px;}
 tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
 #telform_btn{
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: #fff;
-    width: 93px;
+    width: 85px;
     background: #10643A;
     border: 0; padding: 0;
     text-align: center;
@@ -122,15 +124,18 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
 
 }
 #fianlform>table td>input{width: 400px;}
-#cernumber_txt{margin-left: 80px; font-size: 1rem;}
+#cernumber_txt{
+    margin-left: 80px; 
+    font-size: 0.9rem; 
+    color:#F52A1E;
+}
 #fianlform_btn{
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     color: #10643A;
     border: 1px solid #10643A;
     box-sizing: border-box;
     background: #fff;
     text-align: center;
-    border-radius: 5px;
     width: 100%;
     height: 40px;
     cursor: pointer;
@@ -138,8 +143,6 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
 }
 #fianlform_btn:hover{
     background-color:#10643A;
-    box-shadow: 0 40px 0 0  rgba(0,0,0,0.25) inset, 
-    0 -40px 0 0 rgba(0,0,0,0.25) inset;
     border:0;
     transition:all 0.3s;
     color:#fff;

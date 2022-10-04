@@ -3,13 +3,14 @@
 *{margin:0; padding:0; list-style: none;}
 a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
 
+/*220930 수정*/
 .sub_title{
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
     margin: 80px auto 0;
 }
-hr{width: 460px; margin: 30px auto 30px;}
+hr{width: 460px; margin: 30px auto 40px;}
 
 /*회원가입 공통 CSS*/
 #sign_in{
@@ -17,25 +18,23 @@ hr{width: 460px; margin: 30px auto 30px;}
     margin:40px auto 100px;
 }
 #sign_in h3{
-    color:#000;
-    font-size: 1.5rem;
+    color:#222;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 20px;
 }
 #sign_in .green_line{
-    border: 2px solid #10643A;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    border: 1px solid #10643A;
+    font-size: 1.0rem;
     box-sizing: border-box;
     margin-bottom: 15px;
     transition:all .3s;
 }
 #sign_in .green_solid{
     background: #10643A;
-    height: 44px;
-    border-radius: 5px;
+    height: 39px;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     border: 0; box-sizing: border-box;
     cursor: pointer;
     transition:all .3s;
@@ -62,8 +61,8 @@ hr{width: 460px; margin: 30px auto 30px;}
 }
 #email span{
     display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 300;
     width: 40px; line-height: 30px;
     text-align: center;
 }
@@ -72,7 +71,7 @@ hr{width: 460px; margin: 30px auto 30px;}
 /*비밀번호*/
 #password input{width: 100%;}
 #pw_text{
-    color: #FF0000;
+    color: #F52A1E;
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 1rem;
@@ -91,19 +90,22 @@ hr{width: 460px; margin: 30px auto 30px;}
 #serviceterm p:first-child{
     padding-bottom: 20px;
     border-bottom: 1px solid #10643A;
-    color: #000; font-weight: 500;
+    color: #222; font-weight: 500;
 }
 #serviceterm p{margin: 30px;}
-#term a{color: #000; font-weight: 500;}
+#term a{color: #222; font-weight: 500;}
 #serviceterm span{color: #adadad;}
 #final_submit{
     width: 100%;
     margin: 20px auto;
 }
-#sign_in>form>p:last-child{text-align: center;}
+#sign_in>form>p:last-child{
+    text-align: center;
+    margin-top:10px;
+}
 #sign_in>form>p:last-child a{
     font-weight: 600;
-    color: #000;
+    color: #222;
     margin-left: 10px;
 }
 

@@ -4,7 +4,7 @@
 
 
 /*전체 공통
-수정 20220929*/
+수정 20220930*/
 
 html{
     font-family: 'Noto Sans KR', sans-serif;
@@ -21,7 +21,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 
 
 .wrap{
-    width:66.6666667%;
+    width:1280px;
     margin:0 auto;
 }
 .hdwrap{
@@ -53,28 +53,25 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 .btn{
     width:180px;
     height:50px;
+    line-height:50px;
     text-align:center;
     border:1px solid #10643A;
     background-color:rgba(0,0,0,0);
     cursor:pointer;
-    color:#202020;
-    font-weight:400;
+    color:#333;
+    font-weight:300;
     font-size:1.2rem;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    line-height:48px;
-    box-sizing:border-box;
-    transition:all 0.3s;
+    transition:all 0.28s;
 }
 
 
 .btn:hover{
     background-color:#10643A;
-    box-shadow: 0 50px 0 0  rgba(0,0,0,0.25) inset, 
-    0 -50px 0 0 rgba(0,0,0,0.25) inset;
+    /*    box-shadow: 0 50px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -50px 0 0 rgba(0,0,0,0.25) inset;*/
     border:0;
     transition:all 0.3s;
-    color:#fff;
+    color: #fbfbfb;;
 }
 
 
@@ -193,7 +190,6 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 .ftinfo li{
     padding:15px;
     width:15%;
-    text-align:center;
 }
 .ftinfo li a{
     width:100%;
@@ -232,43 +228,6 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 .icon_list img{
     width:70%;
 }
-/*footer>div:nth-of-type(1),
-footer>div:nth-of-type(3){
-    width:100%;
-}
-footer>div:nth-of-type(2){
-    width:100%;
-    text-align:center;
-}
-
-
-#social_icon>.flex{
-    justify-content:flex-start;
-}
-#social_icon>.flex>li{
-    margin:10px;
-}
-#social_icon a, #social_icon img{
-    display:block;
-    width:40px;
-    height:40px;
-}
-
-footer>div:nth-of-type(2){
-    font-size:1.2rem;
-}
-
-
-#social_icon{
-    position:relative;
-}
-#social_icon>ul{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-}*/
-
-
 
 @media screen and (max-width: 1023px){
     /*공통*/
@@ -355,19 +314,17 @@ footer>div:nth-of-type(2){
     }
     #head>nav>ul>li{
         width:180px;
-        height:60px;
+        height:70px;
         background:rgba(16,100,58,0.8);
     }
     
     #head>nav>ul>li:hover{
         background:white;
         box-sizing:border-box;
-        border:1px solid rgba(16,100,58,0.8);
-        transition:all .15s;
     }
     #head>nav>ul>li>a{
         display:block;
-        line-height:60px;
+        line-height:70px;
         text-align:center;
         color:#fff;
     }
@@ -389,7 +346,7 @@ footer>div:nth-of-type(2){
 
 
     /*푸터*/
-    .footer{
+    .fotter{
         width:100%;
         height:100%;
     }
@@ -418,7 +375,6 @@ footer>div:nth-of-type(2){
         width:100%;
         font-weight:300;
         color:#333;
-        display:block;
     }
     
     .ftadd{
@@ -453,8 +409,4 @@ footer>div:nth-of-type(2){
         width:70%;
     }
 
-
-    address>p>span{
-        display:block;
-    }
 }

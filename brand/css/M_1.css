@@ -2,7 +2,7 @@
 @import url('store_common.css');
 
 
-@media all and (min-width:1024px){
+@media screen and (min-width:1024px){
     /*타이틀*/
     .mytitle{
         margin-top:50px;
@@ -247,7 +247,7 @@
 
 
 /*모바일 영역*/
-@media all and (max-width:1024px){
+@media screen and (max-width: 1023px){
     /*타이틀*/
     .wrap{
         width:95%;
