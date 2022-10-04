@@ -2,6 +2,10 @@
 let cnt = $("#main>div").length;    //총 컨텐츠요소 갯수
 let change = function(){
     $("#main").css("background-image","url('./images/bg_01.png"); //default 이미지 설정
+    if((window.matchMedia('(max-width: 1023px)').matches)){
+        $("#main").css("background-image","url('')");
+    }
+    
     $('#products>ul>li').click(function(){      
         let idx = $(this).index()+1;        //컨텐츠 넘버링 타겟
         
@@ -10,7 +14,11 @@ let change = function(){
             $("#prod"+i).removeClass("switch"); //전체 컨텐츠 클래스 초기화
         }
         $("#prod"+idx).addClass("switch");  //클래스 삽입
-        $("#main").css("background-image","url('./images/bg_0"+ idx +".png')"); //이미지 삽입
+        if((window.matchMedia('(max-width: 1023px)').matches)){
+            $("#main").css("background-image","url('')");
+        }else{
+        $("#main").css("background-image","url('./images/bg_0"+ idx +".png')");
+        }         //이미지 삽입
 
         let color = [ //모바일용 백그라운드 컬러 설정
             ,
@@ -25,6 +33,15 @@ let change = function(){
     });
 };
 $(document).ready(change());
+$(window).resize(function(){
+    if((window.matchMedia('(max-width: 1023px)').matches)){
+        $("#main").css("background-image","url('')");
+    }else{
+        let switch_idx = $(".switch").index()+1;
+        $("#main").css("background-image","url('./images/bg_0"+ switch_idx +".png')");
+    }
+});
+
 
 //슬라이드(+swiper.js)
 var mySwiper = undefined;
@@ -53,12 +70,27 @@ initSwiper();
 
 
 //버튼이벤트 - 장바구니
+let btn_cnt = 0;
 $(function(){
     $(".paybtn>button:nth-of-type(1)").click(function(){
-        $(this).append("<div class='btn_popup'>장바구니에 담았습니다.</div>");
+        btn_cnt += 1;
+
+        if($(".btn_popup").hasClass("btn_popup")){
+            $(".btn_popup").remove();
+        };
+        if($(".btn_count").hasClass("btn_count")){
+            $(".btn_count").remove();
+        };
+
+        $('body').append("<div class='btn_popup'></div>");
+        $('#CA').append("<div class='btn_count'>"+btn_cnt+"</div>");
+
+        $(".btn_popup").fadeIn(300);
+        $(".btn_count").fadeIn(300);
         setTimeout(function(){
-            $(".paybtn>button:nth-of-type(1)>div:nth-of-type(1)").remove();
-        },2000);
+            $(".btn_popup").fadeOut(300);
+            $(".btn_count").fadeOut(300);
+        },600)
     });
 });
 

@@ -20,16 +20,20 @@
     //초기화
     $(document).ready(function(){
         $(".buckets:nth-of-type(1) .item_name").html(item1.name);
-        $(".buckets:nth-of-type(1) .item_price").html(item1.price+"원");
+        $(".buckets:nth-of-type(1) .item_price").html(item1.price.toLocaleString()+"원");
+
 
         $(".buckets:nth-of-type(2) .item_name").html(item2.name);
-        $(".buckets:nth-of-type(2) .item_price").html(item2.price+"원");
+        $(".buckets:nth-of-type(2) .item_price").html(item2.price.toLocaleString()+"원");
+
 
         $(".buckets:nth-of-type(3) .item_name").html(item3.name);
-        $(".buckets:nth-of-type(3) .item_price").html(item3.price+"원");
+        $(".buckets:nth-of-type(3) .item_price").html(item3.price.toLocaleString()+"원");
+
 
         $(".buckets:nth-of-type(4) .item_name").html(item4.name);
-        $(".buckets:nth-of-type(4) .item_price").html(item4.price+"원");
+        $(".buckets:nth-of-type(4) .item_price").html(item4.price.toLocaleString()+"원");
+
 
             
         list_delete();  //리스트삭제
@@ -47,6 +51,7 @@
     };
 
 
+
     // 가격계산
     $(function(){
         //감소버튼
@@ -58,11 +63,21 @@
                 let idx = $(this).parents("ul").index() + 1;
 
                 let afterprice = price(aftercnt, idx);  //계산함수 호출
-                $(this).parent("div").siblings(".item_price").html(afterprice+"원");
+                let min_com = afterprice.toLocaleString();
+                
+                $(this).parent("div").siblings(".item_price").html(min_com+"원")
 
-                paybanner();
+            //총금액계산
+            let sum = 0;
+            for(let i = 0; i < bucketslist(); i++){
+                let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .count_items").text());
+                sum = sum + (sprs * items[i+1]);
+            };
+            paybanner(sum);
+            
             };
         });
+
         //증가버튼
         $(".btn_inc").click(function(){
             let nowcnt = parseInt($(this).siblings(".count_items").text());
@@ -71,9 +86,18 @@
             let idx = $(this).parents("ul").index() + 1;
 
             let afterprice = price(aftercnt, idx);  //계산함수 호출
-            $(this).parent("div").siblings(".item_price").html(afterprice+"원");
+            let pls_com = afterprice.toLocaleString();
+            $(this).parent("div").siblings(".item_price").html(pls_com+"원");
 
-            paybanner();
+
+            //총금액계산
+            let sum = 0;
+            for(let i = 0; i < bucketslist(); i++){
+                let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .count_items").text());
+                sum = sum + (sprs * items[i+1]);
+            };
+            paybanner(sum);
+            
         });
     });
     //가격계산식
@@ -81,20 +105,11 @@
             return items[idx] * aftercnt;
         }; 
 
-    //총금액계산
-    let sumprice = function(){
-        let sum = 0;
-        for(let i = 0; i < bucketslist(); i++){
-            let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .item_price").text());
-            sum = sum + sprs;
-        }
-        return sum;
-    };
 
     //결제 링크 배너 최신화
-    let paybanner = function(){
-        $("#to_pay_link h5:first-child").html(bucketslist()+"개 상품 "+"총 "+sumprice()+"원 + 배송비 3000원 입니다.");
-        $("#to_pay_link h4:last-child").html("총 "+(sumprice()+3000)+"원")
+    let paybanner = function(sum){
+        $("#to_pay_link h5:first-child").html(bucketslist()+"개 상품 "+sum.toLocaleString()+"원 + 배송비 3,000원 입니다.");
+        $("#to_pay_link h4:last-child").html("총 "+(sum+3000).toLocaleString()+"원");
     };
 
 
@@ -103,6 +118,7 @@
         $("input[name=items]").prop("checked", $(this).is(":checked"));
         });
     
+
 
     //삭제이벤트
     //X버튼

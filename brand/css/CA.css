@@ -137,11 +137,10 @@ body>section:nth-of-type(1){
     display:block;
     width:28px;
     height:28px;
-    line-height:27px;
-    border-radius:50%;
-    border:1px solid #10643A;
+    line-height:28px;
     cursor:pointer;
     box-sizing:border-box;
+    border-radius:50%;
 }
 #contents>.buckets>li:nth-of-type(3)>div>.btn_dec:hover,
 #contents>.buckets>li:nth-of-type(3)>div>.btn_inc:hover{
