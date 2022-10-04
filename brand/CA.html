@@ -47,14 +47,14 @@
     <div class="wrap">
         <form>
             <div class="flex">
-                <input id = "checkall" type="checkbox"> 
+                <input id = "checkall" type="checkbox" name='selectall' value='selectall' onclick='selectAll(this)'/>
                 <h4 id="h_h4">전체선택</h4>
                 <button type="button" name="delete_select_items" class="btn">선택 삭제</button>
             </div>
         </form>
         <article id="contents">
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img3.png" alt="img3"/></a>
                    <!--무작위 난수-->
@@ -73,7 +73,7 @@
                 </li>
             </ul>
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img5.png" alt="img3"/></a>
                 </li>
@@ -91,7 +91,7 @@
                 </li>
             </ul>
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img7.png" alt="img3"/></a>
                 </li>
@@ -109,7 +109,7 @@
                 </li>
             </ul>
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img2.png" alt="img3"/></a>
                 </li>
