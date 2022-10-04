@@ -109,7 +109,9 @@
                 <option value="coupon" disabled>보유한 쿠폰이 없습니다</option>
             </select>
         </p>
-        <p>쿠폰 번호<input type="text" maxlength="16" id="margin_left_plus02" class="margin_left" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        <p>쿠폰 번호<input type="text" maxlength="16" id="margin_left_plus02" class="margin_left" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="일련번호 16자리"/>
+            <input type="button" value="쿠폰등록" id="coupon_regi" class="btn">
+        </p>
 </section>
 <section id="od_pay" class="wrap">
     <h2>결제 방법</h2>
