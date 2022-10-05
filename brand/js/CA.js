@@ -39,7 +39,13 @@
         list_delete();  //리스트삭제
         bucketslist();  //건수 구하기
         list_refresh(); // 건수 새로고침
-        paybanner();    //구매하기배너
+        //총금액계산
+        let sum = 0;
+        for(let i = 0; i < bucketslist(); i++){
+            let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .count_items").text());
+            sum = sum + (sprs * items[i+1]);
+        };
+        paybanner(sum);    //구매하기배너
     });
 
     //총 건수
@@ -56,7 +62,7 @@
     $(function(){
         //감소버튼
         $(".btn_dec").click(function(){
-            if(parseInt($(this).siblings(".count_items").text()) >= 2){  //2 이상일때만 감소
+            if(parseInt($(this).siblings(".count_items").text()) >= 2){  //2 이상, 200이하 일때만 감소
                 let nowcnt = parseInt($(this).siblings(".count_items").text());
                 let aftercnt = nowcnt - 1;
                 $(this).siblings(".count_items").html(aftercnt);
@@ -66,6 +72,7 @@
                 let min_com = afterprice.toLocaleString();
                 
                 $(this).parent("div").siblings(".item_price").html(min_com+"원")
+            }
 
             //총금액계산
             let sum = 0;
@@ -74,12 +81,11 @@
                 sum = sum + (sprs * items[i+1]);
             };
             paybanner(sum);
-            
-            };
         });
 
         //증가버튼
         $(".btn_inc").click(function(){
+            if(($(this).siblings(".count_items").text()) < 200){
             let nowcnt = parseInt($(this).siblings(".count_items").text());
             let aftercnt = nowcnt + 1;
             $(this).siblings(".count_items").html(aftercnt);
@@ -88,7 +94,7 @@
             let afterprice = price(aftercnt, idx);  //계산함수 호출
             let pls_com = afterprice.toLocaleString();
             $(this).parent("div").siblings(".item_price").html(pls_com+"원");
-
+            }
 
             //총금액계산
             let sum = 0;
@@ -97,7 +103,6 @@
                 sum = sum + (sprs * items[i+1]);
             };
             paybanner(sum);
-            
         });
     });
     //가격계산식
@@ -114,10 +119,32 @@
 
 
     //체크박스 이벤트
-        $("#checkall").click(function(){
-        $("input[name=items]").prop("checked", $(this).is(":checked"));
-        });
-    
+    function checkSelectAll()  {
+        // 전체 체크박스
+        const checkboxes 
+          = document.querySelectorAll('input[name="items"]');
+        // 선택된 체크박스
+        const checked 
+          = document.querySelectorAll('input[name="items"]:checked');
+        // select all 체크박스
+        const selectAll 
+          = document.querySelector('input[name="selectall"]');
+        
+        if(checkboxes.length === checked.length)  {
+          selectAll.checked = true;
+        }else {
+          selectAll.checked = false;
+        }
+      }
+      
+      function selectAll(selectAll)  {
+        const checkboxes 
+           = document.getElementsByName('items');
+        
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = selectAll.checked
+        })
+      }
 
 
     //삭제이벤트
@@ -146,5 +173,12 @@
         
         bucketslist();
         list_refresh();
-        paybanner();
+        //총금액계산
+        let sum = 0;
+        for(let i = 0; i < bucketslist(); i++){
+            let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .count_items").text());
+            sum = sum + (sprs * items[i+1]);
+        };
+        paybanner(sum);
+
     });

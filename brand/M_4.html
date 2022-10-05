@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>결제중입니다</title>
-    <link href="./css/ST_2.css" rel="stylesheet" type="text/css" />
-    <script src="./js/jquery.js"></script>
-    <script src="./js/jquery-ui.js"></script>
-    <script src="./js/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="./css/jquery-ui.css">
-    <link href="./css/store_common.css" rel="stylesheet" type="text/css" />
+    <title>찜한상품</title>
+    <link href="./css/M_4.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
@@ -36,11 +31,77 @@
             <h1 id="logo"><a href="ST.html">logo</a></h1>
         </div>
     </header>
-<!--  중간    -->
-<section id="pay">
+<!--    컨텐츠 영역    -->
 
-<h3>결제가 진행되는 중입니다.</h3>
-<div id="update"></div>
+<hgroup class="wrap">
+    <div id="bk_head">
+        <h2>찜한상품</h2>
+        <hr/>
+    </div>
+    <div id = "counting_buckets">
+        <h3>총 건</h3>
+        <hr/>
+    </div>
+</hgroup>
+<section>
+    <div class="wrap">
+        <form>
+            <div class="flex">
+                <input id = "checkall" type="checkbox" name='selectall' value='selectall' onclick='selectAll(this)'/> 
+                <h4 id="h_h4">전체선택</h4>
+                <button type="button" name="delete_select_items" class="btn">선택 삭제</button>
+            </div>
+        </form>
+        <article id="contents">
+            <ul class="buckets flex">
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+                <li>
+                    <a href="#"><img src="./images/img3.png" alt="img3"/></a>
+
+                </li>
+                 <li>
+                    <h5 class="item_name">까스활명수</h5>
+                </li>
+            </ul>
+            <ul class="buckets flex">
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+                <li>
+                    <a href="#"><img src="./images/img5.png" alt="img3"/></a>
+                </li>
+                <li>
+                    <h5 class="item_name">미인활명수</h5>
+                </li>
+            </ul>
+            <ul class="buckets flex">
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+                <li>
+                    <a href="#"><img src="./images/img7.png" alt="img3"/></a>
+                </li>
+                <li>
+                    <h5 class="item_name">꼬마활명수</h5>
+                </li>
+            </ul>
+            <ul class="buckets flex">
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+                <li>
+                    <a href="#"><img src="./images/img2.png" alt="img3"/></a>
+                </li>
+                <li>
+                    <h5 class="item_name">까스활</h5>
+                </li>
+            </ul>
+        </article>
+    </div>
+
+    <div id="CA_link">
+        <div class="wrap">
+            <a href="CA.html">
+            <article class="flex">
+                <h4>주문하기</h4>
+            </article>
+            </a>
+        </div>
+    </div>
 </section>
 
 <!--푸터영역 수정 20220929-->
@@ -76,9 +137,8 @@
     </div>
 </footer>
 
-    <script type="text/javascript" src="./js/store_common.js"></script>
-    <script type="text/javascript" src="./js/ST_2.js"></script>
-   
+<script type="text/javascript" src="./js/M_4.js"></script>
+<script type="text/javascript" src="./js/store_common.js"></script>
 
 </body>
 </html>

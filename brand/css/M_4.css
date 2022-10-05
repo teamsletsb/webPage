@@ -5,15 +5,32 @@
 input[type=checkbox]{
     width:30px;
     height:30px;
+
 }
 
 button.delete{
     width:44px;
     height:44px;
-    line-height:42px;
-    position:relative;
-}
+    position:absolute;
+    margin: -20px 30px;
 
+}
+.buckets>span{
+    position:relative;
+    top:55%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.btn { 
+    border: 1px solid #333;
+    color: #333;
+    cursor:pointer;
+    user-select: none;
+    font-weight: 500;
+    font-size: 1.125rem;
+    border-radius: 2rem;
+    line-height: 40px;
+}
 
 
 body>section:nth-of-type(1){
@@ -38,14 +55,12 @@ body>section:nth-of-type(1){
 .wrap>form button{
     width:130px;
     height:40px;
-    line-height:38px;
     font-size:1rem;
     font-weight:600;
-    box-sizing:border-box;
 }
 .wrap>form,
 .wrap>form>div{
-    justify-content: space-between;
+    justify-content:space-around;
     flex-flow:row wrap;
     margin:0 20px;
     align-items: center;
@@ -57,6 +72,11 @@ body>section:nth-of-type(1){
 }
 
 #contents{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    width:900px;
+    margin-left: 150px;
     user-select: none;
 }
 #contents>.buckets>li>a>img{
@@ -81,101 +101,80 @@ body>section:nth-of-type(1){
     transition:all .2s;
 }
 #contents>.buckets>li{
-    margin:50px 0;
+    margin:70px 3px 0 0;
+    padding-right: -200px;
     text-align:center;
+    position: relative;
+}
+#contents>.buckets>li:first-child{
+    position: relative;
+    top:-17%; left:25%;
+    width: 50px; height: 50px;
+    z-index: 99;
 }
 #contents>.buckets{
     align-items: center;
 }
 
 #contents>.buckets>li:nth-of-type(1){
-    width:10%;
+    width:15%;
 }
 #contents>.buckets>li:nth-of-type(2){
-    width:40%;
+    width:35%;
     text-align:left;
     position:relative;
 }
-#contents>.buckets>li:nth-of-type(2)>img,
-#contents>.buckets>li:nth-of-type(2)>span{
-    margin:10px 0;
-    line-height:55px;
+#contents>.buckets>li:nth-of-type(3){
+    width:3%;
+    text-align: left;
+    position:relative;
 }
-#contents>.buckets>li:nth-of-type(2)::after{
-    content:'　　　최대 200개 구매가능';
-    height:40px;
-    line-height:40px;
-    font-size:0.95rem;
-    position:absolute;
-    display:block;
-    background:url('../images/CA_icon.png') no-repeat left center;
-}
+
 #contents>.buckets>li:nth-of-type(3){
     width:25%;
 }
 #contents>.buckets>li:nth-of-type(3)>h5{
     font-size:1.6rem;
     font-weight:500;
+    margin: 400px 0 0 -65px;
 }
 #contents>.buckets>li:nth-of-type(3)>h6{
-    font-size:1.3rem;
-    margin:30px 0;
-    color:red;
+    font-size:1.6rem;
+    font-weight:500;
+    margin: 400px 0 0 -36px;
 }
-#contents>.buckets>li:nth-of-type(3)>div{
-    font-size:1.5rem;
-    width:100%;
-    height:40px;
-    align-items: center;
-    border-radius: 20px;
-}
-#contents>.buckets>li:nth-of-type(3)>div>.btn_dec,
-#contents>.buckets>li:nth-of-type(3)>div>.btn_inc{
-    display:block;
-    width:28px;
-    height:28px;
-    line-height:26px;
-    border:1px solid #10643A;
-    cursor:pointer;
-    box-sizing:border-box;
-    border-radius:50%;
-}
+
 #contents>.buckets>li:nth-of-type(3)>div>.btn_dec:hover,
 #contents>.buckets>li:nth-of-type(3)>div>.btn_inc:hover{
     border:0;
     background:#10643A;
     color:#fff;
-    transition:all .3s;
+    transition:all .25s;
     box-shadow:0 50px 0 0  rgba(0,0,0,0.25) inset, 
     0 -50px 0 0 rgba(0,0,0,0.25) inset;
     box-sizing:border-box;
 }
-#contents>.buckets>li:nth-of-type(3)>div>.count_items{
-    width:40px;
-    height:40px;
-    line-height:40px;
-    font-size:1.3rem;
-}
+
 #fixedzone{
     width:100%;
-    height:120px;
+    height:80px;
 }
-#to_pay_link{
+#CA_link{
     margin-top:100px;
     width:inherit;
-    height:120px;
+    height:80px;
     background:#10643A;
     position:sticky;
     left:0;
     bottom:0;
     cursor:pointer;
     display:block;
+    z-index: 999;
 }
-#to_pay_link>div{
-    height:inherit;
+#CA_link>div{
+    height:50px;
 }
-#to_pay_link .flex{
-    justify-content: space-between;
+#CA_link .flex{
     margin:0 60px;
     height:50%;
     color:#fff;
@@ -183,44 +182,50 @@ body>section:nth-of-type(1){
     font-weight:400;
     letter-spacing:1px;
 }
-#to_pay_link .flex>h4{
-    line-height:60px;
+#CA_link .flex>h4{
+    line-height:80px;
 }
-#to_pay_link .flex>h4:last-child{
-    color:red;
+#CA_link .flex>h4:last-child{
+    color:#fff;
     font-size:2rem;
     font-weight:600;
     letter-spacing:3px;
 }
-#to_pay_link .flex>h5{
-    line-height:30px;
-}
-#to_pay_link .flex>h5:last-child{
-    font-size:2rem;
-    font-weight:600;
-    letter-spacing:7px;
-}
+
 
 
 
 @media screen and (max-width: 1023px){
-    section>div>form>.flex{
-        justify-content: left;
-    }
     #h_h4{
         width:80px;
         margin:0 33% 0 5%;
     }
+    #contents{
+        width: 50%;
+    }
+    #wrap{
+        width:50%;
+    }    
     .buckets{
-        margin:60px 0;
+        margin:-50px 0 0 0;
+    }
+    #contents {
+        margin-left: 90px;
+    }
+    #contents>.buckets>li:nth-child(3) h5{
+        margin-left: -100px;
+        margin-top: 250px;
+        text-align: center;
     } 
-
+    #contents>.buckets>li:nth-child(3) h6{
+        margin-left: -58px;
+    } 
     #contents>.buckets>li:nth-of-type(2){
-        width:34%;
+        width:50%;
     }
     #contents>.buckets>li>a{
-        width:100%;
-        height:200px;
+        width:180px;
+        height: 150px;
     }
     #contents>.buckets>li>a>img{
         height:120px;
@@ -228,25 +233,12 @@ body>section:nth-of-type(1){
     #contents>.buckets>li>a:hover>img{
         height:140px;
     }
-
-    #to_pay_link .flex{
-    margin: 0 3%;
-    }
-    #to_pay_link .pay1{
+    #CA_link .flex>h4:last-child{
         font-size:1.5rem;
     }
-    #to_pay_link .pay3{
-        font-size:1.1rem;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space:nowrap;
-        width:68%;
-        
-    }
-    #to_pay_link .flex>h4:last-child{
-        font-size:1.5rem;
-    }
-    #to_pay_link .flex>h5:last-child {
-        font-size:1.75rem;
+    #contents>.buckets>li:first-child{
+        top:0; left:0;
+        width: 50px; height: 50px;
+        z-index: 99;
     }
 }

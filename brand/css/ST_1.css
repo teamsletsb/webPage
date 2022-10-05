@@ -96,13 +96,15 @@ h1{
 
 /*배송지정보*/
 #find_postcode{
-    width: 160px; height: 37px; 
+    width: 120px; height: 37px; 
+    line-height: 37px;
     background-color: #10643A;
     color:#fff; border:0;
     border-radius: 10px;
     vertical-align: top;
     cursor: pointer;
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 #sample3_postcode{margin-left: 49px;}
 #sample3_postcode, #sample3_detailAddress{
@@ -117,6 +119,17 @@ h1{
 /*쿠폰포인트 영역*/
 #margin_left_plus01{margin-left: 107px; width: 176px;}
 #margin_left_plus02{margin-left: 73px;}
+#coupon_regi{
+    width: 120px; height: 37px; 
+    line-height: 37px;
+    background-color: #10643A;
+    color:#fff; border:0;
+    border-radius: 10px;
+    vertical-align: top;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
 
 /*결제방법 영역*/
 #u_pay{width: 1080px;}

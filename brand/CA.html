@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>new</title>
+    <title>장바구니</title>
     <link href="./css/CA.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -47,14 +47,14 @@
     <div class="wrap">
         <form>
             <div class="flex">
-                <input id = "checkall" type="checkbox"> 
+                <input id = "checkall" type="checkbox" name='selectall' value='selectall' onclick='selectAll(this)'/> 
                 <h4 id="h_h4">전체선택</h4>
                 <button type="button" name="delete_select_items" class="btn">선택 삭제</button>
             </div>
         </form>
         <article id="contents">
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img3.png" alt="img3"/></a>
                    <!--무작위 난수-->
@@ -69,11 +69,11 @@
                     </div>
                 </li>
                 <li>
-                    <button name="delete_btn" class="btn delete"><span>X</span></button> <!--버킷 삭제버튼-->
+                    <button name="delete_btn" class="btn delete">X</button> <!--버킷 삭제버튼-->
                 </li>
             </ul>
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img5.png" alt="img3"/></a>
                 </li>
@@ -91,7 +91,7 @@
                 </li>
             </ul>
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img7.png" alt="img3"/></a>
                 </li>
@@ -109,7 +109,7 @@
                 </li>
             </ul>
             <ul class="buckets flex">
-                <li><input type="checkbox" name = "items"></li>
+                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
                 <li>
                     <a href="#"><img src="./images/img2.png" alt="img3"/></a>
                 </li>

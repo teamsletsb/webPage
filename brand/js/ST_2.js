@@ -1,7 +1,6 @@
 let number = 0;
 $(function unknown_number(){
     number = Math.floor(Math.random() * 10);
-    alert(number);
 });
 
 $(function(){

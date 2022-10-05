@@ -129,6 +129,7 @@
         margin-left:9px;
     }
     .txtcon{
+        width:20%;
         height:20px;
     }
 
@@ -324,7 +325,7 @@
         float:left;
         display:flex;
         justify-content:center;
-        width:100%;
+        width:97%;
         padding-top:70px;
     }
     .orderinfowrap::after{
@@ -351,10 +352,10 @@
         justify-content:center;
     }
     .buyinglist span:first-of-type{
-        margin:7px 0;
+        margin-bottom:20px;
         display:flex;
         justify-content: center;
-        width:15%;
+        width:100%;
         font-size:1.2rem;
     }
     .button{
@@ -376,6 +377,13 @@
         background: #10643A;
         color:#fff;
         margin-left:9px;
+    }
+    .txtcon{
+        width:25%;
+    }
+    .buyinglist .search{
+        width:15%;
+        
     }
 
     /*주문내역*/
@@ -404,9 +412,11 @@
     }
     .orderimg{
         width:100%;
+        display:flex;
+        justify-content: space-around;
     }
     .orderimg img{
-        width:100%;
+        width:50%;
     }
 
     .orderleft{
