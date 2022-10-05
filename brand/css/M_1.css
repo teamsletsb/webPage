@@ -1,5 +1,27 @@
 @charset "utf-8";
 @import url('store_common.css');
+section{
+    overflow:hidden;
+}
+.wrap{
+    width:100%;
+}
+.chklist hr,
+.orderlist hr,
+.addinfo hr{
+    width:95%;
+    margin:0 2.5%;
+}
+section h2{
+    width:95%;
+    margin-left: 2.5%;
+}
+.order_info,
+.orderlist_sub,
+.addinfo_sub{
+    margin-left:2.5%;
+    width:95%;
+}
 
 
 @media screen and (min-width:1024px){
@@ -29,7 +51,6 @@
 
     .mylist ul li{
         font-size:1.3rem;
-        float:left;
         font-weight:400;
     }
 
@@ -50,14 +71,15 @@
     .orderinfowrap{
         width:100%;
         position:relative;
-        float:left;
         text-align:center;
         margin-top:50px;
         margin-bottom:50px;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: center;
     }
     .orderinfo{
         width:7%;
-        float:left;
         display:block;
         margin-top:50px;
         margin-bottom:50px;
@@ -72,7 +94,7 @@
     }
     .arrow{
         font-size:4rem;
-        margin:50px 80px 50px 60px;
+        margin:50px 40px 50px 60px;
         float:left;
     }
     .orderinfowrap::after{
@@ -296,17 +318,14 @@
     /*주문배송조회*/
     .orderinfowrap{
         width:100%;
+        margin:50px auto 100px;
         position:relative;
-        float:left;
         text-align:center;
-        margin-top:50px;
-        margin-bottom:100px;
         display:flex;
         justify-content:space-around;
     }
     .orderinfo{
         width:100%;
-        float:left;
         margin-top:50px;
     }
     .orderinfo p a{
@@ -315,16 +334,12 @@
     }
     .orderinfo p:last-child{
         margin-top: 20px;
-        float:left;
         justify-content:center;
         display:flex;
         width:100%;
     }
     .arrow{
         font-size:2rem;
-        float:left;
-        display:flex;
-        justify-content:center;
         width:97%;
         padding-top:70px;
     }
