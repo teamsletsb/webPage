@@ -5,7 +5,6 @@ $(document).ready(function(){
     list_delete();  //리스트삭제
     bucketslist();  //건수 구하기
     list_refresh(); // 건수 새로고침
-    paybanner();    //구매하기배너
 });
 
 //총 건수
@@ -57,7 +56,6 @@ let list_delete = function(){
         $(this).parents(".buckets").remove();
         bucketslist();
         list_refresh();
-        paybanner();
     });
 };
 
@@ -76,5 +74,4 @@ $("button[name=delete_select_items]").click(function(){
     
     bucketslist();
     list_refresh();
-    paybanner();
 });
