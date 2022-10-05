@@ -8,7 +8,7 @@
     <link href="./css/ST_1.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <header class="hdwrap">
+    <header>
         <div id="head">
             <nav>
                 <div id="mob_menu">
@@ -84,7 +84,8 @@
             <input type="text" name="u_phonenum02" maxlength="4" class="phone_num" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
         <p id="parcel_address">배송지 주소
             <input type="text" name="addr01" id="sample3_postcode" placeholder="우편번호" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-            <input type="button" onclick="sample3_execDaumPostcode()" value="우편번호 찾기" id="find_postcode" class="btn"><br>
+            <button type="button" onclick="sample3_execDaumPostcode()" id="find_postcode" class="btn">우편번호 찾기</button>
+            <br/>
             <input type="text" name ="addr02" id="sample3_detailAddress" placeholder="상세주소를 입력해주세요">
         </p>
         <p>배송 메모　
@@ -110,7 +111,7 @@
             </select>
         </p>
         <p>쿠폰 번호<input type="text" maxlength="16" id="margin_left_plus02" class="margin_left" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="일련번호 16자리"/>
-            <input type="button" value="쿠폰등록" id="coupon_regi" class="btn">
+            <button type="button" id="coupon_regi" class="btn">쿠폰 등록</button>
         </p>
 </section>
 <section id="od_pay" class="wrap">
@@ -182,7 +183,7 @@
             <label for="check_2">개인정보제공 동의(필수)</label>
             <input type="checkbox" id="check_3" class="normal" >
             <label for="check_3">제3자 정보이용 동의(필수)</label>
-            <input type="submit" class="btn" id="submit_btn" value="결제하기"></button>
+            <button type="submit" class="btn" id="submit_btn">결제하기</button>
         </div>
     </form>
 </section>

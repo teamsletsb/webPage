@@ -26,6 +26,28 @@ h1{
 /*위에 여백*/
 #od_list, #od_info, #od_coupon, #od_pay, #od_last{margin-top: 100px;}
 
+#od_list hr, #od_list h2,
+#od_info hr, #od_info h2,
+#od_coupon hr, #od_coupon h2,
+#od_pay hr, #od_pay h2,
+#od_last hr, #od_last h2{
+    width:95%;
+    margin-left:2.5%;
+    margin-right:2.5%;
+}
+.wrap{
+    width:100%;
+}
+.wrap p{
+    width:92%;
+    margin:0 4%;
+    min-width:480px;
+}
+#find_postcode:hover,
+#coupon_regi:hover{
+    box-shadow: 0 37px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -37px 0 0 rgba(0,0,0,0.25) inset;
+}
 
 
 
@@ -133,10 +155,17 @@ h1{
 
 /*결제방법 영역*/
 #u_pay{width: 1080px;}
+#pay_wrap{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
 #pay_wrap div{
-    float:left; width: 150px; height: 150px;
+    width: 15%;
+    min-width: 150px;
+    height: 100px;
     position: relative;
-    margin-left: 100px;
+    margin:20px 20px;
 }
 #pay_wrap .sltbox{
     position: absolute; left:-50px;
@@ -191,10 +220,12 @@ h1{
 }
 #submit_btn{
     position: absolute;
-    left:70%; top:50%;
+    left:60%; top:50%;
     transform: translateY(-50%);
     border-radius: 10px;
-    width: 100px; 
+    width: 200px;
+    height:50px;
+    line-height:48px;
 }
 /*푸터랑 간격 넓히기*/
 #od_agree{margin-bottom: 100px;}
@@ -202,6 +233,16 @@ h1{
 /*모바일ver.*/
 @media all and (max-width:1024px) {
     .wrap{width: 100%;}
+    .wrap p{
+        
+        margin:0 0;
+        min-width:470px;
+    }
+    .margin_left{margin-left: 20px;}
+    #parcel_memo{margin-left: 16px;}
+    #margin_left_plus01{margin-left: 71px; width: 176px;}
+    #margin_left_plus02{margin-left: 38px;}
+
     
     /*라인*/
     #od_list>hr, #od_info>hr,
@@ -229,9 +270,11 @@ h1{
     .phone_num{width: 10%;}
     #sample3_detailAddress{
         width: 50%;
+        margin-left:162px;
     }
     #sample3_postcode{
         width: 30%;
+        margin-left:18px;
     }
     #sample3_postcode, #find_postcode{
         margin-top: 10px;
