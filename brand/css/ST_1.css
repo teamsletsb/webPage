@@ -13,7 +13,7 @@ h1{
 }
 .mytitle hr{
     margin-top: 30px;
-    width:400px;
+    width:480px;
 }
 /*h2 기본스타일*/
 #od_list h2, #od_info h2, #od_coupon h2, #od_pay h2, #od_last h2{
@@ -36,7 +36,7 @@ h1{
     margin-right:2.5%;
 }
 .wrap{
-    width:100%;
+    width:66.6667%;
 }
 .wrap p{
     width:92%;
@@ -127,6 +127,7 @@ h1{
     cursor: pointer;
     margin-bottom: 10px;
     font-size: 1rem;
+    border-radius:0;
 }
 #sample3_postcode{margin-left: 49px;}
 #sample3_postcode, #sample3_detailAddress{
@@ -151,6 +152,7 @@ h1{
     cursor: pointer;
     margin-bottom: 10px;
     font-size: 1rem;
+    border-radius:0;
 }
 
 /*결제방법 영역*/
