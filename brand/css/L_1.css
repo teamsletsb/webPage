@@ -91,7 +91,7 @@ tr.form_flex th{
     line-height: 40px;
 }
 tr.form_flex td>input,
-#telform_btn,
+.telform_btn,
 tr.form_flex:nth-child(2) td>select{
     height: 40px;
     line-height: 40px;
@@ -105,7 +105,7 @@ tr.form_flex:nth-child(1) td>input{width: 400px;}
 tr.form_flex:nth-child(2) td>select,
 tr.form_flex:nth-child(2) td>input{width:93px; margin-right: 5px;}
 tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
-#telform_btn{
+.telform_btn{
     font-size: 1.0rem;
     color: #fff;
     width: 85px;
@@ -115,7 +115,7 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
     cursor: pointer;
     transition:all .3s;
 }
-#telform_btn:hover{
+.telform_btn:hover{
     box-shadow: 0 40px 0 0  rgba(0,0,0,0.25) inset, 
     0 -40px 0 0 rgba(0,0,0,0.25) inset;
     border:0;
@@ -123,13 +123,13 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
     color:#fff;
 
 }
-#fianlform>table td>input{width: 400px;}
-#cernumber_txt{
+.fianlform>table td>input{width: 400px;}
+.cernumber_txt{
     margin-left: 80px; 
     font-size: 0.9rem; 
     color:#F52A1E;
 }
-#fianlform_btn{
+.fianlform_btn{
     font-size: 1.0rem;
     color: #10643A;
     border: 1px solid #10643A;
@@ -141,7 +141,7 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
     cursor: pointer;
     transition:all .3s;
 }
-#fianlform_btn:hover{
+.fianlform_btn:hover{
     background-color:#10643A;
     border:0;
     transition:all 0.3s;
@@ -153,9 +153,9 @@ tr.form_flex:nth-child(2) td>input:last-child{margin-right: 0;}
     .contents{width:400px;}
     .form_flex{width: 400px;}
     tr.form_flex:nth-child(1) td>input{width: 295px;}
-    #telform_btn{
+    .telform_btn{
         margin-top: 15px;
         width: 400px;
     }
-    #cernumber_txt{margin-left: 105px;}
+    .cernumber_txt{margin-left: 105px;}
 }
