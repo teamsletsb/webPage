@@ -45,7 +45,7 @@ $(".checkbox_group").on("click", "#check_all", function () {
 });
 
 
-//약관동의 전체체크 아닐시 경고창
+//약관동의 및 input 입력 없을 때 경고창
     $(document).ready(function(){
         $("#submit_btn").click(function(){
             var u_id = $("input[name='u_id']").val();
