@@ -14,16 +14,12 @@
     text-align:center;
 }
 h1{
-    font-weight: 500;
+    font-weight: 600;
     font-size:1.8rem;
     color:#222;
 }
 
-.mytitle hr{
-    margin-top: 30px;
-    width:480px;
-    margin-bottom:0;
-}
+
 
 /*마이페이지 리스트*/
 .mylist ul{
@@ -50,8 +46,8 @@ h1{
 
 /*h2 기본스타일*/
 h2{
-    font-size:2rem;
-    font-weight:400;
+    font-size:1.6rem;
+    font-weight:500;
     margin-bottom:15px;
 }
 /*label 기본스타일*/
@@ -64,8 +60,8 @@ label{
 }
 /*정보수정 영역*/
 .memtitle{
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 #memmodify{
     margin-bottom:100px;
@@ -80,13 +76,11 @@ label{
     display:inline-block;
     width: 150px;
     height: 40px;
-    border:1px solid #333;
     text-align: center;
     line-height: 38px;
     letter-spacing:1px;
     cursor: pointer;
     margin-left: 50px;
-    box-sizing: border-box;
 }
 
 #memmodify>ul{
@@ -183,7 +177,7 @@ button{
         margin-left:0;
     }
     #memmodify{width:95%;}
-    #memmodify ul span{font-size: 0.8rem;}
+    #memmodify ul span{font-size: 0.9rem;}
     #memmodify span{width: 20%; margin-left:20px;}
     button{width:50%}
     

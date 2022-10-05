@@ -155,7 +155,7 @@
     }
     .orderlist_sub{
         float:left;
-        font-size:2.1rem;
+        font-size:1.6rem;
         font-weight: bold;
         width:100%;
         margin-top:50px;
@@ -341,16 +341,18 @@
     .buyinglist{
         margin:35px 0;
         width:100%;
+        height:120px;
         display:flex;
         flex-flow: row wrap;
         justify-content:center;
     }
     .buyinglist span:first-of-type{
-        margin:20px;
+        margin:20px auto 0;
         text-align:center;
         width:100%;
+        display:block;
         font-size:1.35rem;
-        font-weight:400
+        font-weight:400;
     }
     .button{
         border:1px solid #333;
@@ -375,6 +377,7 @@
     }
     .txtcon{
         width:25%;
+        height:24px;
     }
     .buyinglist .search{
         width:15%;   
@@ -390,7 +393,7 @@
     }
     .orderlist_sub{
         float:left;
-        font-size:2.1rem;
+        font-size:1.6rem;
         font-weight: bold;
         width:100%;
         margin-top:50px;

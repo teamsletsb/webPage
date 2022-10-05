@@ -17,16 +17,12 @@ input[type=checkbox]{
     margin-bottom:0;
 }
 h1{
-    font-weight: 500;
+    font-weight: 600;
     font-size:1.8rem;
     color:#222;
 }
 
-.mytitle hr{
-    margin-top: 30px;
-    width:480px;
-    margin-bottom:0;
-}
+
 
 /*마이페이지 리스트*/
 .mylist ul{
@@ -52,8 +48,8 @@ h1{
 
 /*h2 기본스타일*/
 h2{
-    font-size:2rem;
-    font-weight:400;
+    font-size:1.6rem;
+    font-weight:500;
     margin-bottom:15px;
 }
 
@@ -71,33 +67,26 @@ button.delete{
     left:50%;
     transform:translate(-50%,-50%);
 }
-.btn { 
+.btn{ 
     border: 1px solid #333;
     color: #333;
     cursor:pointer;
     user-select: none;
     font-weight: 500;
-    font-size: 1.125rem;
-    border-radius: 2rem;
-    line-height: 40px;
+    font-size: 1.15rem;
+    height:40px;
+    line-height: 38px;
 }
 
-
-
-#bk_head>h2{
-    font-size: 2rem;
-    font-weight: 400;
-    text-align: center;
-    margin: 80px auto 0;
+#counting_buckets{
+    margin-bottom:50px;
 }
-#bk_head>hr{width: 480px; margin: 30px auto 30px;}
-
 #counting_buckets>h3{
-    font-weight:700;
-    font-size:1.2rem;
+    font-weight:400;
+    font-size:1.1rem;
 }
 #counting_buckets>hr{
-    margin:30px auto 60px;
+    margin-bottom:30px;
 }
 
 .wrap>form button{
@@ -108,7 +97,7 @@ button.delete{
 }
 .wrap>form,
 .wrap>form>div{
-    justify-content:space-around;
+    justify-content:space-between;
     flex-flow:row wrap;
     margin:0 20px;
     align-items: center;
@@ -118,90 +107,64 @@ button.delete{
     font-size:1.2rem;
     width:80%;
 }
+#ppp{
+    width:30%;
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: left;
+}
+#h_span{
+    width:50%;
+    display:block;
+    margin-left:5%
+
+}
 
 #contents{
     display: flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    width:900px;
-    margin-left: 150px;
+    flex-flow: row wrap;
+    justify-content:center;
+    width:100%;
     user-select: none;
 }
-#contents>.buckets>li>a>img{
-    vertical-align:top;
-    height:160px;
+#contents>ul{
+    margin:80px 4% 40px;
+    width:20%;
+    min-width:250px;
+}
+#contents>ul>li:first-child{
+    width:100%;
+    height:260px;
+    border:1px solid #666;
+    border-radius:5px;
+    position:relative;
+}
+#contents>ul>li:first-child>input{
+    top:2%;
+    left:2%;
+    position:absolute;
+}
+#contents>ul>li:first-child>a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+#contents>ul>li:first-child>a>img{
+    height:80%;
     position:absolute;
     left:50%;
     top:50%;
     transform:translate(-50%,-50%);
     transition:all .2s;
 }
-#contents>.buckets>li>a{
-    display:block;
-    border:1px solid #202020;
-    text-align:center;
-    width:240px;
-    height:260px;
-    position:relative;
-}
-#contents>.buckets>li>a:hover>img{
-    height:185px;
+#contents>ul>li:first-child>a:hover>img{
+    height:85%;
     transition:all .2s;
 }
-#contents>.buckets>li{
-    margin:70px 3px 0 0;
-    padding-right: -200px;
-    text-align:center;
-    position: relative;
-}
-#contents>.buckets>li:first-child{
-    position: relative;
-    top:-17%; left:25%;
-    width: 50px; height: 50px;
-    z-index: 99;
-}
-#contents>.buckets{
-    align-items: center;
-}
 
-#contents>.buckets>li:nth-of-type(1){
-    width:15%;
-}
-#contents>.buckets>li:nth-of-type(2){
-    width:35%;
-    text-align:left;
-    position:relative;
-}
-#contents>.buckets>li:nth-of-type(3){
-    width:3%;
-    text-align: left;
-    position:relative;
-}
 
-#contents>.buckets>li:nth-of-type(3){
-    width:25%;
-}
-#contents>.buckets>li:nth-of-type(3)>h5{
-    font-size:1.6rem;
-    font-weight:500;
-    margin: 400px 0 0 -65px;
-}
-#contents>.buckets>li:nth-of-type(3)>h6{
-    font-size:1.6rem;
-    font-weight:500;
-    margin: 400px 0 0 -36px;
-}
-
-#contents>.buckets>li:nth-of-type(3)>div>.btn_dec:hover,
-#contents>.buckets>li:nth-of-type(3)>div>.btn_inc:hover{
-    border:0;
-    background:#10643A;
-    color:#fff;
-    transition:all .25s;
-    box-shadow:0 50px 0 0  rgba(0,0,0,0.25) inset, 
-    0 -50px 0 0 rgba(0,0,0,0.25) inset;
-    box-sizing:border-box;
-}
 
 #fixedzone{
     width:100%;
@@ -252,15 +215,11 @@ button.delete{
         text-align:center;
     }
     h1{
-        font-weight: 500;
+        font-weight: 600;
         font-size:1.8rem;
         color:#222;
     }
 
-    .mytitle hr{
-        margin-top: 30px;
-        width:480px;
-    }
 
     /*마이페이지 리스트*/
     .mylist ul{

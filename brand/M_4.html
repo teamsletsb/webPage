@@ -36,7 +36,7 @@
 <!--마이페이지 타이틀-->
 <section class="mytitle">
     <h1>마이페이지</h1>
-    <hr />
+    <hr class="title_line" />
 </section>
 <!--마이페이지 리스트-->
 <section class="mylist">
@@ -47,58 +47,77 @@
         <li><a href="./M_4.html">찜한상품</a></li>
     </ul>
 </section>
-
-    <div id = "counting_buckets">
-        <h3>총 건</h3>
-        <hr/>
-    </div>
+<div id = "counting_buckets" class="wrap">
+    <h2>찜한상품</h2>
+    <hr/>
+    <h3>총 건</h3>
+</div>
 </hgroup>
 
 <section>
     <div class="wrap">
         <form>
-            <div class="flex" id="check">
-                <input id = "checkall" type="checkbox" name='selectall' value='selectall' onclick='selectAll(this)'/> 
-                <h4 id="h_h4">전체선택</h4>
+            <div class="flex">
+                <p id="ppp">
+                    <input id = "checkall" type="checkbox" name='selectall' value='selectall' onclick='selectAll(this)'/> 
+                    <span id="h_span">전체선택</span>
+                </p>
                 <button type="button" name="delete_select_items" class="btn">선택 삭제</button>
             </div>
         </form>
         <article id="contents">
-            <ul class="buckets flex">
-                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+            <ul class="buckets">
                 <li>
+                    <input type="checkbox" name = "items" onclick='checkSelectAll()'/>
                     <a href="#"><img src="./images/img3.png" alt="img3"/></a>
-
                 </li>
                  <li>
                     <h5 class="item_name">까스활명수</h5>
                 </li>
             </ul>
-            <ul class="buckets flex">
-                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+            <ul class="buckets">
                 <li>
-                    <a href="#"><img src="./images/img5.png" alt="img3"/></a>
+                    <input type="checkbox" name = "items" onclick='checkSelectAll()'/>
+                    <a href="#"><img src="./images/img5.png" alt="img5"/></a>
                 </li>
                 <li>
                     <h5 class="item_name">미인활명수</h5>
                 </li>
             </ul>
-            <ul class="buckets flex">
-                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+            <ul class="buckets">
                 <li>
-                    <a href="#"><img src="./images/img7.png" alt="img3"/></a>
+                    <input type="checkbox" name = "items" onclick='checkSelectAll()'/>
+                    <a href="#"><img src="./images/img7_pack.png" alt="img7"/></a>
                 </li>
                 <li>
                     <h5 class="item_name">꼬마활명수</h5>
                 </li>
             </ul>
-            <ul class="buckets flex">
-                <li><input type="checkbox" name = "items" onclick='checkSelectAll()'/></li>
+            <ul class="buckets">
                 <li>
-                    <a href="#"><img src="./images/img2.png" alt="img3"/></a>
+                    <input type="checkbox" name = "items" onclick='checkSelectAll()'/>
+                    <a href="#"><img src="./images/img2.png" alt="img2"/></a>
                 </li>
                 <li>
                     <h5 class="item_name">까스활</h5>
+                </li>
+            </ul>
+            <ul class="buckets">
+                <li>
+                    <input type="checkbox" name = "items" onclick='checkSelectAll()'/>
+                    <a href="#"><img src="./images/img6.png" alt="img6"/></a>
+                </li>
+                <li>
+                    <h5 class="item_name">활명수-액</h5>
+                </li>
+            </ul>
+            <ul class="buckets">
+                <li>
+                    <input type="checkbox" name = "items" onclick='checkSelectAll()'/>
+                    <a href="#"><img src="./images/img4.png" alt="img4"/></a>
+                </li>
+                <li>
+                    <h5 class="item_name">미인활</h5>
                 </li>
             </ul>
         </article>
