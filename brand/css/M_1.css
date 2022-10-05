@@ -1,28 +1,16 @@
 @charset "utf-8";
 @import url('store_common.css');
-section{
-    overflow:hidden;
-}
-.wrap{
-    width:100%;
-}
-.chklist hr,
-.orderlist hr,
-.addinfo hr{
-    width:95%;
-    margin:0 2.5%;
-}
-section h2{
-    width:95%;
-    margin-left: 2.5%;
-}
-.order_info,
-.orderlist_sub,
-.addinfo_sub{
-    margin-left:2.5%;
-    width:95%;
-}
 
+.wrap{
+    width:66.6667%;
+}
+.search:hover{
+    box-shadow: 0 30px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -30px 0 0 rgba(0,0,0,0.25) inset;
+}
+.mylist>ul>li:nth-of-type(1)>a{
+    font-weight:600;
+}
 
 @media screen and (min-width:1024px){
     /*타이틀*/
@@ -31,39 +19,38 @@ section h2{
         text-align:center;
     }
     h1{
-        font-weight: 500;
+        font-weight: 600;
         font-size:1.8rem;
         color:#222;
     }
 
-    .mytitle hr{
-        margin-top: 30px;
-        width:400px;
-    }
 
     /*마이페이지 리스트*/
     .mylist ul{
         display: flex;
         justify-content: space-between;
-        padding:80px 30% 70px 30%;
+        padding:80px 25% 70px 25%;
         text-align:center;
     }
 
     .mylist ul li{
         font-size:1.3rem;
         font-weight:400;
+        width:24%;
     }
 
-    .mylist ul li a:hover{
+    .mylist ul li:hover a{
         font-weight: 600;
         color:#10643A;
         display:block;
+        width:100%;
+        height:100%;
     }
 
     /*h2 기본스타일*/
     h2{
-        font-size:2rem;
-        font-weight:400;
+        font-size:1.6rem;
+        font-weight:500;
         margin-bottom:15px;
     }
 
@@ -79,11 +66,12 @@ section h2{
         justify-content: center;
     }
     .orderinfo{
-        width:7%;
+        width:9%;
         display:block;
         margin-top:50px;
         margin-bottom:50px;
     }
+
     .orderinfo p a{
         display:block;
         font-weight: 600;
@@ -94,8 +82,7 @@ section h2{
     }
     .arrow{
         font-size:4rem;
-        margin:50px 40px 50px 60px;
-        float:left;
+        margin:50px 10px 50px 30px;
     }
     .orderinfowrap::after{
         content:'';
@@ -129,10 +116,9 @@ section h2{
     .button{
         border:1px solid #333;
         background: #fff;
-        display:inline-block;
         width:60px;
         height:30px;
-        line-height:30px;
+        line-height:28px;
         text-align:center;
         cursor:pointer;
         margin-right:10px;
@@ -160,11 +146,12 @@ section h2{
         position:relative;
     }
     .order_info p{
-        float:left;
         margin:5px 20px 10px 10px;
+        float:left;
     }
     .order_info>p:last-of-type{
         color:#B53333;
+        font-weight:500;
     }
     .orderlist_sub{
         float:left;
@@ -181,30 +168,32 @@ section h2{
     }
     .ordercontent{
         width:100%;
-        display:inline-block;
         border-top: 1px solid #d0d0d0;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align:center;
+        margin:80px 0;
+    }
+    .ordercontent>div{
+        width:30%;
     }
     .ordercontent:first-of-type{border-top: 0;}
+    .ordercontent p{
+        margin:20px 0;
+    }
     .orderimg{
-        width:20%;
+        padding-top:40px;
+    }
+    .orderimg>img{
         display:block;
-        margin: 15px 0 0 15px;
-    }
-    .orderimg img{
-        display:flex;
-        justify-content:space-between;
         width:100%;
-    }
-    .article{
-        position:absolute;
-        bottom:10px;
-    }
+    }}
     .orderleft{
-        width:20%;
         font-size:1.5rem;
-        display:inline-block;
-        position:absolute;
-        left:300px;
+        width:50%;
+        text-align:right;
     }
     .orderleft p:first-of-type{
         font-weight:600;
@@ -213,26 +202,17 @@ section h2{
         font-size:1.0rem;
     }
     .orderright{
-        float:right;
+        width:20%;
     }
     .orderright p{
-        float:left;
-        margin-left:350px;
         font-size:1.2rem;
     }
 
     .orderright p:first-of-type{
         color:#B53333;
     }
+    
 
-
-    .orderleft{
-        transform:translate(50%,-150%);
-    }
-    .orderright{
-        transform:translateY(-1250%);
-        padding:0 50px;
-    }
 
     .total{
         width:100%;
@@ -240,7 +220,7 @@ section h2{
         line-height:80px;
         background: #f5f5f5;
         font-size:1.2rem;
-        display:inline-block;
+        display:block;
         text-align:center;
         margin:50px 0 50px 0;
 
@@ -266,7 +246,7 @@ section h2{
         margin:30px 0;
         font-size:1.1rem;
     }
-}
+
 
 
 /*모바일 영역*/
@@ -285,14 +265,11 @@ section h2{
         color:#222;
     }
 
-    .mytitle hr{
-        margin-top: 30px;
-        width:400px;
-    }
 
     /*마이페이지 리스트*/
     .mylist ul{
-        padding-bottom:70px;
+        padding:0;
+        padding-bottom:50px;
         text-align:center;
     }
 
@@ -301,17 +278,19 @@ section h2{
         margin-top:50px;
         font-weight:400;
     }
+    
 
-    .mylist ul li a:hover{
+    .mylist>ul>li:hover>a{
         font-weight: 600;
         color:#10643A;
         display:block;
     }
 
+
     /*h2 기본스타일*/
     h2{
-        font-size:2rem;
-        font-weight:400;
+        font-size:1.6rem;
+        font-weight:500;
         margin-bottom:15px;
     }
 
@@ -355,7 +334,7 @@ section h2{
     .buyinglistwrap{
         background:#f5f5f5;
         margin-bottom:90px;
-        display:inline-block;
+        display:block;
         width:100%;
         height:100%;
     }
@@ -367,11 +346,11 @@ section h2{
         justify-content:center;
     }
     .buyinglist span:first-of-type{
-        margin-bottom:20px;
-        display:flex;
-        justify-content: center;
+        margin:20px;
+        text-align:center;
         width:100%;
-        font-size:1.2rem;
+        font-size:1.35rem;
+        font-weight:400
     }
     .button{
         border:1px solid #333;
@@ -379,11 +358,12 @@ section h2{
         display:block;
         width:50px;
         height:30px;
-        line-height:30px;
+        line-height:28px;
         text-align:center;
         cursor:pointer;
         margin-right:5px;
         font-size:0.9rem;
+        box-sizing: border-box;
     }
     .button:last-of-type{
         width:100px;
@@ -423,40 +403,39 @@ section h2{
     }
     .ordercontent{
         width:100%;
+        margin:80px 0;
+        text-align:center;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: center;
+        border-top: 1px solid #d0d0d0;
+    }
+    .ordercontent:first-of-type{
+        border-top:0;
+    }
+    .ordercontent p{
+        margin:30px 0;
     }
     .orderimg{
+        padding-top:40px;
         width:100%;
-        display:flex;
-        justify-content: space-around;
     }
     .orderimg img{
-        width:50%;
+        width:33%;
     }
-
     .orderleft{
-        display:flex;
-        justify-content: space-around;
-        width:80%;
-        margin:0 auto;
+        width:30%;
         font-size:1.4rem;
         font-weight:bold;
+        text-align:center;
     }
     .orderright{
-        display:flex;
-        width:100%;
-        justify-content:space-around;
-        height:1%;
-    }
-    .orderright p{
-        margin:0 auto;
+        width:30%;
     }
     .orderleft p:last-of-type{
         font-size:1.0rem;
-        line-height:25px;
-        font-weight:normal;
+        font-weight:400;
     }
-
-
     .orderright p:first-of-type{
         color:#B53333;
         font-size:1.2rem;

@@ -4,6 +4,9 @@
 div.wrap{
     width:66.7%;
 }
+.mylist>ul>li:nth-of-type(3)>a{
+    font-weight:600;
+}
 @media screen and (min-width:1024px){
     /*타이틀*/
     .mytitle{
@@ -18,28 +21,39 @@ div.wrap{
 
     .mytitle hr{
         margin-top: 30px;
-        width:400px;
+        width:480px;
+        margin-bottom:0;
     }
 
     /*마이페이지 리스트*/
     .mylist ul{
         display: flex;
         justify-content: space-between;
-        padding:80px 30% 70px 30%;
+        padding:80px 25% 70px 25%;
         text-align:center;
     }
 
     .mylist ul li{
         font-size:1.3rem;
-        float:left;
         font-weight:400;
+        width:24%;
     }
 
-    .mylist ul li a:hover{
+    .mylist ul li:hover a{
         font-weight: 600;
         color:#10643A;
         display:block;
+        width:100%;
+        height:100%;
     }
+
+    /*h2 기본스타일*/
+    h2{
+        font-size:2rem;
+        font-weight:400;
+        margin-bottom:15px;
+    }
+
     .qnalist{
         width:100%;
         display:flex;
@@ -235,12 +249,13 @@ div.wrap{
 
     .mytitle hr{
         margin-top: 30px;
-        width:400px;
+        width:480px;
     }
 
     /*마이페이지 리스트*/
     .mylist ul{
-        padding-bottom:70px;
+        padding:0;
+        padding-bottom:50px;
         text-align:center;
     }
 
@@ -250,7 +265,7 @@ div.wrap{
         font-weight:400;
     }
 
-    .mylist ul li a:hover{
+    .mylist ul li:hover a{
         font-weight: 600;
         color:#10643A;
         display:block;

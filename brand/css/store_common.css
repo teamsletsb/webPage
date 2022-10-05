@@ -2,9 +2,9 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/*수정 20221005*/
 
-/*전체 공통
-수정 20220930*/
+/*전체 공통*/
 
 html{
     font-family: 'Noto Sans KR', sans-serif;
@@ -45,11 +45,20 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     clear:both;
 }
 
+/*타이틀 언더라인*/
+.title_line{
+    margin:20px auto;
+    width:70px;
+    height:4px;
+    background:#10643A;
+}
+
 
 .btn{
     width:180px;
     height:50px;
-    line-height:px;
+    line-height:50px;
+    vertical-align: top;
     text-align:center;
     border:1px solid #10643A;
     background-color:rgba(0,0,0,0);
@@ -69,7 +78,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     0 -50px 0 0 rgba(0,0,0,0.25) inset;*/
     border:0;
     transition:all 0.3s;
-    color: #fbfbfb;
+    color: #fafafa;
     box-sizing:border-box;
     padding:0;
 }
@@ -90,6 +99,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
 #head .flex{
     justify-content:right;
     user-select: none;
+    padding-top:5px;
 }
 #head ul>li{
     height:50px;
@@ -104,7 +114,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     height:100%;
     line-height:50px;
     text-align:center;
-    font-size:1.0rem;
+    font-size:0.97rem;
     font-weight:400;
 }
 
@@ -131,10 +141,10 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     transition: all .5s;
 }
 #head ul li a:hover:after {
-    width: 45%
+    width: 30%;
 }
 #head ul li a:hover:before {
-    width: 45%
+    width: 30%;
 }
 
 
@@ -156,12 +166,12 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
     width:150px;
     position:absolute;
     top:0;
-    left:0;
+    left:20px;
 }
 #logo>a{
     display:block;
     height:100px;
-    background:url('../images/logo.png') no-repeat center center/70px;
+    background:url('../images/logo.png') no-repeat center center/100%;
     text-indent:-9999px;
 }
 
@@ -330,7 +340,7 @@ a:link,a:visited,a:hover,a:active{text-decoration:none;}
         color:#fff;
     }
     #head>nav>ul>li:hover>a{
-        color:#202020;
+        color:#333;
     }
 
     #head ul li a:after,
