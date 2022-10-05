@@ -25,7 +25,7 @@
                 <li><a href="S.html">회원가입</a></li>
                 <li ><a href="M_1.html">마이페이지</a></li>
                 <li ><a href="CA.html">장바구니</a></li>
-                <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
+                <li><a href="##"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
             </ul>
         </nav>
         <h1 id="logo"><a href="ST.html">logo</a></h1>
@@ -53,14 +53,14 @@
         </div>
         <div id="password">
             <h3>비밀번호</h3>
-            <div id="pw_text">8자 이상 25자 이하로 입력해주세요.</div>
-            <input type="password" name="pw_length" placeholder="비밀번호" class="green_line" id="pw_length"/>
+            <div id="pw_text">영문, 숫자 조합 8자 이상 25자 이하로 입력해주세요.</div>
+            <input type="password" name="pw_length" placeholder="비밀번호" class="green_line" id="pw_length" maxlength="25"/>
             <h3>비밀번호 확인</h3>
-            <input type="password" name="re_pw_length" placeholder="비밀번호 확인" class="green_line" id="re_pw_length"/>
+            <input type="password" name="re_pw_length" placeholder="비밀번호 확인" class="green_line" id="re_pw_length" maxlength="25"/>
         </div>
         <h3>닉네임</h3>
         <div id="nickname" class="form_flex">
-            <input type="text" name="u_name" placeholder="(1~15자)" class="green_line" id="u_name"/>
+            <input type="text" name="u_name" placeholder="(1~15자)" class="green_line" id="u_name" maxlength="15"/>
             <button type="button" class="green_solid buttn" id="u_name_btn">닉네임 중복체크</button>
         </div>
         <h3>약관동의</h3>
