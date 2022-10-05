@@ -43,29 +43,29 @@
         <div id="first" class="active">
             <h2>등록된 휴대폰 번호로 아이디 찾기</h2>
             <h3>가입 당시 입력한 휴대전화 번호를 통해 인증해주세요.</h3>
-            <form action="#" method="post" name="form" id="form">
+            <form action="#" method="post" name="form" class="form">
                 <table>
                     <tr class="form_flex">
                         <th>이름</th>
                         <td>
-                            <input type="text" name="Username" placeholder="이름"/>
+                            <input type="text" name="Username" placeholder="이름" class="tel_name"/>
                         </td>
                      </tr>
                      <tr class="form_flex">
                         <th>휴대전화</th>
                          <td>
-                            <select type="tel" name="phone2">
+                            <select type="tel" name="phone1">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="016">016</option>
                                 <option value="017">017</option>
                                 <option value="019">019</option> 
                             </select>
-                             <input type="tel" name="phone2"/>
-                             <input type="tel" name="phone3"/>
+                             <input type="tel" name="phone2" class="phone2" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
+                             <input type="tel" name="phone3" class="phone3" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
                          </td>
                          <td>
-                            <button type="button" id="telform_btn">번호인증</button>
+                            <button type="button" class="telform_btn">번호인증</button>
                         </td>
                     </tr>
                 </table>
@@ -73,40 +73,41 @@
                     <tr class="form_flex">
                         <th>인증번호</th>
                         <td>
-                            <input type="text" name="cernumber" placeholder="인증번호 6자리 숫자 입력"/>
+                            <input type="text" name="cernumber" placeholder="인증번호 입력" maxlength="6" class="cernumber_blank"/>
                         </td>
-                        <td id="cernumber_txt">인증번호를 입력해주세요.</td>
+                        <td class="cernumber_txt">인증번호를 입력해주세요.</td>
                     </tr>
                 </table>
+                <button type="submit" class="fianlform_btn"/>인증하기</button>
             </form>
-            <button type="submit" id="fianlform_btn"/>인증하기</button>
+            
         </div><!--여기부터 비밀번호 찾기 영역-->
         <div id="second">
             <h2>등록된 휴대폰 번호로 비밀번호 찾기</h2>
             <h3>가입 당시 입력한 휴대전화 번호를 통해 인증해주세요.</h3>
-            <form action="#" method="post" name="form" id="form">
+            <form action="#" method="post" name="form" class="form">
                 <table>
                     <tr class="form_flex">
                         <th>이름</th>
                         <td>
-                            <input type="text" name="Username" placeholder="이름"/>
+                            <input type="text" name="Username" placeholder="이름" class="tel_name"/>
                         </td>
                      </tr>
                      <tr class="form_flex">
                         <th>휴대전화</th>
                          <td>
-                            <select type="tel" name="phone2">
+                            <select type="tel" name="phone1">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="016">016</option>
                                 <option value="017">017</option>
                                 <option value="019">019</option> 
                             </select>
-                             <input type="tel" name="phone2"/>
-                             <input type="tel" name="phone3"/>
+                             <input type="tel" name="phone2" class="phone2" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
+                             <input type="tel" name="phone3" class="phone3" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
                          </td>
                          <td>
-                            <button type="button" id="telform_btn">번호인증</button>
+                            <button type="button" class="telform_btn">번호인증</button>
                         </td>
                     </tr>
                 </table>
@@ -114,13 +115,13 @@
                     <tr class="form_flex">
                         <th>인증번호</th>
                         <td>
-                            <input type="text" name="cernumber" placeholder="인증번호 6자리 숫자 입력"/>
+                            <input type="text" name="cernumber" placeholder="인증번호 입력" maxlength="6" class="cernumber_blank"/>
                         </td>
-                        <td id="cernumber_txt">인증번호를 입력해주세요.</td>
+                        <td class="cernumber_txt">인증번호를 입력해주세요.</td>
                     </tr>
                 </table>
+                <button type="submit" class="fianlform_btn"/>인증하기</button>
             </form>
-            <button type="submit" id="fianlform_btn"/>인증하기</button>
         </div>
     </div>
 </div>
@@ -161,7 +162,46 @@
 </footer>
 <script type="text/javascript" src="./js/store_common.js"></script>
 </script>
-<script type="text/javascript" src="./js/L_1.js"></script>
+<script>
+    //탭메뉴
+    $(function(){
+    $("ul.tab_menu>li").click(function(){
+        $(this).siblings("li").removeClass("active");
+        $(this).addClass("active");
+        var idx = $(this).index();
+        $(".tab_contents>div").removeClass("active");
+        $(".tab_contents>div").eq(idx).addClass("active");
+        });
+    });
 
+    //휴대전화 번호인증
+    $("#first .telform_btn").click(function(){
+        if($('#first .phone2' && '#first .phone3').val() != ''){
+        alert("인증번호가 전송되었습니다.");
+        };
+    });
+    $("#second .telform_btn").click(function(){
+        if($('#second .phone2' && '#second .phone3').val() != ''){
+        alert("인증번호가 전송되었습니다.");
+        };
+    });
+</script>
+<script>
+    //인증하기 alert
+    $('#first .fianlform_btn').click(function(){
+        if($('#first .cernumber_blank').val() != ''){
+            alert("인증되었습니다.")
+        }else{
+            return false;
+        };
+    });
+    $('#second .fianlform_btn').click(function(){
+        if($('#second .cernumber_blank').val() != ''){
+            alert("인증되었습니다.")
+        }else{
+            return false;
+        };
+    });
+</script>
 </body>
 </html>
