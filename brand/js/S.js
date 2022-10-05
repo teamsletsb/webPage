@@ -1,12 +1,19 @@
 
-// 비밀번호 8자리 이상 입력 경고문구
+// 비밀번호 8자리 이상 25자리이하 입력 경고문구
 $('#pw_text').hide();
 $('#pw_length').on('input', function(){
     if($('#pw_length').val() != '' && $('#pw_length').val().length < 8){
         $('#pw_text').show();
     }else{
         $('#pw_text').hide();
-    }
+    };
+
+    var pwdCheck = /^(?=.*[0-9])(?=.*[a-zA-Z]).{8,25}$/;
+
+    if(!pwdCheck.test(pw_length.value)){
+         $('#pw_text').show();
+        return false;
+    };
 })
 // 체크박스 전체 선택
 $(".checkbox_group").on("click", "#check_all", function () {
@@ -34,13 +41,16 @@ $(document).ready(function(){
         var u_name = document.getElementById('u_name');
         
 
-
         if(email_id.value == ""){
             alert("이메일 주소를 입력하세요.");
             email_id.focus();
             return false;
         };
 
+        if(email_sel.value == ""){
+            alert("이메일 주소를 입력하세요.");
+            return false;
+        };
 
         if(pw_length.value == ""){
             alert("비밀번호를 입력하세요.");
@@ -48,10 +58,10 @@ $(document).ready(function(){
             return false;
         };
 
-        var pwdCheck = /^(?=.*[0-9]).{8,25}$/;
+        var pwdCheck = /^(?=.*[0-9])(?=.*[a-zA-Z]).{8,25}$/;
 
         if(!pwdCheck.test(pw_length.value)){
-            alert("비밀번호는 8이상 25자리 이하로 사용해야합니다.");
+            alert("비밀번호는 영문 숫자 조합 8이상 25자리 이하로 사용해야합니다.");
             pw_length.focus();
             return false;
         };
@@ -101,8 +111,8 @@ $(document).ready(function(){
 
 //이메일 체크 팝업..
 $("#email_btn").click(function(){
-        if($('#email_id').val() != ''){
-        alert("확인되었습니다.");
+    if($('#email_id' && '#email_sel').val() != ''){
+    alert("확인되었습니다.");
     };
 });
 //닉네임 체크 팝업..
