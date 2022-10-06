@@ -6,19 +6,17 @@ a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
 
 #sub_title{
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     color:#222;
-    margin: 50px auto 30px;
+    margin: 50px auto 0px;
 }
-#h_hr{
-    width:480px;
-    margin:0 auto;
-}
+
 .contents{
     width:480px;
     height:500px;
-    margin:50px auto;
+    margin:0 auto;
+    padding:50px 0;
 }
 ul.tab_menu{
     width:100%;

@@ -16,9 +16,6 @@ button.delete{
 
 
 
-body>section:nth-of-type(1){
-    margin-bottom:20px;
-}
 #bk_head>h2{
     font-size: 1.8rem;
     font-weight: 500;
@@ -26,8 +23,10 @@ body>section:nth-of-type(1){
     text-align: center;
     margin: 50px auto 0;
 }
-#bk_head>hr{width: 480px; margin: 30px auto 50px;}
 
+#counting_buckets{
+    padding-top:50px;
+}
 #counting_buckets>h3{
     font-weight:700;
     font-size:1.2rem;
@@ -70,6 +69,9 @@ body>section:nth-of-type(1){
 
 #contents{
     user-select: none;
+}
+.buckets{
+    margin:50px 0;
 }
 #contents>.buckets>li>a>img{
     vertical-align:top;
