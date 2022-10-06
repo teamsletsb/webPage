@@ -248,8 +248,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img2_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -262,8 +262,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img3_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -276,8 +276,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img4_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -290,8 +290,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img5_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -304,8 +304,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img6_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -318,8 +318,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img7_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -332,8 +332,8 @@ z-index: 9999999;
     background: #f3f3f3;
     z-index: -1;
     position: absolute;
-    top: 19vh;
-    left: 42vw;
+    margin: auto 50%; /*여기수정함*/
+    left: -100px; /*여기수정함*/
     background-image: url("../images/img8_bg.png");
     background-size: cover;
     border: 2px solid;
@@ -836,13 +836,112 @@ footer{width:100%;}
   #history01, #history02, #history03, #history04,
   #history05, #history06, #history07, #history_wrap .line_wrap{font-size: 1rem;}
   #history_wrap{padding-left: 140px;}
-  #history_wrap .line_wrap{border-bottom: none;}
   
   #history04{left: 50%;}
   #history04 img{height: 170px;}
   #history06 img{height: 170px;}
   #history07 img{height: 130px;}
   
+    /*하단배너영역 M*/
+  #container {
+    height: 600px;
+  }
+  #container>ul>li:first-child{
+      position: absolute;
+      top: 50%; left: 4%;
+      transform: translateY(-50%);
+  }
+  #container>ul>li:last-child{
+      top:50%; left: 60%;
+      transform: translateY(-50%);
+  }
   
+  /*뉴스,캠페인,광고 영역*/
+#newsimg{
+  display: block;
+  height: 700px;
+  position: relative;
+}
+#newsimg>li{
+  height: 400px; width: 400px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#newsimg>.news_hover:nth-child(1){top:10%; left:75%;}
+#newsimg>.news_hover:nth-child(2){top:20%;}
+#newsimg>.news_hover:nth-child(3){top:30%; left:25%;}
+
+#newsimg li:hover{
+  filter: none;
+  transform: scale(1.2) translateX(-45%);
+  transition: all .4s;
+}
   
+/*푸터*/
+.fotter{
+  width:100%;
+  height:100%;
+}
+.ft_bg{
+  background: #fafafa;
+  line-height:1.5;
+}
+.ftinfo{
+  background:#fff;
+  display:flex;
+  justify-content: center;
+  float:left;
+  font-size:1.0rem;
+  width:100%;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  margin-bottom:20px;
+}
+.ftinfo li{
+  width:100%;
+  font-size:0.9rem;
+  text-align:center;
+  padding:14px 0;
+}
+.ftinfo li a{
+  width:100%;
+  font-weight:300;
+  color:#333;
+}
+
+.ftadd{
+  display:flex;
+  width:100%;
+  justify-content:center;
+  font-size: 0.9rem;
+  color:#aaa;
+  text-align:left;
+}
+
+.ftadd #logo_footer{
+  width:120px;
+  background:url('../images/logo_gray.png') no-repeat center/70px;
+  text-indent:-9999px;
+}
+
+.ftadd address p{
+  padding:10px 0;
+} 
+
+#social_icon{
+  width:100%;
+  padding-top:20px;
+}
+.icon_list{
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+.icon_list img{
+  width:70%;
+}
+ 
+ 
 }
