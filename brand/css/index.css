@@ -654,25 +654,29 @@ z-index: 9999999;
   }
 }
 
-/*뉴스,캠페인,광고 영역*/
+/*뉴스,캠페인,광고 영역*/ /*여기수정함*/
 #news{
   width: 100%;
   background-color: #fff;
 }
 #newsimg{
   justify-content: space-around;
-  padding-top:5%;
+  padding:5% 0;
 }
-#newsimg img{height: 80%; filter:grayscale(90%);}
-#news img:last-child{
-  display: block;
-  margin:0 auto;
+#newsimg>li{
+  height: 500px; width: 500px;
+  filter:grayscale(90%);
+  text-indent: -9999px;
+  margin: 20px 0;
 }
-#newsimg img:hover{
+#newsimg>li:nth-child(1){background: url('../images/newsimg01.jpg') no-repeat 100%/cover;}
+#newsimg>li:nth-child(2){background: url('../images/newsimg02.jpg') no-repeat 100%/cover;}
+#newsimg>li:nth-child(3){background: url('../images/newsimg03.jpg') no-repeat center/cover;}
+
+#newsimg li:hover{
   filter: none;
   transform: scale(1.1);
   transition: all .4s;
-  overflow: hidden;
 }
 
 /*푸터*/
