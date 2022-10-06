@@ -94,3 +94,14 @@ $(document).ready(function() {
     wow.init();
 
     gsap.config({trialWarn: false})
+
+
+    $('.news_hover').hover(function(){
+        $(this).css('z-index','999');
+        if($(this).index() == 0){
+            $(".news_hover:nth-of-type(2)").css("z-index","99");
+        }
+    },function(){
+        $(this).css('z-index','0');
+        $(".news_hover:nth-of-type(2)").css("z-index","0");
+    });
