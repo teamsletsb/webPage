@@ -9,14 +9,13 @@ a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
     height: 200px;
 }
 #pay h3, #sec01 h3{
-    margin:50px 0;
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
     margin: 100px auto 50px;
 }
 /*st-2-1*/
-#sec01{height: 450px;}
+#sec01{height: 450px; margin-bottom: 20px;}
 #sec01 .flex{
     width: 80%;
     margin: 50px auto 0;
@@ -31,23 +30,25 @@ a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
     width: 80%;
     margin: 0 auto;
 }
-.btn{
+
+#home_btn{
     display: block;
-    margin: 50px auto 0;
-    border-radius: 10px;
-    line-height: 48px;
-    box-sizing:border-box;
+    margin: 30px auto 100px;
+    border: 0;
+    font-size: 1.2rem;
+    padding: 15px 50px;
+    color: #fbfbfb;
+    background: #10643A;
+    cursor: pointer;
+    transition:all .3s;
 }
-.btn>a{
-    color:#202020;
-}
-.btn:hover>a{
-    display:block;
-    width:100%;
-    height:100%;
-    color:#fff;
-    box-sizing:border-box;
-    line-height:50px;
+
+#home_btn:hover{
+    box-shadow: 0 60px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -60px 0 0 rgba(0,0,0,0.25) inset;
+    border:0;
+    transition:all 0.3s;
+
 }
 /*폰트 굵게*/
 .bold{font-weight: 500;}

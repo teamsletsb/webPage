@@ -3,40 +3,38 @@
 
 /*공통*/
 input[type=checkbox]{
-    width:30px;
+    width:18px;
     height:30px;
 }
 
 button.delete{
-    width:44px;
-    height:44px;
-    line-height:42px;
+    width:30px;
+    height:30px;
+    line-height:28px;
     position:relative;
+    font-size:0.9rem;
 }
 
 
 
+body>section:nth-of-type(1){
+    margin-bottom:20px;
+}
 #bk_head>h2{
     font-size: 1.8rem;
     font-weight: 600;
-    color:#222;
     text-align: center;
     margin: 50px auto 0;
 }
 
-#counting_buckets{
-    padding-top:50px;
-}
 #counting_buckets>h3{
     font-weight:700;
     font-size:1.2rem;
-    width:95%;
-    margin-left:2.5%;
-
+    margin-top:70px;
 }
 #counting_buckets>hr{
-    width: 95%;
-    margin:30px 2.5% 60px;
+    width: 100%;
+    margin:15px auto 60px ;
 }
 
 .wrap>form button{
@@ -45,6 +43,7 @@ button.delete{
     line-height:38px;
     font-size:1rem;
     font-weight:600;
+    box-sizing:border-box;
 }
 .wrap>form,
 .wrap>form>div{
@@ -56,10 +55,13 @@ button.delete{
     box-sizing:border-box;
     position: relative;
 }
-
+.wsrap>form>div>h4{
+    font-weight:400;
+    font-size:1.1rem;   
+}
 #h_span{
-    font-weight:500;
-    font-size:1.2rem;
+    font-weight:400;
+    font-size:1.1rem;
     text-align: left;
     margin-left: 30px;
     position: absolute;
@@ -69,9 +71,6 @@ button.delete{
 
 #contents{
     user-select: none;
-}
-.buckets{
-    margin:50px 0;
 }
 #contents>.buckets>li>a>img{
     vertical-align:top;
@@ -84,9 +83,9 @@ button.delete{
 }
 #contents>.buckets>li>a{
     display:block;
-    border:1px solid #202020;
+    border:1px solid #ccc;
     text-align:center;
-    width:240px;
+    width:260px;
     height:260px;
     position:relative;
 }
@@ -116,25 +115,26 @@ button.delete{
     line-height:55px;
 }
 #contents>.buckets>li:nth-of-type(2)::after{
-    content:'　　　최대 200개 구매가능';
+    content:'　　최대 200개 구매가능';
     height:40px;
     line-height:40px;
     font-size:0.95rem;
     position:absolute;
     display:block;
-    background:url('../images/CA_icon.png') no-repeat left center;
+    background:url('../images/CA_icon.png') no-repeat left center/12%;
 }
 #contents>.buckets>li:nth-of-type(3){
     width:25%;
 }
 #contents>.buckets>li:nth-of-type(3)>h5{
-    font-size:1.6rem;
-    font-weight:500;
+    font-size:1.7rem;
+    font-weight:400;
 }
 #contents>.buckets>li:nth-of-type(3)>h6{
-    font-size:1.3rem;
+    font-size:1.2rem;
     margin:30px 0;
-    color:red;
+    color: #FF5A33;
+    font-weight:500;
 }
 #contents>.buckets>li:nth-of-type(3)>div{
     font-size:1.5rem;
@@ -153,6 +153,7 @@ button.delete{
     cursor:pointer;
     box-sizing:border-box;
     border-radius:50%;
+    font-size:1.0rem;
 }
 #contents>.buckets>li:nth-of-type(3)>div>.btn_dec:hover,
 #contents>.buckets>li:nth-of-type(3)>div>.btn_inc:hover{
@@ -160,15 +161,17 @@ button.delete{
     background:#10643A;
     color:#fff;
     transition:all .3s;
-    box-shadow:0 50px 0 0  rgba(0,0,0,0.25) inset, 
+    /* box-shadow:0 50px 0 0  rgba(0,0,0,0.25) inset, 
     0 -50px 0 0 rgba(0,0,0,0.25) inset;
-    box-sizing:border-box;
+    box-sizing:border-box;*/
+   
 }
 #contents>.buckets>li:nth-of-type(3)>div>.count_items{
     width:40px;
     height:40px;
     line-height:40px;
     font-size:1.3rem;
+    font-weight:bold;
 }
 #fixedzone{
     width:100%;
@@ -177,7 +180,7 @@ button.delete{
 #to_pay_link{
     margin-top:100px;
     height:120px;
-    background:#10643A;
+    background:#F0ECCC;
     position:sticky;
     left:0;
     bottom:0;
@@ -197,19 +200,25 @@ button.delete{
     letter-spacing:1px;
 }
 #to_pay_link .flex>h4{
-    line-height:60px;
+    line-height:70px;
+}
+#to_pay_link .flex>h4:first-child{
+    color:#333;
+    font-size:1.2rem;
 }
 #to_pay_link .flex>h4:last-child{
-    color:red;
-    font-size:2rem;
+    color: #FF5A33;
+    font-size:1.5rem;
     font-weight:600;
     letter-spacing:3px;
 }
 #to_pay_link .flex>h5{
     line-height:30px;
+    color:#10643A;
+    font-weight:600;
 }
 #to_pay_link .flex>h5:last-child{
-    font-size:2rem;
+    font-size:1.5rem;
     font-weight:600;
     letter-spacing:7px;
 }
@@ -222,7 +231,7 @@ div.wrap{width: 66.66666666666667%;}
     div.wrap{width: 100%;}
     #counting_buckets>hr,
     #counting_buckets>h3{
-
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }

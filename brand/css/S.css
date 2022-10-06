@@ -5,13 +5,13 @@ a,a:link,a:visited,a:hover,a:active{color:#666; text-decoration: none;}
 
 /*220930 수정*/
 .sub_title{
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.8rem; /*221006 래경수정*/
+    font-weight: 600; /*221006 래경수정*/
     text-align: center;
     color:#222;
     margin: 50px auto 0;
 }
-hr{width: 480px; margin: 30px auto 40px;}
+/*hr{width: 480px; margin: 30px auto 40px;}*/
 
 /*회원가입 공통 CSS*/
 #sign_in{
@@ -21,9 +21,10 @@ hr{width: 480px; margin: 30px auto 40px;}
 #sign_in h3{
     color:#222;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 500; /*221006 래경수정*/
     margin-bottom: 20px;
 }
+#sign_in>form>h3:first-child{margin-top: 50px;}
 #sign_in .green_line{
     border: 1px solid #10643A;
     font-size: 1.0rem;
