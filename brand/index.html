@@ -229,11 +229,11 @@
     </ul>
 </section>
 <section id="news"><!--뉴스,캠페인,광고 영역-->
-    <div>
+    <div><!--여기영역 전체수정함-->
         <ul id="newsimg" class="flex">
-            <li><a href="#"><img src="images/newsimg01.jpg" alt="활명수클래식"/></a></li>
-            <li><a href="#"><img src="images/newsimg02.jpg" alt="활명수클래식"/></a></li>
-            <li><a href="#"><img src="images/newsimg03.png" alt="활명수클래식"/></a></li>
+            <li class="news_hover">newsimg01.jpg</li>
+            <li class="news_hover">newsimg02.jpg</li>
+            <li class="news_hover">newsimg03.jpg</li>
         </ul>
     </div>
 </section>
@@ -332,7 +332,16 @@ $(document).ready(function() {
          }); 
      });
  });
-
+ //뉴스영역 모바일 호버하면 이미지 제일 앞으로 오게
+ $('.news_hover').hover(function(){
+    $(this).css('z-index','999');
+    if($(this).index() == 0){
+        $(".news_hover:nth-of-type(2)").css("z-index","99");
+    }
+},function(){
+    $(this).css('z-index','0');
+    $(".news_hover:nth-of-type(2)").css("z-index","0");
+});
 </script>
 
 <!--
