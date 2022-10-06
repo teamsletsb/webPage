@@ -1,9 +1,6 @@
 @charset "utf-8";
 @import url('store_common.css');
 
-div.wrap{
-    width:66.7%;
-}
 .mylist>ul>li:nth-of-type(3)>a{
     font-weight:600;
 }

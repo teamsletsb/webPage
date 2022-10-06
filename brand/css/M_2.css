@@ -151,12 +151,8 @@ button{
 
 /*모바일 버전*/
 @media screen and (max-width: 1023px){
-    .mylist ul{flex-direction: column;}
-    .mylist ul li{margin-top: 50px;}*/
-    .wrap{
-        width:95%;
-    }
     .mylist ul{
+        display:block;
         padding:0;
         padding-bottom:50px;
         text-align:center;
@@ -164,14 +160,17 @@ button{
 
     .mylist ul li{
         font-size:1.3rem;
+        margin-top:50px;
         font-weight:400;
+        width:100%;
     }
 
-    .mylist ul li a:hover{
+    .mylist ul li:hover a{
         font-weight: 600;
         color:#10643A;
         display:block;
     }
+
     input{width:50%;}
     #membermodify li:last-child p input:last-of-type{
         margin-left:0;

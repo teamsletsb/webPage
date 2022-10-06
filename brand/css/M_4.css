@@ -46,6 +46,8 @@ h1{
     height:100%;
 }
 
+
+
 /*h2 기본스타일*/
 h2{
     font-size:1.6rem;
@@ -84,6 +86,7 @@ button.delete{
 #counting_buckets>h3{
     font-weight:400;
     font-size:1.1rem;
+    color:#b53333;
 }
 #counting_buckets>hr{
     margin-bottom:30px;
@@ -124,13 +127,14 @@ button.delete{
 #contents{
     display: flex;
     flex-flow: row wrap;
-    justify-content:center;
+    justify-content:left;
     width:100%;
+    margin:0 auto;
     user-select: none;
 }
 #contents>ul{
-    margin:80px 4% 40px;
-    width:20%;
+    margin:80px 5% 40px;
+    width:23%;
     min-width:250px;
 }
 #contents>ul>li:first-child{
@@ -160,16 +164,16 @@ button.delete{
     transition:all .2s;
 }
 #contents>ul>li:first-child>a:hover>img{
-    height:85%;
+    height:88%;
     transition:all .2s;
 }
-
-
-
-#fixedzone{
-    width:100%;
-    height:80px;
+#contents>ul>li:last-child>.item_name{
+    text-align:center;
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:400;
 }
+
 #CA_link{
     margin-top:100px;
     width:inherit;
@@ -182,26 +186,16 @@ button.delete{
     display:block;
     z-index: 999;
 }
-#CA_link>div{
-    height:50px;
-}
-#CA_link .flex{
-    margin:0 60px;
-    height:50%;
-    color:#fff;
-    font-size:1.6rem;
-    font-weight:400;
-    letter-spacing:1px;
-}
-#CA_link .flex>h4{
+
+#CA_link h4{
+    text-align:center;
     line-height:80px;
-}
-#CA_link .flex>h4:last-child{
     color:#fff;
     font-size:2rem;
-    font-weight:600;
-    letter-spacing:3px;
+    font-weight:500;
+    letter-spacing:1px;
 }
+
 
 
 
@@ -223,6 +217,7 @@ button.delete{
 
     /*마이페이지 리스트*/
     .mylist ul{
+        display:block;
         padding:0;
         padding-bottom:50px;
         text-align:center;
@@ -232,6 +227,7 @@ button.delete{
         font-size:1.3rem;
         margin-top:50px;
         font-weight:400;
+        width:100%;
     }
 
     .mylist ul li:hover a{
@@ -239,75 +235,14 @@ button.delete{
         color:#10643A;
         display:block;
     }
-    #check{
-        justify-content: left;
-    }
 
-    #h_h4{
-        width:80px;
-        margin:0 33% 0 5%;
+
+    #contents>ul{
+        min-width:180px;
     }
-    #contents{
-        width: 50%;
-    }
-    #wrap{
-        width:50%;
-    }    
-    .buckets{
-        margin:-50px 0 0 0;
-    }
-    #contents {
-        margin-left: 90px;
-    }
-    #contents>.buckets>li:nth-child(3) h5{
-        margin-left: -100px;
-        margin-top: 250px;
-        text-align: center;
-    } 
-    #contents>.buckets>li:nth-child(3) h6{
-        margin-left: -58px;
-    } 
-    #contents>.buckets>li:nth-of-type(2){
-        width:50%;
-    }
-    #contents>.buckets>li>a{
-        width:180px;
-        height: 150px;
-    }
-    #contents>.buckets>li>a>img{
-        height:120px;
-    }
-    #contents>.buckets>li>a:hover>img{
-        height:140px;
-    }
-    #CA_link .flex{
-        justify-content: center;
-    }
-    #CA_link .flex>h4:last-child{
-        font-size:1.5rem;
-    }
-    #contents>.buckets>li:first-child{
-        top:0; left:0;
-        width: 50px; height: 50px;
-        z-index: 99;
-    }
+    
     #checkall{z-index: 99999;}
 
-    .mylist ul{
-        padding-bottom:70px;
-        text-align:center;
-    }
 
-    .mylist ul li{
-        font-size:1.3rem;
-        margin-top:50px;
-        font-weight:400;
-    }
-
-    .mylist ul li:hover a{
-        font-weight: 600;
-        color:#10643A;
-        display:block;
-    }
 }
 
