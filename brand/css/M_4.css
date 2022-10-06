@@ -178,7 +178,7 @@ button.delete{
     margin-top:100px;
     width:inherit;
     height:80px;
-    background:#10643A;
+    background:#F0ECCC;
     position:sticky;
     left:0;
     bottom:0;
@@ -190,9 +190,9 @@ button.delete{
 #CA_link h4{
     text-align:center;
     line-height:80px;
-    color:#fff;
+    color:#10643A;
     font-size:2rem;
-    font-weight:500;
+    font-weight:600;
     letter-spacing:1px;
 }
 
