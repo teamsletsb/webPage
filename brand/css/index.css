@@ -216,8 +216,8 @@ z-index: 9999999;
   }
   
   #product-carousel {
-    height: 45vw;
-    margin: 50px 0 0;
+    height: 40vw;
+    margin:0;
     list-style: none;
     position: relative;
   }
@@ -272,7 +272,7 @@ z-index: 9999999;
   #product-carousel li:after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 17%;
     display: block;
     width: 80%;
@@ -355,7 +355,15 @@ z-index: 9999999;
     color: #333;
     z-index: 999;
   }
-  
+  /*제품소개 바로가기*/
+ #store_link{
+  font-family: 'SEBANG_Gothic_Bold';
+  margin-top: 100px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+ }
+ #store_link a{color: #009e5f;}
 
 /*연혁 영역*/
 #hwal_history{
@@ -587,7 +595,7 @@ z-index: 9999999;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   .page-content {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -609,7 +617,7 @@ z-index: 9999999;
 }
 @media (min-width: 600px) {
   .news_card {
-    height: 350px;
+    height: 450px;
   }
 }
 .news_card:before {
@@ -645,17 +653,18 @@ z-index: 9999999;
   transition: transform calc(var(--d) * 2) var(--e);
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
+/*뉴스 이미지 삽입*/
 .news_card:nth-child(1):before {
-  background-image: url('../images/newsimg01.jpg');
+  background: url('../images/newsimg01.jpg') no-repeat center/cover;
 }
 .news_card:nth-child(2):before {
-  background-image: url('../images/newsimg02.jpg');
+  background: url('../images/newsimg02.png') no-repeat center/cover;
 }
 .news_card:nth-child(3):before {
-  background-image: url('../images/newsimg03.png');
+  background: url('../images/newsimg03.jpg') no-repeat center/cover;
 }
 .news_card:nth-child(4):before {
-  background-image: url('../images/story3.png');
+  background: url('../images/newsimg04.jpg') no-repeat center/cover;
 }
 
 .news_content {
@@ -708,8 +717,7 @@ z-index: 9999999;
   background-color: #0d0d0d;
 }
 .news_btn:focus {
-  outline: 1px dashed yellow;
-  outline-offset: 3px;
+  outline: 0;
 }
 
 @media (hover: hover) and (min-width: 600px) {

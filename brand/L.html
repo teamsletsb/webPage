@@ -38,11 +38,11 @@
 <section id="login" class="wrap">
     <form action="#" method="post" name="frm">
         <div>
-            <input type="text" name="uid" size="50" placeholder="아이디"/>
-            <input type="password" name="pwd" maxlength="20" placeholder="비밀번호" size="50"/>
+            <input type="text" name="uid" size="50" placeholder="아이디" class="frm_fill"/>
+            <input type="password" name="pwd" maxlength="20" placeholder="비밀번호" size="50" class="frm_fill2"/>
         </div>
         <div id="login_submit">
-            <input type="button" value="로그인" name="login" onClick="location.href='./ST.html'"/>
+            <input type="button" value="로그인" name="login"  id="frm_login"/>
         </div>
     </form>
     <a href="./L_1.html">· 아이디 / 비밀번호 찾기</a>
@@ -83,5 +83,6 @@
 </footer>
 
 <script type="text/javascript" src="./js/store_common.js"></script>
+<script type="text/javascript" src="./js/L.js"></script>
 </body>
 </html>
