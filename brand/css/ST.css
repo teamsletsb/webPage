@@ -2,6 +2,11 @@
 @import url('store_common.css');
 
 /*공통*/
+hr{
+    height:1px;
+    border:0;
+    background:#666;
+}
 
 #main{
     width:100%;
@@ -16,11 +21,13 @@
 }
 
 #main article:nth-of-type(1){
-    padding-top:20px;
+    padding:40px 0 20px;
+
 }
 #main article:nth-of-type(1)>h2{
-    font-size:4rem;
-    font-weight:600;
+    font-size:3.4rem;
+    font-family: 'SEBANG_Gothic_Bold';
+    color:#333;
 }
 #main article:nth-of-type(1)>h3{
     font-size:1.25rem;
@@ -69,9 +76,9 @@
 }
 .info_text>dl>dd>ul>li,
 .info_text>dl>dd{
-overflow:hidden;
-text-overflow:ellipsis;
-white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 .info_img>figure{
@@ -193,7 +200,7 @@ white-space:nowrap;
     /*공통 레이아웃*/
 
     #main{
-        height:1500px;
+        height:1350px;
         background-position:left top;
         background-size:100% 600px;
         background-color:#56BB8A;
@@ -205,6 +212,15 @@ white-space:nowrap;
     #main article.flex>div{
         width:100%;
     }
+
+    /*GNB*/
+    #head>nav>ul>li{
+        height:60px;
+    }
+    #head>nav>ul>li>a{
+        line-height:60px;
+    }
+
     .contents{
         display:block;
         position:relative;
@@ -214,13 +230,13 @@ white-space:nowrap;
     }
     .contents>.info_img{
         position:absolute;
-        top:18%;
+        top:13%;
         transform:translateY(-50%);
     }
     .contents>.info_text{
         position:absolute;
         height:700px;
-        top:60%;
+        top:51%;
         transform:translateY(-50%);
     }
 
@@ -229,7 +245,7 @@ white-space:nowrap;
         margin:0;
         justify-content:center;
         position:absolute;
-        top:72%;
+        top:73%;
         left:50%;
         transform:translateX(-50%);
     }
@@ -254,11 +270,11 @@ white-space:nowrap;
         width:100%;
     }
     .info_img>figure>img{
-        height:340px !important;
+        height:300px !important;
     }
 
     #products{
-        top:82%;
+        top:80%;
         height:220px;
         overflow:hidden;
     }

@@ -146,8 +146,8 @@ bottom: 25px;
 z-index: 9999999;
 }
 #top_btn img{
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 #top_btn:hover{
   transition: all 1.5s;
