@@ -176,26 +176,8 @@ button.delete{
     font-weight:400;
 }
 
-#CA_link{
-    margin-top:100px;
-    width:inherit;
-    height:80px;
-    background:#F0ECCC;
-    position:sticky;
-    left:0;
-    bottom:0;
-    cursor:pointer;
-    display:block;
-    z-index: 999;
-}
-
-#CA_link h4{
-    text-align:center;
-    line-height:80px;
-    color:#10643A;
-    font-size:1.5rem;
-    font-weight:600;
-    letter-spacing:1px;
+section:last-of-type{
+    margin-bottom:100px;
 }
 
 
