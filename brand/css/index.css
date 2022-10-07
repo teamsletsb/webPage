@@ -710,7 +710,7 @@ z-index: 9999999;
   letter-spacing: 0.025rem;
   text-transform: uppercase;
   color: white;
-  background-color: black;
+  background-color: #202020;
   border: none;
 }
 .news_btn:hover {
@@ -978,6 +978,14 @@ footer{width:100%;}
     bottom:20%;
   }
   
+
+  /*브랜드소개*/
+  #brandint>figure>figcaption{
+    padding:100px 20% 0;
+    text-align:center;
+  }
+
+
   /*슬라이드*/
   .sldtxt{font-size: 1.6rem;}
 
