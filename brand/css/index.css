@@ -191,7 +191,7 @@ z-index: 9999999;
     font-size: 1.4rem;
     font-weight: 300;
     padding-top: 100px;
-    padding-left: 50px;
+    padding-left: 150px;
 }
 #brandint>figure>figcaption p{margin-bottom: 15px;}
 #brandint>figure>figcaption p>span{
@@ -203,7 +203,7 @@ z-index: 9999999;
 
 #prdtitle {
     font-family: 'SEBANG_Gothic_Bold';
-    font-size: 60px;
+    font-size: 45px;
     text-align: center;
     padding-top: 10vh;
     z-index: 999999 !important;
@@ -384,10 +384,15 @@ z-index: 9999999;
   background-image: url('../images/line.png');
   background-repeat: no-repeat;
   background-position: center 10%;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .line_wrap p{margin: 10px 0;}
+.line_wrap span{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#history07 span{font-size: 1.8rem;}
 #history_wrap img{padding:0 20%; height: 200px;}
 #history01, #history02, #history03, #history04,
 #history05, #history06, #history07, #history_wrap .line_wrap{
