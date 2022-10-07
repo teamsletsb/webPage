@@ -105,3 +105,5 @@ $(document).ready(function() {
         $(this).css('z-index','0');
         $(".news_hover:nth-of-type(2)").css("z-index","0");
     });
+
+

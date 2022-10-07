@@ -84,78 +84,50 @@
     </figure>
 </section>
 <section id="card"><!--슬라이드 영역-->
-    <div class='wrapper'>
-        <h2 id="prdtitle">제품 소개</h2>
-        <div class="cards">
-          <button class="btn prev"><span>Prev</span></button>
-          <button class="btn next"><span>Next</span></button>
-          <div class="card card00">
-            <div class="content">
-              <div class="circle01"></div>
-              <img src='./images/img2.PNG' alt="img2"/>
-              <h2 class="card-title">까스 활</h2>
-              <p class="card-subtitle">보존제 무첨가, 의약외품</p>
-            </div>
-          </div>
-          <div class="card card01">
-            <div class="content">
-              <div class="circle02"></div>
-              <img src='./images/img3.PNG' alt="img3"/>
-              <h2 class="card-title">까스활명수 큐</h2>
-              <p class="card-subtitle">"liQuid Quick Qualty"</p>
+    <h2 id="prdtitle">제품 소개</h2>
+    <div id="product-carousel-container">
+        <ul id="product-carousel">
+          <li class="item-1">
+            <img src="./images/img2.PNG"><p class="sldtxt">까스활</p>
+          </li>
+          <li class="item-2">
+            <img src="./images/img3.PNG"><p class="sldtxt">까스 활명수</p>
+          </li>
+          <li class="item-3">
+            <img src="./images/img4.PNG"><p class="sldtxt">미인활</p>
+          </li>
+          <li class="item-4">
+            <img src="./images/img5.PNG"><p class="sldtxt">미인 활명수</p>
+          </li>
+          <li class="item-5">
+            <img src="./images/img6.PNG"><p class="sldtxt">활명수</p>
+          </li>
+          <li class="item-6">
+            <img src="./images/img7_pack_h500.PNG"><p class="sldtxt">꼬마 활명수</p>
+          </li>
+          <li class="item-7">
+            <img src="./images/img8_pack_h500.PNG"><p class="sldtxt">활명수 유</p>
+          </li>
+        </ul>
       
-            </div>
-          </div>
-          <div class="card card02">
-            <div class="content">
-              <div class="circle03"></div>
-              <img src='./images/img4.PNG' alt="img4"/>
-              <h2 class="card-title">꼬마활명수</h2>
-              <p class="card-subtitle">천연 딸기,오렌지향 첨부, 1회복용 스틱형 포장</p>
-      
-            </div>
-          </div>
-          <div class="card card03">
-            <div class="content">
-              <div class="circle04"></div>
-              <img src='./images/img5.PNG' alt="img5"/>
-              <h2 class="card-title">미인 활</h2>
-              <p class="card-subtitle">상큼한 아사이베리 과즙 함유</p>
-      
-            </div>
-          </div>
-          <div class="card card04">
-            <div class="content">
-              <div class="circle05"></div>
-              <img src='./images/img6.PNG' alt="img6" />
-              <h2 class="card-title">미인 활명수</h2>
-              <p class="card-subtitle">오매 1,200mg 함유, 보존제 무첨가</p>
-      
-            </div>
-          </div>
-          <div class="card card05">
-            <div class="content">
-              <div class="circle06"></div>
-              <img src='./images/img7.PNG' alt="img7"/>
-              <h2 class="card-title">활명수</h2>
-              <p class="card-subtitle">유,소아 복용 가능</p>
-      
-            </div>
-          </div>
-          <div class="card card06">
-            <div class="content">
-              <div class="circle07"></div>
-              <img src='./images/img8.PNG' alt="img8"/>
-              <h2 class="card-title">활명수 유</h2>
-              <p class="card-subtitle">스틱형 포장</p>
-            </div>
-          </div>
+        <div id="product-carousel-nav">
+          <button class="carousel-nav prev"></button>
+          <button class="carousel-nav next"></button>
+        </div>
+        <div id="carousel-dots">
+          <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
-      <!-- partial -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js'></script>
-      <script src='https://assets.codepen.io/16327/GSDevTools3.min.js'></script>
-      <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script><script src="./js/prdslidescript.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <script  src="./js/index_slide.js"></script>
 </section>
 <section id="hwal_history"><!--연혁 영역-->
     <div class="whole_wrap">
@@ -228,13 +200,36 @@
        </li>
     </ul>
 </section>
-<section id="news"><!--뉴스,캠페인,광고 영역-->
-    <div><!--여기영역 전체수정함-->
-        <ul id="newsimg" class="flex">
-            <li class="news_hover">newsimg01.jpg</li>
-            <li class="news_hover">newsimg02.jpg</li>
-            <li class="news_hover">newsimg03.jpg</li>
-        </ul>
+<section id="news" class="page-content"><!--뉴스,캠페인,광고 영역-->
+    <div class="news_card">
+      <div class="news_content">
+        <h2 class="news_title">활명수 늬우스</h2>
+        <p class="news_copy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <button class="news_btn">더보기</button>
+      </div>
+    </div>
+    <div class="news_card">
+      <div class="news_content">
+        <h2 class="news_title">활명수 캠페인</h2>
+        <p class="news_copy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <button class="news_btn">더보기</button>
+      </div>
+    </div>
+    <div class="news_card">
+      <div class="news_content">
+        <h2 class="news_title">활명수 늬우스</h2>
+        <p class="news_copy">It's the desert you've always dreamed of</p>
+        <button class="news_btn">더보기</button>
+      </div>
+    </div>
+    <div class="news_card">
+        <div class="news_content">
+          <h2 class="news_title">활명수 늬우스</h2>
+          <p class="news_copy">It's the desert you've always dreamed of</p>
+          <button class="news_btn">더보기</button>
+        </div>
+      </div>
+<h6>&nbsp;</h6>
 </section>
 <footer>
     <div class="ftinfocon">
