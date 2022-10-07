@@ -1,11 +1,11 @@
     /*탈퇴버튼*/
     $("#outbtn").click(function(){
-        var result = confirm("정말로 탈퇴하시겠어요? ㅠ.ㅠ");
+        var result = confirm("정말로 탈퇴하시겠어요?");
         if(!result){
             return false;
         }else{
-            alert("즐거웠습니다...")
-            location.href="./ST.html";
+            alert("탈퇴 완료되었습니다.")
+            location.href="./index.html";
         }
     })
     /*적용버튼*/
