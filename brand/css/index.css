@@ -193,7 +193,7 @@ z-index: 9999999;
     padding-top: 100px;
     padding-left: 150px;
 }
-#brandint>figure>figcaption p{margin-bottom: 15px;}
+#brandint>figure>figcaption p{margin-bottom: 30px;}
 #brandint>figure>figcaption p>span{
     color: #10643A;
     font-weight: 600;
