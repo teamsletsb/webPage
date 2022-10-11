@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import url('./store_common.css');
+*{margin:0; padding:0; list-style: none;}
+a,a:link,a:visited,a:hover,a:active{color:#202020; text-decoration: none;}
+
+/*220930 수정*/
+.sub_title{
+    font-size: 1.8rem; /*221006 래경수정*/
+    font-weight: 600; /*221006 래경수정*/
+    text-align: center;
+    color:#222;
+    margin: 50px auto 0;
+}
+/*hr{width: 480px; margin: 30px auto 40px;}*/
+
+/*회원가입 공통 CSS*/
+#sign_in{
+    width:480px;
+    margin:40px auto 100px;
+}
+#sign_in h3{
+    color:#222;
+    font-size: 1.2rem;
+    font-weight: 500; /*221006 래경수정*/
+    margin-bottom: 20px;
+}
+#sign_in>form>h3:first-child{margin-top: 50px;}
+#sign_in .green_line{
+    border: 1px solid #10643A;
+    font-size: 1.0rem;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transition:all .3s;
+}
+#sign_in .green_solid{
+    background: #10643A;
+    height: 39px;
+    color: #fff;
+    font-size: 1.0rem;
+    border: 0; box-sizing: border-box;
+    cursor: pointer;
+    transition:all .3s;
+}
+.buttn:hover{
+    box-shadow: 0 50px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -50px 0 0 rgba(0,0,0,0.25) inset;
+    border:0;
+    transition:all 0.3s;
+}
+#sign_in input{padding: 10px}
+#sign_in input::placeholder{color: #adadad;}
+.form_flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 480px;
+}
+/*이메일*/
+#email .green_line{
+    width: 210px;
+    height: 40px; line-height: 40px;
+}
+#email span{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 40px; line-height: 30px;
+    text-align: center;
+}
+#email button{width: 100%;}
+
+/*비밀번호*/
+#password input{width: 100%;}
+#pw_text{
+    color: #F52A1E;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/*닉네임*/
+.form_flex input,
+.form_flex button{width: 225px;}
+
+/*약관동의*/
+#serviceterm hr{
+    width: 420px;
+    margin: 15px auto;
+}
+#serviceterm p:first-child{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #10643A;
+    color: #222; font-weight: 500;
+}
+#serviceterm p{margin: 30px;}
+#term a{color: #222; font-weight: 500;}
+#serviceterm span{color: #adadad;}
+#final_submit{
+    width: 100%;
+    margin: 20px auto;
+}
+#sign_in>form>p:last-child{
+    text-align: center;
+    margin-top:10px;
+}
+#sign_in>form>p:last-child a{
+    font-weight: 600;
+    color: #222;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 1023px){
+    #sign_in{width:400px;}
+    #serviceterm p{font-size: 1.1rem;}
+    .form_flex{width: 400px;}
+    #email .green_line{width: 180px;}
+    .form_flex input,
+    .form_flex button{width: 195px;}
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>회원가입</title>
+    <link href="./css/S.css" rel="stylesheet" type="text/css" />
+</head>
+<body>    
+<!--헤더 유틸 로고,스토어 링크 변경 221007-->
+<header>
+    <div id="head">
+        <nav>
+            <div id="mob_menu">
+                <article>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <span class="mob_menu_switch_off"></span>
+                </article>
+            </div>
+            <ul class="flex">
+                <li><a href="index.html">홈으로</a></li>
+                <li><a href="L.html">로그인</a></li>
+                <li><a href="S.html">회원가입</a></li>
+                <li ><a href="M_1.html">마이페이지</a></li>
+                <li ><a href="CA.html">장바구니</a></li>
+                <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
+            </ul>
+        </nav>
+        <h1 id="logo"><a href="ST.html">logo</a></h1>
+    </div>
+</header>
+<!--  S회원가입 영역   -->
+<h2 class="sub_title">회원가입</h2>
+<hr class="title_line"/>
+<section id="sign_in">
+    <form name="join_form" action="#" id="join"method="post">
+        <h3>이메일</h3>
+        <div id="email" class="form_flex">
+            <input type='text' name="email_id" placeholder="이메일" class="green_line" id="email_id">
+            <span>@</span>
+           <!-- <input type='text' name="email_add"> --> 
+            <select name="email_sel" class="green_line" id="email_sel" onchange="change_email();">
+                <option value="">선택하세요</option>
+                <option value="daum.net">daum.net</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="hanmail.net">hanmail.net</option>
+                <option value="naver.com">naver.com</option>
+                <option value="nate.com">nate.com</option>
+             </select>
+            <button type="button" class="green_solid buttn" id="email_btn">이메일 확인</button>
+        </div>
+        <div id="password">
+            <h3>비밀번호</h3>
+            <div id="pw_text">영문, 숫자 조합 8자 이상 25자 이하로 입력해주세요.</div>
+            <input type="password" name="pw_length" placeholder="비밀번호" class="green_line" id="pw_length" maxlength="25"/>
+            <h3>비밀번호 확인</h3>
+            <input type="password" name="re_pw_length" placeholder="비밀번호 확인" class="green_line" id="re_pw_length" maxlength="25"/>
+        </div>
+        <h3>닉네임</h3>
+        <div id="nickname" class="form_flex">
+            <input type="text" name="u_name" placeholder="(1~15자)" class="green_line" id="u_name" maxlength="15"/>
+            <button type="button" class="green_solid buttn" id="u_name_btn">닉네임 중복체크</button>
+        </div>
+        <h3>약관동의</h3>
+        <fieldset  id="serviceterm" class="green_line checkbox_group">
+            <p>
+                <input type="checkbox" name="serviceterm" id="check_all"/> &nbsp; 전체동의
+            </p>
+            <p>
+                <input type="checkbox" name="serviceterm" id="check_1" class="normal"/> &nbsp; 만 14세 이상입니다.&nbsp; <span>(필수)</span>
+            </p>
+            <p id="term">
+                <input type="checkbox" name="serviceterm" id="check_2" class="normal"/><a href="#"> &nbsp; 이용약관</a>&nbsp; <span>(필수)</span>
+            </p>
+            <p>
+                <input type="checkbox" name="serviceterm" id="check_3" class="normal"/> &nbsp; 개인정보수집 및 이용동의&nbsp; <span>(필수)</span>
+            </p>
+            <p>
+                <input type="checkbox" name="serviceterm" id="check_4" class="normal"/> &nbsp; 이벤트, 프로모션 알림 메일 및 SMS 수신&nbsp; <span>(선택)</span>
+            </p>
+        </fieldset>
+        <input name="final_submit" type="button" value="회원가입" class="green_solid buttn" id="final_submit" />
+        <p>이미 회원이신가요?<a href="./L.html">로그인</a></p>
+    </form>
+</section>
+<!--푸터영역 수정 20220929-->
+<footer>
+    <div class="ftinfocon">
+        <ul class="ftinfo">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일수집거부</a></li>
+        </ul>
+<div class="ft_bg">
+        <div>
+            <ul class="ftadd">
+                <h2 id="logo_footer"><a href="#">logo</a></h2>
+                <li>
+                    <address>
+                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
+                        <p>Tel : 02-2021-9300 04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
+                        <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <div id="social_icon">
+            <ul class="icon_list">
+                <li><a href="https://www.facebook.com/"><img src="./images/social_icon_1.png" alt="icon_social_1"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./images/social_icon_2.png" alt="icon_social_2"></a></li>
+                <li><a href="https://twitter.com/"><img src="./images/social_icon_3.png" alt="icon_social_3"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+
+
+<script type="text/javascript" src="./js/store_common.js"></script>
+<script type="text/javascript" src="./js/S.js"></script>
+</html>

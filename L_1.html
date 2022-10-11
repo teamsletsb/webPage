@@ -8,29 +8,30 @@
     <link href="./css/L_1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>    
+    <!--헤더 유틸 로고,스토어 링크 변경 221007-->
     <header>
-    <div id="head">
-        <nav>
-            <div id="mob_menu">
-                <article>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <span class="mob_menu_switch_off"></span>
-                </article>
-            </div>
-            <ul class="flex">
-                <li><a href="index.html">홈으로 돌아가기</a></li>
-                <li><a href="L.html">로그인</a></li>
-                <li><a href="S.html">회원가입</a></li>
-                <li ><a href="M_1.html">마이페이지</a></li>
-                <li ><a href="CA.html">장바구니</a></li>
-                <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
-            </ul>
-        </nav>
-        <h1 id="logo"><a href="ST.html">logo</a></h1>
-    </div>
-</header>
+        <div id="head">
+            <nav>
+                <div id="mob_menu">
+                    <article>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <span class="mob_menu_switch_off"></span>
+                    </article>
+                </div>
+                <ul class="flex">
+                    <li><a href="index.html">홈으로</a></li>
+                    <li><a href="L.html">로그인</a></li>
+                    <li><a href="S.html">회원가입</a></li>
+                    <li ><a href="M_1.html">마이페이지</a></li>
+                    <li ><a href="CA.html">장바구니</a></li>
+                    <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
+                </ul>
+            </nav>
+            <h1 id="logo"><a href="ST.html">logo</a></h1>
+        </div>
+    </header>
 <!--   L-1 아이디/비밀번호 찾기 영역    -->
 <section class="wrap">
 <h2 id="sub_title">ID/PW찾기</h2>
@@ -55,7 +56,7 @@
                      <tr class="form_flex">
                         <th>휴대전화</th>
                          <td>
-                            <select name="tel">
+                            <select type="tel" name="phone1">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="016">016</option>
@@ -79,7 +80,7 @@
                         <td class="cernumber_txt">인증번호를 입력해주세요.</td>
                     </tr>
                 </table>
-                <button type="submit" class="fianlform_btn">인증하기</button>
+                <button type="submit" class="fianlform_btn"/>인증하기</button>
             </form>
             
         </div><!--여기부터 비밀번호 찾기 영역-->
@@ -97,7 +98,7 @@
                      <tr class="form_flex">
                         <th>휴대전화</th>
                          <td>
-                            <select name="tel">
+                            <select type="tel" name="phone1">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="016">016</option>
@@ -121,7 +122,7 @@
                         <td class="cernumber_txt">인증번호를 입력해주세요.</td>
                     </tr>
                 </table>
-                <button type="submit" class="fianlform_btn">인증하기</button>
+                <button type="submit" class="fianlform_btn"/>인증하기</button>
             </form>
         </div>
     </div>
@@ -138,11 +139,10 @@
             <li><a href="#">개인정보취급방침</a></li>
             <li><a href="#">이메일수집거부</a></li>
         </ul>
-    </div>
 <div class="ft_bg">
         <div>
             <ul class="ftadd">
-                <li id="logo_footer"><a href="#">logo</a></li>
+                <h2 id="logo_footer"><a href="#">logo</a></h2>
                 <li>
                     <address>
                         <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
@@ -163,46 +163,7 @@
     </div>
 </footer>
 <script type="text/javascript" src="./js/store_common.js"></script>
-<script>
-    //탭메뉴
-    $(function(){
-    $("ul.tab_menu>li").click(function(){
-        $(this).siblings("li").removeClass("active");
-        $(this).addClass("active");
-        var idx = $(this).index();
-        $(".tab_contents>div").removeClass("active");
-        $(".tab_contents>div").eq(idx).addClass("active");
-        });
-    });
+<script type="text/javascript" src="./js/L_1.js"></script>
 
-    //휴대전화 번호인증
-    $("#first .telform_btn").click(function(){
-        if($('#first .phone2' && '#first .phone3').val() != ''){
-        alert("인증번호가 전송되었습니다.");
-        };
-    });
-    $("#second .telform_btn").click(function(){
-        if($('#second .phone2' && '#second .phone3').val() != ''){
-        alert("인증번호가 전송되었습니다.");
-        };
-    });
-</script>
-<script>
-    //인증하기 alert
-    $('#first .fianlform_btn').click(function(){
-        if($('#first .cernumber_blank').val() != ''){
-            alert("인증되었습니다.")
-        }else{
-            return false;
-        };
-    });
-    $('#second .fianlform_btn').click(function(){
-        if($('#second .cernumber_blank').val() != ''){
-            alert("인증되었습니다.")
-        }else{
-            return false;
-        };
-    });
-</script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link href="./css/M_2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <!--헤더 유틸 로고,스토어 링크 변경 221007-->
     <header>
         <div id="head">
             <nav>
@@ -20,7 +21,7 @@
                     </article>
                 </div>
                 <ul class="flex">
-                    <li><a href="index.html">홈으로 돌아가기</a></li>
+                    <li><a href="index.html">홈으로</a></li>
                     <li><a href="L.html">로그인</a></li>
                     <li><a href="S.html">회원가입</a></li>
                     <li ><a href="M_1.html">마이페이지</a></li>
@@ -28,7 +29,7 @@
                     <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
                 </ul>
             </nav>
-            <h1 id="logo"><a href="#">logo</a></h1>
+            <h1 id="logo"><a href="ST.html">logo</a></h1>
         </div>
     </header>
 <!--    컨텐츠 영역    -->
@@ -52,10 +53,10 @@
         <h2 class="memtitle">회원정보수정</h2>
         <hr>
     </div>
-    <ul class="membermodify">
+    <ul id="membermodify">
         <li>
             <label>휴대폰번호</label>
-            <p><input type="text" name="phone"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/><span class="btn" onclick="alert('인증되었습니다')">본인인증하기</span></p>
+            <p><input type="text" name="phone"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/><span class="btn" onclick=verify();>본인인증하기</span></p>
         </li>
         <li>
             <label>아이디</label>
@@ -63,38 +64,30 @@
         </li>
         <li>
             <label>비밀번호</label>
-            <p><input type="password" name="uid" /></p>
+            <p><input type="password" name="password" id="pw1"/></p>
             <label class="mgs">비밀번호 확인</label>
-            <p><input type="password" name="uid" /><span class="btn" onclick="alert('변경되었습니다')">비밀번호변경</span></p>
+            <p><input type="password" name="password" id="pw2" /><span class="btn" onclick=pw();>비밀번호변경</span></p>
         </li>
-    </ul>
-    <div>
-        <h2 class="memtitle">배송정보수정</h2>
-        <hr>
-    </div>
-    <ul class="membermodify">
+        <div>
+            <h2 class="memtitle">배송정보수정</h2>
+            <hr>
+        </div>
         <li>
             <label>수령인</label>
             <p><input type="text" name="phone" size="100"/></p>
         </li>
         <li>
             <label>배송지</label>
-            <p><input type="text" name="uid" size="100"/>
-                <input type="text" name="uid" size="100"><span class="btn" onclick="alert('수정되었습니다')">수정하기</span></p>
+            <p><input type="text" name="uid" size="100" id="loc1"/>
+                <input type="text" name="uid" size="100" id="loc2"><span class="btn" onclick=loc()>수정하기</span></p>
         </li>
     </ul>
     <div class="buttonwrap">
-    <button class="button" onclick="alert('수정되었습니다^^')">수정하기</button>
+    <button class="button" id="modify">적용하기</button>
     <button class="button" id="outbtn">회원탈퇴</button>
     </div>
 </section>
-<script>
-    $("#outbtn").click(function(){
-        var result = confirm("정말로 탈퇴하시겠어요? ㅠ.ㅠ");
-        if(!result){return false;}
-})
 
-</script>
 <!--푸터영역 수정 20220929-->
 <footer>
     <div class="ftinfocon">
@@ -104,11 +97,10 @@
             <li><a href="#">개인정보취급방침</a></li>
             <li><a href="#">이메일수집거부</a></li>
         </ul>
-    </div>
 <div class="ft_bg">
         <div>
             <ul class="ftadd">
-                <li id="logo_footer"><a href="#">logo</a></li>
+                <h2 id="logo_footer"><a href="#">logo</a></h2>
                 <li>
                     <address>
                         <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
@@ -130,5 +122,6 @@
 </footer>
 
 <script type="text/javascript" src="./js/store_common.js"></script>
+<script type="text/javascript" src="./js/M_2.js"></script>
 </body>
 </html>

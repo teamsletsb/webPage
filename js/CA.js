@@ -152,9 +152,17 @@
     let list_delete = function(){
         $("button.delete").click(function(){
             $(this).parents(".buckets").remove();
+            
+            //총금액계산
+            let sum = 0;
+            for(let i = 0; i < bucketslist(); i++){
+                let sprs = parseInt($(".buckets:nth-of-type("+(i+1)+") .count_items").text());
+                sum = sum + (sprs * items[i+1]);
+            };
+
             bucketslist();
             list_refresh();
-            paybanner();
+            paybanner(sum);
         });
     };
 
