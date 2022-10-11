@@ -163,47 +163,7 @@
     </div>
 </footer>
 <script type="text/javascript" src="./js/store_common.js"></script>
-</script>
-<script>
-    //탭메뉴
-    $(function(){
-    $("ul.tab_menu>li").click(function(){
-        $(this).siblings("li").removeClass("active");
-        $(this).addClass("active");
-        var idx = $(this).index();
-        $(".tab_contents>div").removeClass("active");
-        $(".tab_contents>div").eq(idx).addClass("active");
-        });
-    });
+<script type="text/javascript" src="./js/L_1.js"></script>
 
-    //휴대전화 번호인증
-    $("#first .telform_btn").click(function(){
-        if($('#first .phone2' && '#first .phone3').val() != ''){
-        alert("인증번호가 전송되었습니다.");
-        };
-    });
-    $("#second .telform_btn").click(function(){
-        if($('#second .phone2' && '#second .phone3').val() != ''){
-        alert("인증번호가 전송되었습니다.");
-        };
-    });
-</script>
-<script>
-    //인증하기 alert
-    $('#first .fianlform_btn').click(function(){
-        if($('#first .cernumber_blank').val() != ''){
-            alert("인증되었습니다.")
-        }else{
-            return false;
-        };
-    });
-    $('#second .fianlform_btn').click(function(){
-        if($('#second .cernumber_blank').val() != ''){
-            alert("인증되었습니다.")
-        }else{
-            return false;
-        };
-    });
-</script>
 </body>
 </html>

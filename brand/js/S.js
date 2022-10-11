@@ -31,7 +31,6 @@ $(".checkbox_group").on("click", ".normal", function() {
 });
 
 
-
 //회원가입 유효성검사
 $(document).ready(function(){
     $("#final_submit").click(function(){
