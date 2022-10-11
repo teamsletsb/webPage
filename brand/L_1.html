@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>아이디/비밀번호 찾기</title>
+    <link href="./css/L_1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>    
+    <!--헤더 유틸 로고,스토어 링크 변경 221007-->
+    <header>
+        <div id="head">
+            <nav>
+                <div id="mob_menu">
+                    <article>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <span class="mob_menu_switch_off"></span>
+                    </article>
+                </div>
+                <ul class="flex">
+                    <li><a href="index.html">홈으로</a></li>
+                    <li><a href="L.html">로그인</a></li>
+                    <li><a href="S.html">회원가입</a></li>
+                    <li ><a href="M_1.html">마이페이지</a></li>
+                    <li ><a href="CA.html">장바구니</a></li>
+                    <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
+                </ul>
+            </nav>
+            <h1 id="logo"><a href="ST.html">logo</a></h1>
+        </div>
+    </header>
+<!--   L-1 아이디/비밀번호 찾기 영역    -->
+<section class="wrap">
+<h2 id="sub_title">ID/PW찾기</h2>
+<hr class="title_line">
+<div class="contents">
+    <ul class="tab_menu">
+        <li class="active hov">아이디</li>
+        <li class="hov">비밀번호</li>
+    </ul>
+    <div class="tab_contents">
+        <div id="first" class="active">
+            <h2>등록된 휴대폰 번호로 아이디 찾기</h2>
+            <h3>가입 당시 입력한 휴대전화 번호를 통해 인증해주세요.</h3>
+            <form action="#" method="post" name="form" class="form">
+                <table>
+                    <tr class="form_flex">
+                        <th>이름</th>
+                        <td>
+                            <input type="text" name="Username" placeholder="이름" class="tel_name"/>
+                        </td>
+                     </tr>
+                     <tr class="form_flex">
+                        <th>휴대전화</th>
+                         <td>
+                            <select type="tel" name="phone1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="019">019</option> 
+                            </select>
+                             <input type="tel" name="phone2" class="phone2" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
+                             <input type="tel" name="phone3" class="phone3" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
+                         </td>
+                         <td>
+                            <button type="button" class="telform_btn">번호인증</button>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="form_flex">
+                        <th>인증번호</th>
+                        <td>
+                            <input type="text" name="cernumber" placeholder="인증번호 입력" maxlength="6" class="cernumber_blank"/>
+                        </td>
+                        <td class="cernumber_txt">인증번호를 입력해주세요.</td>
+                    </tr>
+                </table>
+                <button type="submit" class="fianlform_btn"/>인증하기</button>
+            </form>
+            
+        </div><!--여기부터 비밀번호 찾기 영역-->
+        <div id="second">
+            <h2>등록된 휴대폰 번호로 비밀번호 찾기</h2>
+            <h3>가입 당시 입력한 휴대전화 번호를 통해 인증해주세요.</h3>
+            <form action="#" method="post" name="form" class="form">
+                <table>
+                    <tr class="form_flex">
+                        <th>이름</th>
+                        <td>
+                            <input type="text" name="Username" placeholder="이름" class="tel_name"/>
+                        </td>
+                     </tr>
+                     <tr class="form_flex">
+                        <th>휴대전화</th>
+                         <td>
+                            <select type="tel" name="phone1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="019">019</option> 
+                            </select>
+                             <input type="tel" name="phone2" class="phone2" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
+                             <input type="tel" name="phone3" class="phone3" oninput="this.value = this.value.replaceAll(/\D/g, '')" maxlength="4"/>
+                         </td>
+                         <td>
+                            <button type="button" class="telform_btn">번호인증</button>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="form_flex">
+                        <th>인증번호</th>
+                        <td>
+                            <input type="text" name="cernumber" placeholder="인증번호 입력" maxlength="6" class="cernumber_blank"/>
+                        </td>
+                        <td class="cernumber_txt">인증번호를 입력해주세요.</td>
+                    </tr>
+                </table>
+                <button type="submit" class="fianlform_btn"/>인증하기</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<!--푸터영역 수정 20220929-->
+<footer>
+    <div class="ftinfocon">
+        <ul class="ftinfo">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일수집거부</a></li>
+        </ul>
+<div class="ft_bg">
+        <div>
+            <ul class="ftadd">
+                <h2 id="logo_footer"><a href="#">logo</a></h2>
+                <li>
+                    <address>
+                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
+                        <p>Tel : 02-2021-9300 04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
+                        <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <div id="social_icon">
+            <ul class="icon_list">
+                <li><a href="https://www.facebook.com/"><img src="./images/social_icon_1.png" alt="icon_social_1"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./images/social_icon_2.png" alt="icon_social_2"></a></li>
+                <li><a href="https://twitter.com/"><img src="./images/social_icon_3.png" alt="icon_social_3"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="./js/store_common.js"></script>
+<script type="text/javascript" src="./js/L_1.js"></script>
+
+</body>
+</html>
