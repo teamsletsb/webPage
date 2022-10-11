@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url('store_common.css');
+*{margin:0; padding:0; list-style: none;}
+a,a:link,a:visited,a:hover,a:active{color:#202020; text-decoration: none;}
+
+.sub_title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color:#222;
+    margin: 50px auto 0;
+    padding-top:50px;
+}
+
+#login{width: 480px; height: 270px; padding-top:50px;}
+form div input{
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+    font-size: 1.0rem;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #696969;
+    padding-left: 10px;
+    margin:0 auto 10px;
+    box-sizing: border-box;
+}
+input::placeholder{color: #adadad;}
+#login_submit>input{
+    width: 100px; height: 110px;
+    background: #10643A;
+    color: #fff;
+    border: 0; padding-left: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:all .3s;
+}
+#login_submit>input:hover{
+    box-shadow: 0 110px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -110px 0 0 rgba(0,0,0,0.25) inset;
+    border:0;
+    transition:all 0.3s;
+    color:#fff;
+}
+#login>form{
+    display: flex;
+    width: 400px;
+    margin-bottom: 5px;
+
+}
+#login>form div{margin-left: 25px;}
+#login a{
+    font-size: 1rem;
+    color: #000;
+    margin-left:30px;
+}
+#login{margin-bottom: 100px;}
+
+
+
+@media screen and (max-width: 1023px){
+    #login{width: 400px;}
+    form div input{
+        width: 250px;
+        margin:0 auto 10px;
+    }
+    #last_submit{width: 100px;}
+    #login a{margin-left:18px;}
+    #login>form{width: 360px;}
+    #login>form div{margin-left:15px;}
+}

@@ -1,0 +1,479 @@
+@charset "utf-8";
+@import url('store_common.css');
+
+.wrap{
+    width:66.6667%;
+}
+.search:hover{
+    box-shadow: 0 30px 0 0  rgba(0,0,0,0.25) inset, 
+    0 -30px 0 0 rgba(0,0,0,0.25) inset;
+}
+.mylist>ul>li:nth-of-type(1)>a{
+    font-weight:600;
+}
+
+@media screen and (min-width:1024px){
+    /*타이틀*/
+    .mytitle{
+        margin-top:50px;
+        text-align:center;
+    }
+    h1{
+        font-weight: 600;
+        font-size:1.8rem;
+        color:#222;
+    }
+
+
+    /*마이페이지 리스트*/
+    .mylist ul{
+        display: flex;
+        justify-content: space-between;
+        padding:80px 25% 70px 25%;
+        text-align:center;
+    }
+
+    .mylist ul li{
+        font-size:1.3rem;
+        font-weight:400;
+        width:24%;
+    }
+
+    .mylist ul li:hover a{
+        font-weight: 600;
+        color:#10643A;
+        display:block;
+        width:100%;
+        height:100%;
+    }
+
+    /*h2 기본스타일*/
+    h2{
+        font-size:1.6rem;
+        font-weight:500;
+        margin-bottom:15px;
+    }
+
+    /*주문배송조회*/
+    .orderinfowrap{
+        width:100%;
+        position:relative;
+        text-align:center;
+        margin-top:50px;
+        margin-bottom:50px;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: center;
+    }
+    .orderinfo{
+        width:9%;
+        display:block;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+
+    .orderinfo p a{
+        display:block;
+        font-weight: 600;
+        font-size:2.2rem;
+    }
+    .orderinfo p:last-child{
+        margin-top: 20px;
+    }
+    .arrow{
+        font-size:4rem;
+        margin:50px 10px 50px 30px;
+    }
+    .orderinfowrap::after{
+        content:'';
+        width:0; height:0;
+        display:block;
+        clear:both;
+        visibility:hidden;
+    }
+
+    /*구매내역*/
+    .buyinglistwrap{
+        background:#f5f5f5;
+        margin-bottom:90px;
+        display:inline-block;
+        width:100%;
+        height:100px;
+        position:relative;
+    }
+    .buyinglist{
+        margin:35px auto;
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .buyinglist span:first-of-type{
+        margin:0 30px;
+        font-size:1.4rem;
+        font-weight:400;
+    }
+    .button{
+        border:1px solid #333;
+        background: #fff;
+        width:60px;
+        height:30px;
+        line-height:28px;
+        text-align:center;
+        cursor:pointer;
+        margin-right:10px;
+        box-sizing:border-box;
+        font-size:1rem;
+    }
+    .button:hover{
+        border:1px solid #10643A;
+        box-sizing:border-box;
+    }
+    .button:last-of-type{
+        width:120px;
+        border:none;
+        background: #10643A;
+        color:#fff;
+        margin-left:9px;
+    }
+    .txtcon{
+        width:20%;
+        height:20px;
+    }
+
+    /*주문내역*/
+    .orderlist{
+        position:relative;
+    }
+    .order_info p{
+        margin:5px 20px 10px 10px;
+        float:left;
+    }
+    .order_info>p:last-of-type{
+        color:#B53333;
+        font-weight:500;
+    }
+    .orderlist_sub{
+        float:left;
+        font-size:1.6rem;
+        font-weight: bold;
+        width:100%;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    .orderlist_sub p:last-of-type{
+        font-size:0.9rem;
+        margin-top:30px;
+        font-weight:400;
+    }
+    .ordercontent{
+        width:100%;
+        border-top: 1px solid #d0d0d0;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align:center;
+        margin:80px 0;
+    }
+    .ordercontent>div{
+        width:30%;
+    }
+    .ordercontent:first-of-type{border-top: 0;}
+    .ordercontent p{
+        margin:20px 0;
+    }
+    .orderimg{
+        padding-top:40px;
+    }
+    .orderimg>img{
+        display:block;
+        width:100%;
+    }}
+    .orderleft{
+        font-size:1.5rem;
+        width:50%;
+        text-align:right;
+    }
+    .orderleft p:first-of-type{
+        font-weight:600;
+    }
+    .orderleft p:last-of-type{
+        font-size:1.0rem;
+    }
+    .orderright{
+        width:20%;
+    }
+    .orderright p{
+        font-size:1.2rem;
+    }
+
+    .orderright p:first-of-type{
+        color:#B53333;
+    }
+    
+
+
+    .total{
+        width:100%;
+        height:80px;
+        line-height:80px;
+        background: #f5f5f5;
+        font-size:1.2rem;
+        display:block;
+        text-align:center;
+        margin:50px 0 50px 0;
+
+    }
+    .totallist li{
+        float:left;
+        width: 16.3%;
+    }
+    .totallist li:nth-of-type(1),
+    .totallist li:nth-of-type(3),
+    .totallist li:nth-of-type(5){
+        font-weight:600;
+    }
+    .totallist li:nth-of-type(5),
+    .totallist li:nth-of-type(6)
+    {color:#B53333; }
+
+
+    .addinfo{
+        margin-bottom:100px;
+    }
+    .addinfo_sub>p{
+        margin:30px 0;
+        font-size:1.1rem;
+    }
+
+
+
+/*모바일 영역*/
+@media screen and (max-width: 1023px){
+    /*타이틀*/
+    .wrap{
+        width:95%;
+    }
+    .mytitle{
+        margin-top:50px;
+        text-align:center;
+    }
+    h1{
+        font-weight: 500;
+        font-size:1.8rem;
+        color:#222;
+    }
+
+
+    /*마이페이지 리스트*/
+    .mylist ul{
+        padding:0;
+        padding-bottom:50px;
+        text-align:center;
+    }
+
+    .mylist ul li{
+        font-size:1.3rem;
+        margin-top:50px;
+        font-weight:400;
+    }
+    
+
+    .mylist>ul>li:hover>a{
+        font-weight: 600;
+        color:#10643A;
+        display:block;
+    }
+
+
+    /*h2 기본스타일*/
+    h2{
+        font-size:1.6rem;
+        font-weight:500;
+        margin-bottom:15px;
+    }
+
+    /*주문배송조회*/
+    .orderinfowrap{
+        width:100%;
+        margin:50px auto 100px;
+        position:relative;
+        text-align:center;
+        display:flex;
+        justify-content:space-around;
+    }
+    .orderinfo{
+        width:100%;
+        margin-top:50px;
+    }
+    .orderinfo p a{
+        font-weight: 600;
+        font-size:2.2rem;
+    }
+    .orderinfo p:last-child{
+        margin-top: 20px;
+        justify-content:center;
+        display:flex;
+        width:100%;
+    }
+    .arrow{
+        font-size:2rem;
+        width:97%;
+        padding-top:70px;
+    }
+    .orderinfowrap::after{
+        content:'';
+        width:0; height:0;
+        display:block;
+        clear:both;
+        visibility:hidden;
+    }
+
+    /*구매내역*/
+    .buyinglistwrap{
+        background:#f5f5f5;
+        margin-bottom:90px;
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    .buyinglist{
+        margin:35px 0;
+        width:100%;
+        height:120px;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content:center;
+    }
+    .buyinglist span:first-of-type{
+        margin:20px auto 0;
+        text-align:center;
+        width:100%;
+        display:block;
+        font-size:1.35rem;
+        font-weight:400;
+    }
+    .button{
+        border:1px solid #333;
+        background: #fbfbfb;
+        display:block;
+        width:50px;
+        height:30px;
+        line-height:28px;
+        text-align:center;
+        cursor:pointer;
+        margin-right:5px;
+        font-size:0.9rem;
+        box-sizing: border-box;
+    }
+    .button:last-of-type{
+        width:100px;
+        display:block;
+        border:none;
+        background: #10643A;
+        color:#fff;
+        margin-left:9px;
+    }
+    .txtcon{
+        width:25%;
+        height:24px;
+    }
+    .buyinglist .search{
+        width:15%;   
+    }
+
+    /*주문내역*/
+    .order_info p{
+        float:left;
+        margin:10px 20px 10px 10px;
+    }
+    .order_info>p:last-of-type{
+        color:#B53333;
+    }
+    .orderlist_sub{
+        float:left;
+        font-size:1.6rem;
+        font-weight: bold;
+        width:100%;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    .orderlist_sub p:last-of-type{
+        font-size:0.9rem;
+        margin-top:30px;
+        font-weight:400;
+    }
+    .ordercontent{
+        width:100%;
+        margin:80px 0;
+        text-align:center;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: center;
+        border-top: 1px solid #d0d0d0;
+    }
+    .ordercontent:first-of-type{
+        border-top:0;
+    }
+    .ordercontent p{
+        margin:30px 0;
+    }
+    .orderimg{
+        padding-top:40px;
+        width:100%;
+    }
+    .orderimg img{
+        width:33%;
+    }
+    .orderleft{
+        width:30%;
+        font-size:1.4rem;
+        font-weight:bold;
+        text-align:center;
+    }
+    .orderright{
+        width:30%;
+    }
+    .orderleft p:last-of-type{
+        font-size:1.0rem;
+        font-weight:400;
+    }
+    .orderright p:first-of-type{
+        color:#B53333;
+        font-size:1.2rem;
+    }
+
+    .total{
+        width:100%;
+        height:80px;
+        line-height:80px;
+        background: #f5f5f5;
+        font-size:1.0rem;
+        display:inline-block;
+        text-align:center;
+        margin:50px 0 50px 0;
+
+    }
+    .totallist li{
+        float:left;
+        width: 16.3%;
+    }
+    .totallist li:nth-of-type(1),
+    .totallist li:nth-of-type(3),
+    .totallist li:nth-of-type(5){
+        font-weight:600;
+    }
+    .totallist li:nth-of-type(5),
+    .totallist li:nth-of-type(6)
+    {color:#B53333; }
+
+
+    .addinfo{
+        margin-bottom:100px;
+    }
+    .addinfo_sub>p{
+        margin:30px 0;
+        font-size:1.1rem;
+    }
+}
