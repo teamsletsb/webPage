@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>로그인</title>
+    <link href="./css/L.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div id="head">
+            <nav>
+                <div id="mob_menu">
+                    <article>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <span class="mob_menu_switch_off"></span>
+                    </article>
+                </div>
+                <ul class="flex">
+                    <li><a href="index.html">홈으로 돌아가기</a></li>
+                    <li><a href="L.html">로그인</a></li>
+                    <li><a href="S.html">회원가입</a></li>
+                    <li ><a href="M_1.html">마이페이지</a></li>
+                    <li ><a href="CA.html">장바구니</a></li>
+                    <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
+                </ul>
+            </nav>
+            <h1 id="logo"><a href="ST.html">logo</a></h1>
+        </div>
+    </header>
+<!--  L로그인 영역   -->
+<h2 class="sub_title">로그인</h2>
+<hr class="title_line"/>
+<section id="login" class="wrap">
+    <form action="#" method="post" name="frm">
+        <div>
+            <input type="text" name="uid" size="50" placeholder="아이디"/>
+            <input type="password" name="pwd" maxlength="20" placeholder="비밀번호" size="50"/>
+        </div>
+        <div id="login_submit">
+            <input type="button" value="로그인" name="login" onClick="location.href='#'"/>
+        </div>
+    </form>
+    <a href="./L_1.html">· 아이디 / 비밀번호 찾기</a>
+    <a href="./S.html">· 회원가입</a>
+</section>
+
+<!--푸터영역 수정 20220929-->
+<footer>
+    <div class="ftinfocon">
+        <ul class="ftinfo">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일수집거부</a></li>
+        </ul>
+    </div>
+<div class="ft_bg">
+        <div>
+            <ul class="ftadd">
+                <li id="logo_footer"><a href="#">logo</a></li>
+                <li>
+                    <address>
+                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
+                        <p>Tel : 02-2021-9300 04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
+                        <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <div id="social_icon">
+            <ul class="icon_list">
+                <li><a href="https://www.facebook.com/"><img src="./images/social_icon_1.png" alt="icon_social_1"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./images/social_icon_2.png" alt="icon_social_2"></a></li>
+                <li><a href="https://twitter.com/"><img src="./images/social_icon_3.png" alt="icon_social_3"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./js/store_common.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+@charset "utf-8";
+@import url('./store_common.css');
+
+/*공통*/
+#checkall{
+    width:18px;
+    height:30px;
+}
+.mylist>ul>li:nth-of-type(4)>a{
+    font-weight:600;
+}
+
+/*타이틀*/
+.mytitle{
+    margin-top:50px;
+    text-align:center;
+    margin-bottom:0;
+}
+h1{
+    font-weight: 600;
+    font-size:1.8rem;
+    color:#222;
+}
+
+
+
+/*마이페이지 리스트*/
+.mylist ul{
+    display: flex;
+    justify-content: space-between;
+    padding:80px 25% 70px 25%;
+    text-align:center;
+}
+
+.mylist ul li{
+    font-size:1.3rem;
+    font-weight:400;
+    width:24%;
+}
+
+.mylist ul li:hover a{
+    font-weight: 600;
+    color:#10643A;
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+
+
+/*h2 기본스타일*/
+h2{
+    font-size:1.6rem;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+
+button.delete{
+    width:44px;
+    height:44px;
+    position:absolute;
+    margin: -20px 30px;
+
+}
+.buckets>span{
+    position:relative;
+    top:55%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.btn{ 
+    border: 1px solid #333;
+    color: #333;
+    cursor:pointer;
+    user-select: none;
+    font-weight: 500;
+    font-size: 1.15rem;
+    height:40px;
+    line-height: 38px;
+}
+
+#counting_buckets{
+    margin-bottom:50px;
+}
+#counting_buckets>h3{
+    font-weight:400;
+    font-size:1.1rem;
+    color:#b53333;
+}
+#counting_buckets>hr{
+    margin-bottom:30px;
+}
+
+.wrap>form button{
+    width:130px;
+    height:40px;
+    font-size:1rem;
+    font-weight:600;
+}
+.wrap>form,
+.wrap>form>div{
+    justify-content:space-between;
+    flex-flow:row wrap;
+    margin:0 20px;
+    align-items: center;
+}
+.wrap>form>div>h4{
+    font-weight:500;
+    font-size:1.2rem;
+    width:80%;
+}
+#ppp{
+    width:30%;
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: left;
+}
+#h_span{
+    width:50%;
+    display:block;
+    margin-left:5%
+
+}
+
+#contents{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:left;
+    width:100%;
+    margin:0 auto;
+    user-select: none;
+}
+#contents>ul{
+    margin:80px 5% 40px;
+    width:23%;
+    min-width:250px;
+}
+#contents>ul>li:first-child{
+    width:100%;
+    height:260px;
+    border:1px solid #ccc;
+    position:relative;
+}
+#contents>ul>li:first-child>input{
+    top:2%;
+    left:4%;
+    width:18px;
+    height:30px;
+    position:absolute;
+}
+#contents>ul>li:first-child>a{
+    display:block;
+    width:50%;
+    height:100%;
+    margin:0 auto;
+    text-align:center;
+}
+#contents>ul>li:first-child>a>img{
+    height:80%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    transition:all .2s;
+}
+#contents>ul>li:first-child>a:hover>img{
+    height:88%;
+    transition:all .2s;
+}
+#contents>ul>li:last-child>.item_name{
+    text-align:center;
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:400;
+}
+
+#CA_link{
+    margin-top:100px;
+    width:inherit;
+    height:80px;
+    background:#10643A;
+    position:sticky;
+    left:0;
+    bottom:0;
+    cursor:pointer;
+    display:block;
+    z-index: 999;
+}
+
+#CA_link h4{
+    text-align:center;
+    line-height:80px;
+    color:#fbfbfb;
+    font-size:1.5rem;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+
+
+
+
+@media screen and (max-width: 1023px){
+    .wrap{
+        width:95%;
+    }
+    .mytitle{
+        margin-top:50px;
+        text-align:center;
+    }
+    h1{
+        font-weight: 600;
+        font-size:1.8rem;
+        color:#222;
+    }
+
+
+    /*마이페이지 리스트*/
+    .mylist ul{
+        display:block;
+        padding:0;
+        padding-bottom:50px;
+        text-align:center;
+    }
+
+    .mylist ul li{
+        font-size:1.3rem;
+        margin-top:50px;
+        font-weight:400;
+        width:100%;
+    }
+
+    .mylist ul li:hover a{
+        font-weight: 600;
+        color:#10643A;
+        display:block;
+    }
+
+
+    #contents>ul{
+        min-width:180px;
+    }
+    
+    #checkall{z-index: 99999;}
+
+
+}
+

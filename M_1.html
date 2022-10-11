@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>주문배송조회</title>
+    <link href="./css/M_1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>    
+    <header>
+        <div id="head">
+            <nav>
+                <div id="mob_menu">
+                    <article>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <span class="mob_menu_switch_off"></span>
+                    </article>
+                </div>
+                <ul class="flex">
+                    <li><a href="index.html">홈으로 돌아가기</a></li>
+                    <li><a href="L.html">로그인</a></li>
+                    <li><a href="S.html">회원가입</a></li>
+                    <li ><a href="M_1.html">마이페이지</a></li>
+                    <li ><a href="CA.html">장바구니</a></li>
+                    <li><a href="#"><img src="./images/lan.png" alt="icon_lan"/>KOR<img src="./images/tri.png" alt="icon_arrow_under"/></a></li>
+                </ul>
+            </nav>
+            <h1 id="logo"><a href="ST.html">logo</a></h1>
+        </div>
+    </header>
+<!--    컨텐츠 영역    -->
+<!--마이페이지 타이틀-->
+<section class="mytitle">
+    <h1>마이페이지</h1>
+    <hr class="title_line"/>
+</section>
+<!--마이페이지 리스트-->
+<section class="mylist">
+    <ul>
+        <li><a href="./M_1.html">주문내역</a></li>
+        <li><a href="./M_2.html">회원정보 수정</a></li>
+        <li><a href="./M_3.html">1:1 문의사항</a></li>
+        <li><a href="./M_4.html">찜한상품</a></li>
+    </ul>
+</section>
+<!--주문배송조회-->
+<div class="wrap">
+<section class="chklist">
+    <h2>주문배송조회</h2>
+    <hr />
+    <div class="orderinfowrap">
+        <div class="orderinfo">
+            <p><a href="#">1</a></p>
+            <p>입금대기</p>
+        </div>
+        <div class="arrow">
+            <p>〉</p>
+        </div>
+        <div class="orderinfo">
+            <p><a href="#">2</a></p>
+            <p>결제완료</p>
+        </div>
+        <div class="arrow">
+            <p>〉</p>
+        </div>
+        <div class="orderinfo">
+            <p><a href="#">3</a></p>
+            <p>준비중</p>
+        </div>
+        <div class="arrow">
+            <p>〉</p>
+        </div>
+        <div class="orderinfo">
+            <p><a href="#">4</a></p>
+            <p>배송중</p>
+        </div>
+        <div class="arrow">
+            <p>〉</p>
+        </div>
+        <div class="orderinfo">
+            <p><a href="#">5</a></p>
+            <p>배송완료</p>
+        </div>
+    </div>
+    <!--구매내역-->
+    <div class="buyinglistwrap">
+        <div class="buyinglist">
+            <span id="buylisthead">구매내역</span>
+            <span class="button btn mbtn">1개월</span>
+            <span class="button btn mbtn">3개월</span>
+            <span class="button btn mbtn">6개월</span>
+            <span class="button btn mbtn">1년</span>
+            <input type="text" name="txt" class="txtcon" />
+            <span class="button btn search">검색</span>
+        </div>
+    </div>
+</section>
+<!--주문내역-->
+<section class="orderlist">
+        <h2>주문내역</h2>
+        <hr>
+    <div class="order_info">
+        <p>주문정보</p>
+        <p>총 3건</p>
+    </div>
+    <div class="orderlist_sub">
+        <p>주문번호 L-E1T-SB</p>
+        <p>주문일 : 2022 / 09 / 22</p>
+    </div>
+    <section class="ordercontent">
+        <div class="orderimg">
+            <img src="./images/img1.jpg" alt="img1"/>
+        </div>
+        <div class="orderleft">
+            <p>까스활</p>
+            <p>수량 : 50개</p>
+        </div> 
+        <div class="orderright">
+            <p>50,000원</p>
+            <p>무료배송</p>
+        </div>
+    </section>
+    <section class="ordercontent">
+            <div class="orderimg">
+                <img src="./images/img2.jpg" alt="img2"/>
+            </div>
+            <div class="orderleft">
+                <p>까스활명수</p>
+
+                <p>수량 : 50개</p>
+            </div>
+            <div class="orderright">
+                <p>50,000원</p>
+                <p>무료배송</p>
+            </div>
+    </section>
+    <section class="ordercontent">
+            <div class="orderimg">
+                <img src="./images/img3.jpg" alt="img3"/>
+            </div>
+            <div class="orderleft">
+                <p>활명수</p>
+
+                <p>수량 : 50개</p>
+            </div>
+            <div class="orderright">
+                <p>50,000원</p>
+                <p>무료배송</p>
+            </div>
+    </section>
+<!--주문금액-->
+    <div class="total">
+        <ul class="totallist">
+            <li>주문금액</li>
+            <li>123,456원</li>
+            <li>할인금액</li>
+            <li>10,000원</li>
+            <li>총 결제금액</li>
+            <li>121,456원</li>
+        </ul>
+    </div>
+</section>
+<!--배송지 정보-->
+<section class="addinfo">
+    <h2>배송지 정보</h2>
+    <hr/>
+    <div class="addinfo_sub">
+        <p>이름 : 홍길동 / 연락처 010-1234-5045</p>
+        <p>주소 : 인천시 서구 연희동 연희아파트 402호</p>
+        <p>배송시 유의사항 : 부재시 문앞에 놓고 가주세요.</p>
+    </div>
+</section>
+</div>
+
+<!--푸터영역 수정 20220929-->
+<footer>
+    <div class="ftinfocon">
+        <ul class="ftinfo">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일수집거부</a></li>
+        </ul>
+    </div>
+<div class="ft_bg">
+        <div>
+            <ul class="ftadd">
+                <li id="logo_footer"><a href="#">logo</a></li>
+                <li>
+                    <address>
+                        <p>대표이사 : 유준하, 한종현 사업자등록번호 : 110-81-00102 <span>Mail : dongwha@dong-wha.co.kr</span></p>
+                        <p>Tel : 02-2021-9300 04522 서울특별시 중구 남대문로9길 24 패스트파이브 타워 6~8층</p>
+                        <p>Copyright&copy; DONG WHA PHARM. CO., LTD. ALL Rights Reserved</p>
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <div id="social_icon">
+            <ul class="icon_list">
+                <li><a href="https://www.facebook.com/"><img src="./images/social_icon_1.png" alt="icon_social_1"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./images/social_icon_2.png" alt="icon_social_2"></a></li>
+                <li><a href="https://twitter.com/"><img src="./images/social_icon_3.png" alt="icon_social_3"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./images/social_icon_4.png" alt="icon_social_4"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./js/store_common.js"></script>
+</body>
+</html>
