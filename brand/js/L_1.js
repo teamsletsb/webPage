@@ -30,6 +30,7 @@
     $('#first .fianlform_btn').click(function(){
         if($('#first .cernumber_blank').val() != ''){
             alert("인증되었습니다.")
+            return false;
         }else{
             return false;
         };
@@ -37,6 +38,7 @@
     $('#second .fianlform_btn').click(function(){
         if($('#second .cernumber_blank').val() != ''){
             alert("인증되었습니다.")
+            return false;
         }else{
             return false;
         };
